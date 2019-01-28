@@ -13,13 +13,14 @@
 
     box-sizing: border-box;
 
+    --nav-link-icon-font-size: 2vw;
     --tile-ttl-font-size: 5vw;
     --mar: 1rem;
     --logowidth: 10rem;
     --carousel-height: 75vh;
     --carousel-width: 75vw;
     --width-person: 13vw;
-    --height-person: 30vh;
+    --height-person: 13vw;
     /* overflow: hidden; */
 }
 
@@ -70,7 +71,7 @@ ul
         "nav"
         "footer";
 
-    grid-template-rows: 22vh 60vh 10vh;
+    grid-template-rows: minmax(10rem, 22rem) minmax(10rem, 60rem) minmax(5rem, 10rem);
     grid-row-gap: 2vh;
 }
 
@@ -80,7 +81,7 @@ ul
     display: grid;
     grid-area: logo;
     position: sticky;
-    top: 2.855rem;
+    top: 2.855vh;
 
     margin: 0 auto; /* **** */
 }
@@ -90,7 +91,7 @@ ul
     grid-area: logo;
     width: var(--logowidth); /* **** */
 
-    border-radius: 30px;
+    border-radius: 50%;
 
     transition: 0.3s ease;
 }
@@ -115,7 +116,7 @@ ul
 .nav-links
 {
     font-family: Decoration;
-    font-size: 3.25vw;
+    font-size: calc(3.6rem + 1vw);
     color: rgb(255, 248, 166, 0.8);
 
     margin: 0;
@@ -132,13 +133,13 @@ ul
 .navicon:hover, .navicon:active /* :active doesn't quite work */
 {
     animation: perturbed 0.4s alternate ease-in-out infinite;
-
 }
 
 footer
 {
     grid-area: footer;
     position: sticky;
+    /* top: calc(92rem - 5rem); *** */
     top: 92vh;
     margin: 0 var(--mar);
     margin-bottom: 2rem;
@@ -553,10 +554,10 @@ h1
 {
     display: grid;
     grid-template-areas:
-        "person1 person2 person3 person4";
+        "person1 person2 person3 person4 person5";
     
     grid-row-gap: 2rem;
-    margin-top: 9rem;
+    margin-top: 9vh;
 }
 
 .person
@@ -570,17 +571,15 @@ h1
     text-align: center;
 
     transition: 0.3s ease;
-
-    /* border-radius: 50%; */
 }
 
 .person-details
 {
     position: relative;
-    top: 22.5rem;
+    top: -13.5rem;
 
     opacity: 0;
-    margin: 0 0.75rem;
+    margin: 0 1.75rem;
 
     color: aliceblue;
     font-size: 5rem;
@@ -596,6 +595,9 @@ h1
     height: 100%;
 
     transition: 0.3s ease;
+
+    border-radius: 50%;
+    /* z-index: 11; */
 }
 
 .person-filter img
@@ -603,9 +605,7 @@ h1
     width: 100%;
     height: 100%;
 
-    margin-top: -5rem; /* Quite important to keep that vertical dead-space in check */
-
-    border-radius: 2.5rem 0;
+    border-radius: 50%;
     border: 1px dotted rgba(255, 174, 0, 0.575);
     box-shadow: 0 0 20px 0px rgba(213, 202, 155, 0.938);
 }
@@ -631,29 +631,35 @@ h1
     border-radius: 5px;
 }
 
-.person:hover .person-filter
+.person-filter:hover
 {
     filter: blur(6px);
 }
 
-.person:hover .person-details
+.person-filter:hover ~ a
 {
-    opacity: 0.6;
+    opacity: 0.7;
+    /* z-index: 20; */
 }
 
-.person:hover .fb:hover
+.person-filter:hover ~ .fb:hover
 {
     opacity: 1;
     color: #3b5998; /* Actual FB Logo Color */
 }
 
-.person:hover .tw:hover /* Useles, if Twitter isn't needed */
+.person-details:hover
 {
     opacity: 1;
-    color: #1DA1F2; /* Actual Twitter Logo Color */
 }
 
-.person:hover .insta:hover
+/* .person:hover .tw:hover / Useles, if Twitter isn't needed /
+{
+    opacity: 1;
+    color: #1DA1F2; / Actual Twitter Logo Color /
+} */
+
+.person-filter:hover ~ .insta:hover
 {
     opacity: 1;
     color: #fb3958; /* Actual Insta Logo Color - Just the Reddish Pink */
