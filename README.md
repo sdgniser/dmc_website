@@ -41,3 +41,16 @@ Repository for the website of Drama &amp; Music Club
     Media Rules for responsiveness.
   </li>
 </ol>
+<br>
+<h2>For collaborators:</h2>
+<ol>
+  <li>
+    Fork the repo.
+  </li>
+  <li>
+    Make changes.
+  </li>
+  <li>
+    Make a Pull Request.
+  </li>
+</ol>
