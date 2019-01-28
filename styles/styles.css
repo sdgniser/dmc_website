@@ -132,8 +132,14 @@ ul
     transition: 0.6s ease;
 }
 
-.navicon:hover, .navicon:active /* :active doesn't quite work */
+.navicon:hover
 {
+    animation: perturbed 0.4s alternate ease-in-out infinite;
+}
+
+.naviconhover
+{
+    transition: 0.6s ease;
     animation: perturbed 0.4s alternate ease-in-out infinite;
 }
 
