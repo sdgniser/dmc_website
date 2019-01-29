@@ -132,10 +132,10 @@ ul
     transition: 0.6s ease;
 }
 
-/* .navicon:hover
+.navicon:hover
 {
     animation: perturbed 0.4s alternate ease-in-out infinite;
-} */
+}
 
 .naviconhover
 {

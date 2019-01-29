@@ -313,10 +313,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
-            $("i.navicon").hover(function(){
-                $(this).addClass(".naviconhover");
+            $("i.navicon").click(function(){
+                $(this).css("animation", "perturbed 0.4s alternate ease-in-out infinite");
                 }, function(){
-                $(this).removeClass(".naviconhover");
+                $(this).css("animation", "perturbed 0.4s alternate ease-in-out infinite");
             });
             });
             // $(document).ready(function(){
