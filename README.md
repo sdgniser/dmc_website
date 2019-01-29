@@ -11,7 +11,7 @@ Repository for the website of Drama &amp; Music Club
     <li>Introductory Text</li>
     <li>Pictures of events</li>
     <li>Details of events</li>
-    <li>Details of members</li>
+      <li><del>Details of members</del></li>
     <li>Contact Info</li>
     <li>Details about SPIC-MACAY</li>
     </ul>
@@ -26,7 +26,7 @@ Repository for the website of Drama &amp; Music Club
   </li>
   <br>
  </ol>
-
+<br>
 <h2>More stuff to code for:</h2>
 <ol>
   <li>
@@ -41,7 +41,7 @@ Repository for the website of Drama &amp; Music Club
     Media Rules for responsiveness.
   </li>
 </ol>
-
+<br>
 <h2>Final Touches</h2>
 <ol>
   <li>
