@@ -132,14 +132,14 @@ ul
     transition: 0.6s ease;
 }
 
-.navicon:hover
+/* .navicon:hover
 {
     animation: perturbed 0.4s alternate ease-in-out infinite;
-}
+} */
 
 .naviconhover
 {
-    transition: 0.6s ease;
+    /* transition: 0.6s ease; */
     animation: perturbed 0.4s alternate ease-in-out infinite;
 }
 
@@ -243,9 +243,9 @@ h1
     border-radius: 10px;
 
     color: rgba(82, 134, 57, 0.884);
-    /* font-weight: 500; */
+    /* font-weight: 600; */
     font-size: 7rem;
-    font-family: 'Sacramento', serif;
+    font-family: 'Amatic SC','Sacramento', serif;
     font-style: italic;
 }
 /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
@@ -253,7 +253,7 @@ blockquote:before
 {
     /* position: relative; */
     /* top: 10rem; */
-    font-family: Georgia, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20rem;
     line-height: 1;
     
@@ -265,7 +265,7 @@ blockquote:after
     float:right;
     top: 18rem;
 
-    font-family: Georgia, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size:20rem;
     line-height: 1;
     content: "\201D";
