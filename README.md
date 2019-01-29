@@ -22,7 +22,7 @@ Repository for the website of Drama &amp; Music Club
   </li>
   <br>
   <li>
-    A way to pull event-images from a web source (GDrive...), would cut the site loading time, by quite a bit.
+    A way to pull event-images from a web source (GDrive...), would cut the site loading time, by quite a bit. - Implemented for "member-images" | Follows the process, discussed <a href="https://productforums.google.com/forum/#!topic/drive/yU_yF9SI_z0/discussion">here</a>. | ISSUES: The process is manual and must be repeated for each image.
   </li>
   <br>
  </ol>
