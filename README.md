@@ -41,3 +41,16 @@ Repository for the website of Drama &amp; Music Club
     Media Rules for responsiveness.
   </li>
 </ol>
+
+<h2>Final Touches</h2>
+<ol>
+  <li>
+    Color Palette
+  </li>
+  <li>
+    Semantic HTML
+  </li>
+  <li>
+    ...
+  </li>
+</ol>
