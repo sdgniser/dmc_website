@@ -117,7 +117,7 @@ ul
 
 .nav-links
 {
-    font-family: Decoration;
+    font-family: Monoton;
     font-size: calc(3.6rem + 1vw);
     color: rgb(255, 248, 166, 0.8);
 
@@ -389,7 +389,7 @@ blockquote:after
 {
     text-align: center;
 
-    font-family: Decoration;
+    font-family: Monoton;
     font-size: var(--tile-ttl-font-size);
     /* EXPERIMENTAL */
     color: rgb(214, 203, 156);
@@ -399,7 +399,7 @@ blockquote:after
     margin: 2rem auto;
     padding: 2rem;
 
-    text-decoration-line: overline underline;
+    /* text-decoration-line: overline underline; */
     text-decoration-style: dotted;
     text-decoration-color:rgb(214, 203, 156);
 }
