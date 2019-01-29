@@ -316,13 +316,33 @@ h1
     background-image: /* From css-tricks */
     linear-gradient(
       to right, 
+      /* #833ab4, */
       rgb(245, 58, 58), 
       #f06d06, 
-      rgb(255, 255, 0), 
+      rgb(255, 255, 0),
       green
     );
     z-index: 10;
     border-radius: 5px;
+    border-color: transparent;
+}
+
+.in-tile-separator
+{
+    margin: 0 auto;
+    padding: 0.2rem;
+
+    /* background-color: rgb(129, 124, 43); /* Alt to below */
+    background-image: /* From css-tricks */
+    linear-gradient(
+      to right, 
+    #009dff,
+    #ec2f4b,
+    #fd1d1d, #fcb045
+    );
+    /* border-bottom: 4px dotted rgba(0, 255, 115, 0.822); */
+    border-radius: 5px;
+    border-style: dotted;
     border-color: transparent;
 }
 
@@ -558,7 +578,7 @@ h1
     background: black url('../images/pics/V1.JPG') center/cover no-repeat fixed;
 }
 
-#group
+.group
 {
     display: grid;
     grid-template-areas:
