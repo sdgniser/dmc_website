@@ -607,6 +607,7 @@ h1
     height: 18vw;
 
     border-radius: 2rem;
+    box-shadow: 0 0 20px 0px rgba(213, 202, 155, 0.938);
 }
 
 .fic-words
