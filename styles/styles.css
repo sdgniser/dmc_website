@@ -578,14 +578,77 @@ h1
     background: black url('../images/pics/V1.JPG') center/cover no-repeat fixed;
 }
 
+.fic
+{
+    display: grid;
+    grid-template-areas:
+        "fic-image fic-words";
+    
+    grid-template-columns: 35% 65%;
+    grid-row-gap: 5rem;
+    margin-top: 9vh;
+}
+
+.fic-image
+{
+
+    grid-area: fic-image;
+
+    margin: 6rem auto;
+
+    text-align: center;
+}
+
+.fic-image img
+{
+    margin: 0 auto;
+
+    width: 16vw;
+    height: 18vw;
+
+    border-radius: 2rem;
+}
+
+.fic-words
+{
+    grid-area: fic-words;
+    padding: 5rem;
+
+    text-align: justify;
+    color: darkkhaki;
+    font-family: cursive;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.fic-name
+{
+    display: grid;
+    margin: 0 auto;
+
+    background: linear-gradient(
+    to right,
+        rgba(255, 136, 0, 0.68),
+        rgba(255, 255, 0, 0.68),
+        rgba(10, 184, 10, 0.68)
+    );
+    
+    color: rgb(13, 113, 228);
+	font-family: Aleo;
+	font-weight: 600;
+    font-size: 2.25rem;
+
+    border-radius: 5px;
+}
+
 .group
 {
     display: grid;
     grid-template-areas:
         "person1 person2 person3 person4 person5";
     
-    grid-row-gap: 2rem;
-    margin-top: 9vh;
+    grid-row-gap: 5rem;
+    margin: 4vh auto;
 }
 
 .person
