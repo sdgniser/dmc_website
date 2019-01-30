@@ -22,6 +22,8 @@
     --width-person: 13vw;
     --height-person: 13vw;
     /* overflow: hidden; */
+
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -118,7 +120,7 @@ ul
 .nav-links
 {
     font-family: Monoton;
-    font-size: calc(3.6rem + 1vw);
+    font-size: calc(2.4rem + 1vw);
     color: rgb(255, 248, 166, 0.8);
 
     margin: 0;
@@ -171,7 +173,7 @@ footer
 /* THE TITLE */
 #intro
 {
-    display: grid;
+    /*display: grid;
 
     grid-template-areas:
         "title title"
@@ -180,24 +182,44 @@ footer
     grid-template-columns: 9fr 3fr;
     grid-template-rows: auto;
 
-    grid-gap: 2rem;
+    grid-gap: 2rem; */
 
+    position: relative;
     height: 97.5vh;
+    text-align: center;
 
-    background: black url('../images/pics/B1.JPG') center/cover no-repeat fixed;
     color: aliceblue;
 
     /* Overrides .tiles */
     border: none;
     border-radius: 0.8rem;
+    overflow: hidden;
 }
+
+.backgroundimagehack {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black url('../images/pics/B1.JPG') center/cover no-repeat fixed;
+    z-index: -1;
+    transition: all 0.2s ease-in;
+}
+
+.blurimage {
+    filter: blur(20px);
+}
+
 
 h1
 {
-    grid-area: title;
-    display: grid;
-
-    max-height: 10vh;
+/*    grid-area: title;
+    display: grid;*/
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #ttl
@@ -211,8 +233,6 @@ h1
 
     max-height: 10vh;
 
-    margin-bottom: 9rem;
-
     text-shadow: 0px 0px 5px rgb(185, 139, 79);
     transition: 0.3s ease;
 }
@@ -222,15 +242,18 @@ h1
     transform: scale(1.02);
 }
 
+blockquote {
+    color: rgba(82, 134, 57, 0.884);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 /* From: https://stackoverflow.com/questions/16325687/make-big-quotes-with-blockquote */
 #hello
 {
-    grid-area: intro;
     
     /* text-align: center; */
-    position: relative;
-    top: 21rem;
-    margin: 0 auto;
+/*    margin: 0 auto;*/
     /* margin-top: 10vh; */
     /* padding: 2rem; */
 
@@ -240,21 +263,21 @@ h1
         rgba(0, 0, 255, 0.5)
     ); */
 
-    border-radius: 10px;
+ /*   border-radius: 10px;*/
 
     color: rgba(82, 134, 57, 0.884);
     /* font-weight: 600; */
-    font-size: 7rem;
+    font-size: 2.4rem;
     font-family: 'Amatic SC','Sacramento', serif;
     font-style: italic;
 }
 /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
 blockquote:before
 {
-    /* position: relative; */
-    /* top: 10rem; */
+    position: relative;
+    top: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20rem;
+    font-size: 10rem;
     line-height: 1;
     
     content: "\201C";
@@ -266,7 +289,7 @@ blockquote:after
     top: 18rem;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size:20rem;
+    font-size:10rem;
     line-height: 1;
     content: "\201D";
 }
