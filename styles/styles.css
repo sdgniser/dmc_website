@@ -614,7 +614,7 @@ blockquote:after
 }
 
 /* EXPERIMENTAL *** <span class="event-date">January 21, 2019</span> */
-.event-date
+.entry-date
 {
     float: right;
 
@@ -850,17 +850,6 @@ blockquote:after
     opacity: 1;
     color: #3b5998; /* Actual FB Logo Color */
 }
-/* 
-.person-details:hover
-{
-    opacity: 1;
-} */
-
-/* .person:hover .tw:hover / Useles, if Twitter isn't needed /
-{
-    opacity: 1;
-    color: #1DA1F2; / Actual Twitter Logo Color /
-} */
 
 .person-filter:hover ~ .insta:hover
 {
@@ -868,7 +857,6 @@ blockquote:after
     color: #fb3958; /* Actual Insta Logo Color - Just the Reddish Pink */
 }
 
-/* Just an example of selectively styling a tile */
 #gallery
 {
     background: url('../images/pics/U1.JPG') center/cover no-repeat fixed;
