@@ -886,10 +886,10 @@ blockquote:after
     text-align: center;
 }
 
-#contact
+/* #contact
 {
-    /* background: url('../images/pics/N1.JPG') center/cover no-repeat fixed; */
-}
+    background: url('../images/pics/N1.JPG') center/cover no-repeat fixed;
+} */
 
 /* From here: https://codepen.io/jh3y/pen/WwVKLN With almost no modifications - except font, or font-size etc. */
 
