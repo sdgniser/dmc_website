@@ -16,6 +16,10 @@
 
         <!-- Google Fonts sheet - Temporary (For the New Layout) - Layout change doesn't seem to affect fonts in any way -->
         <!-- I know, there are many fonts - most will be removed soon -->
+        <!-- Event Header: Century Gothic/Helvetica -->
+        <!-- Event Text: Cadence - White -->
+        <!-- Quotes of FIC -> 150, 203, 127 -->
+        <!--  -->
         <link href="https://fonts.googleapis.com/css?family=Roboto|Flamenco|Source+Serif+Pro|Aleo|Kanit|Signika|Cinzel+Decorative|Amatic+SC|Dancing+Script|Great+Vibes|Lobster|Monoton|Niconne|Oleo+Script|Parisienne|Sacramento|Satisfy|Special+Elite|Tangerine" rel="stylesheet">
 
         <!-- Font Awesome - For icons -->
@@ -28,8 +32,17 @@
         <title>Home | Drama & Music Club</title>
     </head>
     <body>
+        <!-- <h1 class="ml1">
+            <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span class="letters">THURSDAY</span>
+                <span class="line line2"></span>
+            </span>
+        </h1> -->
+        <!-- <div class="globalwrapper"> -->
+        <!-- <div class="side-wrapper"> -->
         <div id="side">
-            <a tabindex="0" id="logo-link" href="home.html" title="DMC Homepage" target="_top"><img id="logo" src="images/logo_smpl.png"></a>
+            <a tabindex="0" id="logo-link" href="index.html" title="DMC Homepage" target="_top"><img id="logo" src="images/logo_smpl.png"></a>
             <nav id="nav">
                 <ul id="nav-list">
                     <li class="ulist"><a tabindex="0" class="nav-links" href="#events" title="Our Club Activities"><i class="far fa-calendar-alt navicon"></i></li>
@@ -40,9 +53,10 @@
                 </ul>
             </nav>
             <footer>
-                <i class="fas fa-copyright"></i>-left 2019<br><i class="fas fa-bolt"></i> <a tabindex="0" id="selfref" href="https://sdgniser.github.io" title="Powered by Software Development Group, NISER" target="_blank">SDG</a>
-            </footer> <!-- Copyright?? - Nah! -->
+                <i class="fas fa-copyright"></i><i class="fas fa-bolt"></i> <a tabindex="0" id="selfref" href="https://sdgniser.github.io" title="Powered by Software Development Group, NISER" target="_blank">SDG<br>2019</a>
+            </footer>
         </div>
+    <!-- </div> -->
        
         <!-- Main content -->
         <main class="content">
@@ -184,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
   
             <hr class="separator">
             <div class="tiles tile3" id="team">
@@ -194,9 +208,9 @@
                         <img src="images/people/catnobi.jpg">
                         <span class="fic-name">Dr. FIC<br><span id="person-dgn">Faculty-in-Charge</span></span>
                     </div>
-                    <div class="fic-words">
-                        <p>Hello there~, I am the faculty-in-charge and I have the high ground.</p>
-                    </div>
+                    <blockquote class="fic-words">
+                        Hello there~, I am the faculty-in-charge and I have the high ground.
+                    </blockquote>
                 </div>
                 <hr class="in-tile-separator">
                 <div class="group admins">
@@ -314,15 +328,51 @@
             <hr class="separator">
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
         <script src="scripts/main.js"></script>
       <script>
-            $(document).ready(function(){
-            $("i.navicon").click(function(){
-                $(this).css("animation", "perturbed 0.4s alternate ease-in-out infinite");
-                }, function(){
-                $(this).css("animation", "perturbed 0.4s alternate ease-in-out infinite");
+            // $(document).ready(function(){
+            // $("i.navicon").click(function(){
+            //     $(this).css("animation", "perturbed 0.4s alternate ease-in-out infinite");
+            //     }, function(){
+            //     $(this).css("animation", "perturbed 0.4s alternate ease-in-out infinite");
+            // });
+            // });
+
+            // Wrap every letter in a span
+            $('.ml1 .letters').each(function(){
+            $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
             });
+
+            anime.timeline({loop: false})
+            .add({
+                targets: '.ml1 .letter',
+                scale: [0.3,1],
+                opacity: [0,1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 600,
+                delay: function(el, i) {
+                return 70 * (i+1)
+                }
+            }).add({
+                targets: '.ml1 .line',
+                scaleX: [0,1],
+                opacity: [0.5,1],
+                easing: "easeOutExpo",
+                duration: 700,
+                offset: '-=875',
+                delay: function(el, i, l) {
+                return 80 * (l - i);
+                }
+            }).add({
+                targets: '.ml1',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
             });
+
             // $(document).ready(function(){
             // $(".person-details").hover(function(){
             //     $(".person-filter").css("filter", "blur(6px)");
@@ -332,5 +382,6 @@
             // });
         </script>
         <!-- <script src="scripts/js.js"></script> -->
+    </div>
     </body>
 </html>

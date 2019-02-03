@@ -17,6 +17,8 @@ html {
 
     box-sizing: border-box;
 
+    --person-border-color: white;
+    --ttl-color: white;
     --nav-link-icon-font-size: 2vw;
     --tile-ttl-font-size: 5vw;
     --mar: 1rem;
@@ -46,10 +48,17 @@ html {
     src: url('../CopalStdDecorated.otf');
 }
 
+
 body
 {
-    background: black center/cover no-repeat fixed;
+    background: black url('../images/pics/bg.JPG') center/cover no-repeat fixed;
+    margin: 0;
+/* }
 
+.globalwrapper
+{ */
+    /* background: black center/cover no-repeat fixed; */
+    background: black url('../images/pics/bg.JPG') center/cover no-repeat fixed;
     margin: 0;
 
     display: grid;
@@ -72,6 +81,13 @@ ul
     padding: 0;
     list-style-type: none;
 }
+
+/* #side-wrapper
+{
+    grid-area: side;
+    text-align: center;
+    filter: blur(20px);
+} */
 
 #side {
     grid-area: side;
@@ -150,18 +166,23 @@ footer
 {
     position: sticky;
     /* top: calc(92rem - 5rem); *** */
-    top: 90vh;
+    top: 88vh;
     margin: 0 var(--mar);
     margin-bottom: 2rem;
     padding: 1.4rem;
 
-    background-color: rgba(85, 45, 12, 0.5);
+    /* background-color: pink; */
     border-radius: 5px;
 
     color: rgb(5, 153, 138);
     font: italic bold 1.5rem 'Segoe UI', cursive;
     text-align: center;
     line-height: 2.2rem;
+}
+
+footer i
+{
+    transform: rotate(180deg);
 }
 
 #selfref
@@ -185,11 +206,11 @@ footer
     grid-gap: 2rem; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: right;
 
     position: relative;
     height: 97.5vh;
-    text-align: center;
+    text-align: right;
 
     color: aliceblue;
 
@@ -209,21 +230,20 @@ footer
     bottom: 0;
     left: 0;
     right: 0;
-    background: black url('../images/pics/B1.JPG') center/cover no-repeat fixed;
+    background: black url('../images/pics/bg.JPG') center/cover no-repeat fixed;
     z-index: -1;
-    transition: all 0.2s ease;
+    transition: all 1s ease;
 }
 
 .blurimage {
     filter: blur(20px);
 }
 
-
 #ttl
 {
-    color: var(--fg1);
+    color: var(--ttl-color);
     font-family: Music, serif;
-    font-size: 7vw;
+    font-size: 11rem;
     font-weight: 500;
 
     text-shadow: 0px 0px 5px rgb(185, 139, 79);
@@ -268,13 +288,16 @@ blockquote:after
 
 #intro #social {
   display: flex;
-  margin: 0 15%;
+  float: right;
+  /* margin: 0; */
 }
 
 #intro #social li {
   display: inline-block;
   font-size: 8rem;
   flex: 1;
+  width: 10rem;
+  /* padding-left: rem; */
 }
 
 
@@ -285,7 +308,7 @@ blockquote:after
   color: white;
   opacity: 0.5;
   filter: blur(1px);
-  transition: 0.2s ease;
+  transition: 1s ease;
 }
 
 #social a:hover,
@@ -381,7 +404,7 @@ blockquote:after
 
 #events
 {
-    background: black url('../images/pics/C1.JPG') center/cover no-repeat fixed;
+    /* background: black url('../images/pics/C1.JPG') center/cover no-repeat fixed; */
     overflow: hidden;
 }
 
@@ -661,16 +684,16 @@ blockquote:after
 
 #team
 {
-    background: black url('../images/pics/V1.JPG') center/cover no-repeat fixed;
+    background: black;
 }
 
 .fic
 {
     display: grid;
     grid-template-areas:
-        "fic-image fic-words";
+        "fic-words fic-image ";
     
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 65% 35%;
     grid-row-gap: 5rem;
     margin-top: 9vh;
 }
@@ -703,11 +726,11 @@ blockquote:after
     margin-bottom: 2rem;
     border-radius: 1.5rem;
 
-    background: linear-gradient(
+    /* background: linear-gradient(
         to right,
         rgba(255, 81, 0, 0.5),
         rgba(0, 102, 255, 0.5)
-    );
+    ); */
 
     text-align: justify;
     color: darkkhaki;
@@ -721,12 +744,12 @@ blockquote:after
     display: grid;
     margin: 0 auto;
 
-    background: linear-gradient(
+    /* background: linear-gradient(
     to right,
         rgba(255, 136, 0, 0.68),
         rgba(255, 255, 0, 0.68),
         rgba(10, 184, 10, 0.68)
-    );
+    ); */
     
     color: rgb(13, 113, 228);
 	font-family: Aleo;
@@ -792,8 +815,8 @@ blockquote:after
     height: 100%;
 
     border-radius: 50%;
-    border: 1px dotted rgba(255, 174, 0, 0.575);
-    box-shadow: 0 0 20px 0px rgba(213, 202, 155, 0.938);
+    border: 2px solid var(--person-border-color);
+    /* box-shadow: 0 0 20px 0px rgba(213, 202, 155, 0.938); */
 }
 
 .person-name
@@ -802,15 +825,15 @@ blockquote:after
     margin: 1rem auto;
     margin-top: -4rem;
 
-    background: linear-gradient(
+    /* background: linear-gradient(
     to right,
         rgba(255, 136, 0, 0.68),
         rgba(255, 255, 0, 0.68),
         rgba(10, 184, 10, 0.68)
-    );
+    ); */
     
-    color: rgb(13, 113, 228);
-	font-family: Aleo;
+    color: var(--sec0);
+	font-family: Helvetica, sans-serif;
 	font-weight: 600;
     font-size: 2.25rem;
 
@@ -823,14 +846,13 @@ blockquote:after
     margin-top: 0.25rem;
     padding-top: 0.25rem;
 
-    color: rgba(89, 0, 255, 0.911);
-
-    font-family: Signika;
+    color: white;
+    /* font-family: cent */
     font-size: 2rem;
     /* font-style: italic; */
     font-weight: 500;
 
-    border-top: 2px dashed rgb(0, 110, 255);
+    /* border-top: 2px dashed rgb(0, 110, 255); */
 }
 
 
@@ -859,21 +881,24 @@ blockquote:after
 
 #gallery
 {
-    background: url('../images/pics/U1.JPG') center/cover no-repeat fixed;
+    /* background: url('../images/pics/U1.JPG') center/cover no-repeat fixed; */
 
     text-align: center;
 }
 
 #contact
 {
-    background: url('../images/pics/N1.JPG') center/cover no-repeat fixed;
+    /* background: url('../images/pics/N1.JPG') center/cover no-repeat fixed; */
 }
 
 /* From here: https://codepen.io/jh3y/pen/WwVKLN With almost no modifications - except font, or font-size etc. */
 
 .carousel { /**/
-  height: var(--carousel-height);
-  width: var(--carousel-width);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* height: var(--carousel-height);
+  width: var(--carousel-width); */
   overflow: hidden;
   text-align: center;
   position: relative;
@@ -1194,3 +1219,41 @@ h2 { /* Temporarily kept, for the captions */
       transform: translateY(-6px);
     }
 }
+
+
+
+.ml1 {
+    /* grid-area: content; */
+    font-weight: 900;
+    font-size: 3.5em;
+
+    /* margin: 0 auto; */
+    background-color: red;
+    z-index: 30;
+  }
+  
+  .ml1 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+  
+  .ml1 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml1 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 0 0;
+  }
+  
+  .ml1 .line1 { top: 0; }
+  .ml1 .line2 { bottom: 0; }
