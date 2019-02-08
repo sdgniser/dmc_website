@@ -34,7 +34,7 @@ html {
     --fg1: #da9f93;
     --sec0: #d90368;
     --sec1: #890620;
-
+    --sec2: #96cb7f;
     scroll-behavior: smooth;
 }
 
@@ -48,6 +48,15 @@ html {
     src: url('../CopalStdDecorated.otf');
 }
 
+@font-face {
+    font-family: Gothic;
+    src: url('../century.ttf');
+}
+
+@font-face {
+    font-family: Gothic_Bold;
+    src: url('../centuryb.ttf');
+}
 
 body
 {
@@ -257,7 +266,8 @@ footer i
 
 blockquote {
     color: rgba(82, 134, 57, 0.884);
-    color: var(--fg0);
+    color: white;
+    font-family: Gothic;
 }
 /* From: https://stackoverflow.com/questions/16325687/make-big-quotes-with-blockquote */
 /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
@@ -266,7 +276,7 @@ blockquote:before
 {
     position: relative;
     top: 1.8rem;
-    color: var(--sec0);
+    color: var(--sec2);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 6rem;
     line-height: 1;
@@ -278,7 +288,7 @@ blockquote:after
 {
     position: relative;
     top: 3.2rem;
-    color: var(--sec0);
+    color: var(--sec2);
 
     font-family: Arial, Helvetica, sans-serif;
     font-size: 6rem;
@@ -500,7 +510,7 @@ blockquote:after
 
     height: 6.5vh;
 
-    color: rgb(151, 221, 245);
+    /*color: rgb(151, 221, 245);
 
     background-color: #d19e108a;
 
@@ -509,10 +519,12 @@ blockquote:after
 
     border-radius: 5px;
 
-    box-shadow: 0 0 3px 3px #d16410c7;
-
-    font: 4.1rem Flamenco, cursive;
-    font-weight: 700;
+    box-shadow: 0 0 3px 3px #d16410c7;*/
+    font-family: Gothic_Bold;
+    font-size: 4.1rem;
+    color: var(--sec0);
+    /*font: 4.1rem Flamenco, cursive;*/
+    /*font-weight: 700;*/
 }
 
 .new-events
@@ -604,7 +616,7 @@ blockquote:after
     background-color: rgba(0, 238, 255, 0.555); /* rgba(0, 238, 255, 0.555); */
     
     color: white;
-	font-family: Aleo;
+	font-family: Gothic_Bold;
     font-weight: 200;
 	font-size: 2.5rem;
 
@@ -616,10 +628,10 @@ blockquote:after
     padding: 1.75rem;
     margin: 0;
     
-    font-family: Signika;
+    font-family: Gothic;
     font-size: 2rem;
     font-weight: 200;
-    font-style: italic;
+    /*font-style: italic;*/
 }
 
 .timeline-entry-date {
@@ -716,7 +728,7 @@ blockquote:after
     height: 18vw;
 
     border-radius: 2rem;
-    box-shadow: 0 0 20px 0px rgba(213, 202, 155, 0.938);
+    /*box-shadow: 0 0 20px 0px rgba(213, 202, 155, 0.938);*/
 }
 
 .fic-words
@@ -732,9 +744,9 @@ blockquote:after
         rgba(0, 102, 255, 0.5)
     ); */
 
-    text-align: justify;
-    color: darkkhaki;
-    font-family: cursive;
+    text-align: right;
+    color: white;
+    font-family: Gothic_Bold ;
     font-weight: 100;
     font-size: 2rem;
 }
@@ -751,11 +763,12 @@ blockquote:after
         rgba(10, 184, 10, 0.68)
     ); */
     
-    color: rgb(13, 113, 228);
-	font-family: Aleo;
+    color: var(--sec0)/*rgb(13, 113, 228)*/;
+	font-family: Helvetica, sans-serif;
 	font-weight: 600;
+    
     font-size: 2.25rem;
-
+    
     border-radius: 5px;
 }
 
