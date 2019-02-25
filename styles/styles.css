@@ -99,12 +99,11 @@ ul
     filter: blur(20px);
 } */
 
-#side {
-    grid-area: side;
-    text-align: center;
-    background-color: #000
-    background-color: rgba(0,0,0,0.7)
-}
+.side {
+    display: grid;
+    grid-template-rows:2fr 10fr 2fr;
+    grid-template-columns: 80px;
+    } 
 
 /*#side {
     float: left;
@@ -149,7 +148,7 @@ ul
   display: block;
   position: fixed;
   top: 56%;
-  left: 2.5%;
+  left: 2%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -170,52 +169,18 @@ ul
   animation: perturbed 0.4s alternate ease-in-out infinite;
 }
 
-/*
-.icon-bar a:hover {
-  background-color: #000; /* Add a hover color */
-/*}
-
-.active {
-  background-color: #4CAF50; /* Add an active/current color */
-/*}
-*/
-
-#nav
-{
-    position: sticky;
-    top: 18rem;
-    margin: 2rem var(--mar);
-
-    line-height: 9vh;
+.sign {
+    display: block;
+    position: fixed;
+    top: 90%;
+    left: 2.7%;
+    font: Gothic_Bold;
+    font-size: 1.5rem;
     text-align: center;
-}
-
-.nav-links
-{
-    font-family: Monoton;
-    font-size: 4rem;
-    color: white;
-
-    margin: 0;
-    padding: 0;
-
-    transition: 0.2s ease;
-}
-
-.navicon
-{
-    transition: 0.6s ease;
-}
-
-.navicon:hover
-{
-    animation: perturbed 0.4s alternate ease-in-out infinite;
-}
-
-.naviconhover
-{
-    /* transition: 0.6s ease; */
-    animation: perturbed 0.4s alternate ease-in-out infinite;
+    color:white;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 footer
@@ -243,7 +208,8 @@ footer i
 
 #selfref
 {
-    color: rgb(5, 153, 138) !important;
+    /*color: rgb(5, 153, 138) !important;*/
+    color:white;
     border-bottom: 1.5px dotted rgb(125, 165, 61);
 }
 
