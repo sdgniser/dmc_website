@@ -99,10 +99,10 @@
 
             <div class="icon-bar">
             <a class="active" href="#"><i class="fa fa-home"></i></a> 
-            <a href="#"><i class="fa fa-calendar"></i></a> 
-            <a href="#"><i class="fa fa-picture-o"></i></a> 
-            <a href="#"><i class="fas fa-id-badge"></i></a>
-            <a href="#"><i class="fa fa-phone"></i></a> 
+            <a href="#events"><i class="fa fa-calendar"></i></a> 
+            <a href="#gallery"><i class="fa fa-picture-o"></i></a> 
+            <a href="#team"><i class="fas fa-id-badge"></i></a>
+            <a href="#contact"><i class="fa fa-phone"></i></a> 
             </div>
             <div class="sign">
                 <i class="fas fa-copyright"></i><i class="fas fa-bolt"></i> <a tabindex="0" id="selfref" href="https://sdgniser.github.io" title="Powered by Software Development Group, NISER" target="_blank">SDG<br>2019</a>
@@ -162,56 +162,72 @@
 
             <!-- EVENTS - 2 Timelines - New & Old -->
             <div class="tiles tile2" id="events">
-                <div id="tile-ttl">Events</div>
-                <div id="proj">
-                    <div class="new-events">
-                        <span class="event-ttl">Upcoming</span>
-                        <!-- From https://codepen.io/girlgeek/pen/OgqBgj With heavy modifications -->
-                        <div class="timeline-wrapper">
-                            <div class="timeline">
-                                <dl class="timeline-entry"><dt class="timeline-entry-title">Performance at MSG!<span class="entry-date">January 31, 2019</span></dt>
-                                    <dd class="timeline-entry-detail">We invite you all, to a night of dance & music at the prestigious Madison Square Garden. Lose yourself to the music and dance the night away. Sign up for the event here: <a href="https://youtu.be/4zLfCnGVeL4?t=3" target="_blank">Sign Up!</a></dd>
-                                </dl>
-                                <dl class="timeline-entry"><dt class="timeline-entry-title">Collecting Track Suggestions<span class="entry-date">January 30, 2019</span></dt>
-                                    <dd class="timeline-entry-detail">Submit your suggestion <a href="https://youtu.be/y6120QOlsfU?t=27" target="_blank">here!</a> </dd>
-                                </dl>
-                                <dl class="timeline-entry"><dt class="timeline-entry-title">More Events<span class="entry-date">January 29, 2019</span></dt>
-                                    <dd class="timeline-entry-detail">Stay tuned for <a href="https://youtu.be/PGSMiVhZgn8?t=35" target="_blank">more bizzare events...</a></dd>
-                                </dl>
-                            </div>
+            <div id="tile-ttl">Events</div>
+            <div id="proj">
+                    
+                <div class="half">
+                 <div class="event-ttl" id="new">Upcoming</div>
+                 <div class="scroll_events">
+                    <div class="tab">
+                    <input id="tab-one" type="checkbox" name="tabs">
+                    <label for="tab-one">Label One</label>
+                        <div class="tab-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
                         </div>
                     </div>
-                    <div class="old-events">
-                        <span class="event-ttl">Concluded</span>
-                        <!-- From https://codepen.io/girlgeek/pen/OgqBgj With heavy modifications -->
-                        <div class="timeline-wrapper">
-                            <div class="timeline">
-                                <dl class="timeline-entry"><dt class="timeline-entry-title">Classical Music Revisited<span class="entry-date">January 27, 2019</span></dt>
-                                    <dd class="timeline-entry-detail">Classical Music, that will <a href="https://youtu.be/VbxgYlcNxE8?t=849" target="_blank">blow you away...</a></dd>
-                                </dl>
-                                <dl class="timeline-entry"><dt class="timeline-entry-title">Classical Music Revisited Again<span class="entry-date">January 26, 2019</span></dt>
-                                    <dd class="timeline-entry-detail">Colorful <a href="https://youtu.be/p_c6uQHlhZ0?t=117" target="_blank">take</a> on Classical Music</dd>
-                                </dl>
-                                <dl class="timeline-entry"><dt class="timeline-entry-title">Shooting Stars<span class="entry-date">January 25, 2019</span></dt>
-                                    <dd class="timeline-entry-detail">Click <a href="https://youtu.be/feA64wXhbjo?t=23" target="_blank" title="Totally works!">here</a> to make a wish!</dd>
-                                </dl>
-                                <dl class="timeline-entry"><dt class="timeline-entry-title">NISER ROCK CONCERT<span class="entry-date">January 24, 2019</span></dt>
-                                    <dd class="timeline-entry-detail">Experience it <a href="https://youtu.be/rvrZJ5C_Nwg?t=141" target="_blank">here!</a></dd>
-                                </dl>
-                                <dl class="timeline-entry"><dt class="timeline-entry-title">wHITE ( ͡° ͜ʖ ͡°)<span class="entry-date">January 23, 2019</span></dt>
-                                    <dd class="timeline-entry-detail">bLUE <a href="https://youtu.be/PGNiXGX2nLU?t=61" target="_blank">( ͡° ͜ʖ ͡°)</a></dd>
-                                </dl>
-                                <dl class="timeline-entry"><dt class="timeline-entry-title">CLICKBAIT<span class="entry-date">January 22, 2019</span></dt>
-                                    <dd class="timeline-entry-detail"><a href="https://youtu.be/4Diu2N8TGKA?t=9" target="_blank">tHIS</a> iS cLICKBAIT.</dd>
-                                </dl>
-                                <dl class="timeline-entry"><dt class="timeline-entry-title">Totally not clickbait<span class="entry-date">January 21, 2019</span></dt>
-                                    <dd class="timeline-entry-detail"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="NOT CLICKBAIT!" target="_blank">Not clickbait!</a> </dd>
-                                </dl>
-                            </div>
+                    <div class="tab">
+                    <input id="tab-two" type="checkbox" name="tabs">
+                    <label for="tab-two">Label Two</label>
+                        <div class="tab-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                    <input id="tab-three" type="checkbox" name="tabs">
+                    <label for="tab-three">Label Three</label>
+                        <div class="tab-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+  
+                <div class="half">
+                <div class="event-ttl" id="new">Concluded</div>
+                    <div class="scroll_events">
+                    <div class="tab">
+                    <input id="tab-four" type="checkbox" name="tabs2">
+                    <label for="tab-four">Label One</label>
+                        <div class="tab-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                    <input id="tab-five" type="checkbox" name="tabs2">
+                    <label for="tab-five">Label Two</label>
+                        <div class="tab-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                    <input id="tab-six" type="checkbox" name="tabs2">
+                    <label for="tab-six">Label Three</label>
+                        <div class="tab-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                    <input id="tab-six" type="checkbox" name="tabs2">
+                    <label for="tab-six">Label Three</label>
+                        <div class="tab-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
                         </div>
                     </div>
                 </div>
             </div>
+            </div>
+            </div>
+            
             <hr class="separator">
             <div class="tiles tile2" id="gallery">
                 <div id="tile-ttl">Gallery</div>
