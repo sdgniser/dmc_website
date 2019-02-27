@@ -1,3 +1,3 @@
-# DMC Website - Testing Ground
+# DMC Website - Spandan
 
-This repo is for trying out any kinds of alterations to the webpage. Expect a lot of things to be broken.
+Rather rough implementations of CSS and JS code, just for visualisation purposes. Not to be taken seriously at any point of time.
