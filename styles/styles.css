@@ -775,8 +775,8 @@ blockquote:after
   position: relative;
   width: 100%;
   height: 100%;
-  /* height: var(--carousel-height);
-  width: var(--carousel-width); */
+  height: var(--carousel-height);
+  width: var(--carousel-width);
   overflow: hidden;
   text-align: center;
   position: relative;
