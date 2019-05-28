@@ -7,9 +7,9 @@
 * Use shorthands, wherever applicable.
 */
 
-html {
+/* html { /* Induces extra side margins *
   max-width: 99%;
-}
+} */
 
 :root
 {
@@ -36,7 +36,6 @@ html {
     --sec1: #890620;
     --sec2: #96cb7f;
     scroll-behavior: smooth;
-
 }
 
 @font-face {
@@ -63,13 +62,6 @@ body
 {
     background: black url('../images/pics/bg.JPG') center/cover no-repeat fixed;
     margin: 0;
-/* }
-
-.globalwrapper
-{ */
-    /* background: black center/cover no-repeat fixed; */
-    background: black url('../images/pics/bg.JPG') center/cover no-repeat fixed;
-    margin: 0;
 
     display: grid;
     grid-template-areas:
@@ -77,7 +69,7 @@ body
         "side content"
         "side content";
 
-    grid-template-columns: minmax(12rem, 20rem) 92%;
+    grid-template-columns: minmax(10rem, 20rem) 92%;
     grid-row-gap: 1.5rem;
 }
 
@@ -102,6 +94,7 @@ ul
 #side {
     grid-area: side;
     text-align: center;
+    /* width: auto; */
 }
 
 /*#side {
@@ -136,9 +129,10 @@ ul
 #nav
 {
     position: sticky;
-    top: 18rem;
+    top: 26vh;
 
     margin: 2rem var(--mar);
+    
 
     line-height: 9vh;
     text-align: center;
@@ -190,11 +184,6 @@ footer
     line-height: 2.2rem;
 }
 
-footer i
-{
-    transform: rotate(180deg);
-}
-
 #selfref
 {
     color: rgb(5, 153, 138) !important;
@@ -204,22 +193,11 @@ footer i
 /* THE TITLE */
 #intro
 {
-    /*display: grid;
-
-    grid-template-areas:
-        "title title"
-        "intro intro";
-
-    grid-template-columns: 9fr 3fr;
-    grid-template-rows: auto;
-
-    grid-gap: 2rem; */
     display: flex;
     flex-direction: column;
     justify-content: right;
 
     position: relative;
-    height: 97.5vh;
     text-align: right;
 
     color: aliceblue;
@@ -401,6 +379,7 @@ blockquote:after
 /* For all the tiles -- Individual tiles can be styled, well, individually */
 .tiles
 {
+    height: 92.5vh;
     margin: auto var(--mar);
     margin-left: 0;
 
@@ -409,15 +388,11 @@ blockquote:after
     border-radius: 20px;
 
     border: 3px dashed rgb(194, 173, 150);
-    /* background-color: rgba(23, 121, 128, 0.927); */
-    backdrop-filter: blur(10px); /* Non-standard - Safari only (Looks good though) */
+
+    backdrop-filter: blur(15px); /* Non-standard - Safari only (Looks good though) */
 }
 
-#events
-{
-    /* background: black url('../images/pics/C1.JPG') center/cover no-repeat fixed; */
-    overflow: hidden;
-}
+
 
 .separator
 {
@@ -484,227 +459,133 @@ blockquote:after
 
 }
 
-#proj
+#events
 {
-    display: grid;
-    grid-template-areas:
-        "newevents oldevents";
-
-    /* overflow: auto; */
-
-    grid-template-columns: 6fr 6fr;
-    grid-column-gap: 2rem;
-    margin: 2rem auto;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-
     overflow: hidden;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline
+{
+    margin: 0 auto;
+    margin-top: 6rem;
+    height: 100vh;
+
+    background: inherit;
+    overflow: scroll;
+}
+
+.timeline::-webkit-scrollbar
+{
+    width: 0 !important;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::before
+{
+    content: '';
+    float: left;
+    margin: 0 1.5rem;;
+    height: 120vh;
+    width: 6px;
+    background-color: #890620;
+    border-radius: 3px;
+    position: sticky;
+    top: 0;
+    z-index: -99;
+    /* margin-left: -3px; */
+}
+
+.entry
+{
+    border-radius: 1.5rem;
+    margin: 2.5rem 5rem;
+    margin-top: 0;
+    margin-right: 0;
+
+    background-color: var(--sec0);
+    
+    border: 1px solid #cfab0cf5;
 
     background: inherit;
 }
 
-.event-ttl
+/* Forcing the last element up */
+.entry:last-child
 {
-    margin: 0 auto;
-    margin-bottom: 2.2rem;
-    padding: 1rem;
-
-    height: 6.5vh;
-
-    /*color: rgb(151, 221, 245);
-
-    background-color: #d19e108a;
-
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
-
-    border-radius: 5px;
-
-    box-shadow: 0 0 3px 3px #d16410c7;*/
-    font-family: Gothic_Bold;
-    font-size: 4.1rem;
-    color: var(--sec0);
-    /*font: 4.1rem Flamenco, cursive;*/
-    /*font-weight: 700;*/
+    margin-bottom: 20rem;
 }
 
-.new-events
+/* Circles on the timeline */
+.entry::before
 {
-    grid-area: newevents;
-
-    border-radius: 5px;
-
-    overflow: auto;
+    content: '';
+    /* In case, we decide to put counters, e.g. Year, in the circles */
+    /* text-align: center;
+    font-size: 1.5rem;
+    color: white; */
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    margin-left: -5.17rem;
+    margin-top: 1.4rem;
+    background-color:  #d90368;
+    border: 4px solid rgb(228, 162, 162);
+    border-radius: 50%;
+    /* counter-reset: counter(section); */
 }
 
-.old-events
+.entry-title
 {
-    grid-area: oldevents;
-
-    border-radius: 5px;
-
-    padding-left: 3rem;
-
-    overflow: auto;
-}
-
-.new-events, .old-events
-{
-    overflow-y: scroll;
-    width: 100%;
-    height: 100%;  
-    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility  !! */
-    box-sizing: content-box; 
-}
-
-/* From https://codepen.io/girlgeek/pen/OgqBgj */
-.new-events, .old-events {
-    display: grid;
-    grid-template-areas: "entry1"
-                        "entry2"
-                        "entry3"
-                        "entry4";
-
-	line-height: 2rem;
-	font-size: 1.5rem;
-	transition: all .4s ease;
-	position: relative;
-    counter-reset: section;
-
-    /* margin: 0 5rem; */
-    padding: 3rem;
-
-    max-height: 80vh;
-    background: inherit; /* ## */
-    /* z-index: */
-    /* box-shadow: inset 0px -10px 0px 0px #DBA632; / FIX THIS / */
-}
-
-.timeline-wrapper::before {
-	content: "";
-    width: 0.4rem;
-    height: 100%; /* *** */
-    background: var(--sec1);
-/*	background: linear-gradient(
-        to bottom,
-        rgb(245, 58, 58), 
-        #f06d06, 
-        rgb(255, 255, 0)
-      );*/
-	position: absolute;
-	top: 0;
-	left: 1.45rem;
-    border-radius: 40px 40px;   
-}
-
-.timeline-entry {
-
-    background-color: var(--sec0);
-
-  	position: relative;
-    background-color: black;
-    
-    border: 1px solid #cfab0cf5;
-    border-radius: 1px;
-
-    /* max-height: 15.5rem; */
-    background: inherit; /* ## */
-}
-
-.timeline-entry-title {
+    border-top-left-radius: 1.4rem;
+    border-top-right-radius: 1.4rem;
+    margin:0;
     padding: 2rem;
 
     background-color: rgba(0, 238, 255, 0.555); /* rgba(0, 238, 255, 0.555); */
     
     color: white;
-	font-family: Gothic_Bold;
+    font-family: Gothic_Bold;
     font-weight: 200;
-	font-size: 2.5rem;
+    font-size: 1.5vw;
 
     border-bottom: 1.5px dotted #cfab0cf5;
+    /* max-height: 6vh; */
 }
 
-.timeline-entry-detail {
-	background-color: rgba(0, 255, 200, 0.452);
-    padding: 1.75rem;
-    margin: 0;
-    
-    font-family: Gothic;
-    font-size: 2rem;
-    font-weight: 200;
-    /*font-style: italic;*/
-}
-
-.timeline-entry-date {
-    background-color: #d16410c7;
-
-    color: white;
-
-    font-family: 'Source Serif Pro', serif; /* Use font shorthand */
-    font-style: italic;
-    
-    font-size: 1.7rem;
-    
-    padding: 0.5rem;
-    float:right;
-}
-
-/* EXPERIMENTAL *** <span class="event-date">January 21, 2019</span> */
 .entry-date
 {
     float: right;
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2vw;
 }
 
-.timeline-entry:before {
-	content: "";
-	font-family: cursive;
-	color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 2.7rem;
-	height: 2.7rem;
-/*	background-color: red; */
-  background-color: var(--sec0);
-	border: .2em solid rgb(228, 162, 162);
-	border-radius: 50%;
-    position: absolute;
-    top: 0.5rem;
-    left: -3.1rem;
-	counter-increment: section;
-    content: counter(section);
-    
-    z-index: 10;
-}
+.entry-detail
+{
+    border-bottom-left-radius: 1.4rem;
+    border-bottom-right-radius: 1.4rem;
+    background-color: rgba(0, 255, 200, 0.452);
+    backdrop-filter: blur(20px);
+    padding: 1.75rem;
+    margin: 0;
 
-.timeline-entry:nth-child(1) {
-    grid-area: entry1;
-}
-
-.timeline-entry:nth-child(2) {
-    grid-area: entry2;
-}
-
-.timeline-entry:nth-child(3) {
-    grid-area: entry3;
-}
-
-.timeline-entry:nth-child(4) {
-    grid-area: entry4;
+    font-family: Gothic;
+    font-size: 2rem;
+    font-weight: 200;
+    /* max-height: 15vh; */
 }
 
 #team
 {
-    background: black;
+    height: auto; /* Overrides .tiles */
 }
 
 .fic
 {
     display: grid;
     grid-template-areas:
-        "fic-words fic-image ";
+        "fic-words fic-image";
     
     grid-template-columns: 65% 35%;
     grid-row-gap: 5rem;
@@ -817,20 +698,10 @@ blockquote:after
     width: 100%;
     height: 100%;
 
-    transition: 0.3s ease;
-
-    border-radius: 50%;
-    /* z-index: 11; */
-}
-
-.person-filter img
-{
-    width: 100%;
-    height: 100%;
-
     border-radius: 50%;
     border: 2px solid var(--person-border-color);
-    /* box-shadow: 0 0 20px 0px rgba(213, 202, 155, 0.938); */
+
+    transition: 0.3s ease;
 }
 
 .person-name
@@ -870,24 +741,23 @@ blockquote:after
 }
 
 
-.person-filter:hover
+.person:hover .person-filter
 {
     filter: blur(6px);
 }
 
-.person-filter:hover ~ a
+.person:hover a
 {
-    opacity: 0.7;
-    /* z-index: 20; */
+    opacity: 1;
 }
 
-.person-filter:hover ~ .fb:hover
+.fb:hover
 {
     opacity: 1;
     color: #3b5998; /* Actual FB Logo Color */
 }
 
-.person-filter:hover ~ .insta:hover
+.insta:hover
 {
     opacity: 1;
     color: #fb3958; /* Actual Insta Logo Color - Just the Reddish Pink */
@@ -895,15 +765,9 @@ blockquote:after
 
 #gallery
 {
-    /* background: url('../images/pics/U1.JPG') center/cover no-repeat fixed; */
-
     text-align: center;
 }
 
-/* #contact
-{
-    background: url('../images/pics/N1.JPG') center/cover no-repeat fixed;
-} */
 
 /* From here: https://codepen.io/jh3y/pen/WwVKLN With almost no modifications - except font, or font-size etc. */
 
@@ -1105,9 +969,6 @@ blockquote:after
 /**
   * Theming
 */
-* {
-  box-sizing: border-box;
-}
 .carousel-container { /**/
   display: inline-grid;
 
@@ -1120,7 +981,7 @@ blockquote:after
   height: 3rem;
   width: 3rem;
 }
-h2 { /* Temporarily kept, for the captions */
+.carousel_slide h2 { /* Temporarily kept, for the captions */
   font-size: 5rem;
   line-height: 5rem;
   color: #fafafa;
@@ -1300,10 +1161,11 @@ h2 { /* Temporarily kept, for the captions */
   white-space: nowrap; 
   margin: 0 auto;
   letter-spacing: .15em;
+  font-size: 4rem;
   color: white;
   text-align: center;
   animation: 
-    typing 1.5s ease-out,/*steps(45, end),*/
+    typing 1.9s ease-out,/*steps(45, end),*/ /* Change the timing to your liking - N.B.: larger font-size implies longer rendering time */
     blink-caret .5s step-end infinite;
 }
 
@@ -1320,7 +1182,7 @@ h2 { /* Temporarily kept, for the captions */
 @keyframes typing {
   from { width: 0;
   }
-  to { width: 288px;
+  to { width: 115rem;
   }
 }
 
