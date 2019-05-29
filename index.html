@@ -22,7 +22,7 @@
         <!--  -->
         <link href="https://fonts.googleapis.com/css?family=Roboto|Flamenco|Source+Serif+Pro|Aleo|Kanit|Signika|Cinzel+Decorative|Amatic+SC|Dancing+Script|Great+Vibes|Lobster|Monoton|Niconne|Oleo+Script|Parisienne|Sacramento|Satisfy|Special+Elite|Tangerine" rel="stylesheet">
 
-        <!-- Font Awesome - For icons -->
+        <!-- Font Awesome - For icons - Up to date, as on 29/05/2019 -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
         <!-- Favicon - More can be added, depending on the devices, we plan to support -->
@@ -52,11 +52,11 @@
             <nav id="nav">
                 <ul id="nav-list">
                     <!-- <li class="ulist"><a tabindex="0" class="nav-links" href="#" title="Home"><i class="fa fa-home"></i></li> -->
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#events" title="Our Club Activities"><i class="fa fa-calendar"></i></li>
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#gallery" title="Image Gallery"><i class="fa fa-picture-o"></i></a></li>
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#team" title="Our Team"><i class="fas fa-id-badge"></i></a></li>
+                    <li class="ulist"><a tabindex="0" class="nav-links" href="#events" title="Our Club Activities"><i class="fa fa-calendar navicon"></i></li>
+                    <li class="ulist"><a tabindex="0" class="nav-links" href="#gallery" title="Image Gallery"><i class="fas fa-image navicon"></i></a></li>
+                    <li class="ulist"><a tabindex="0" class="nav-links" href="#team" title="Our Team"><i class="fas fa-id-badge navicon"></i></a></li>
                     <li class="ulist"><a tabindex="0" class="nav-links" href="#blog" title="Visit our Blog"><i class="fas fa-blog navicon"></i></a></li>
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#contact" title="Connect with us"><i class="fa fa-phone"></i></a></li>
+                    <li class="ulist"><a tabindex="0" class="nav-links" href="#contact" title="Connect with us"><i class="fas fa-comments navicon"></i></a></li>
                 </ul>
             </nav>
             <footer>
@@ -84,7 +84,7 @@
                   <li class="fb">
                     <abbr title="DMC's Facebook">
                       <a href="">
-                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-facebook-square social-icons"></i>
                       </a>
                     </abbr>
                   </li>
@@ -92,7 +92,7 @@
                   <li class="yt">
                     <abbr title="DMC's YouTube">
                       <a href="">
-                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-youtube social-icons"></i>
                       </a>
                     </abbr>
                   </li>
@@ -316,10 +316,32 @@
             <hr class="separator">
             <div class="tiles tile5" id="contact">
                 <div id="tile-ttl">Connect With Us</div>
-                <div id="contact-tile">
+                <iframe class="gform" src="https://docs.google.com/forms/d/e/1FAIpQLSfuIa5ehmhCHXQwnsZ1OBjS1DuMMGJxE0dHybsC4DXUTktn0Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                <div class="contact-details">
+                    <p id="contact-us">Contact us:</p>
+                    <div class="contact-us">
+                        <i class="fas fa-paper-plane"></i> <a href="mailto:dmc@niser.ac.in" title="Our mail address">dmc@niser.ac.in</a><br>
+                        <i class="fab fa-whatsapp"></i> <a href="tel:+911234567890">+91 12345 67890</a>
+                    </div>
+                    <hr class="separator contact-sep">
+                    <p id="mailing-address">Mailing Address:</p>
+                    <div class="mailing-address">
+                        <address>
+                            Drama & Music Club<br> 
+                            <a href="https://www.niser.ac.in" target="_blank" title="NISER's Homepage">National Institute of Science Education and Research</a><br>
+                            Jatni, Bhubaneswar<br>
+                            Odisha, India<br><br>
+                        </address>
+                    </div>
+                    <hr class="separator contact-sep">
+                    <p id="follow-us">Follow us:</p>
+                    <div class="follow-us">  
+                        <a href="" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
-            <hr class="separator">
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>

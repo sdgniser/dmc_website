@@ -85,6 +85,7 @@ ul
 #side {
     grid-area: side;
     text-align: center;
+    backdrop-filter: blur(20px);
     /* width: auto; */
 }
 
@@ -123,7 +124,6 @@ ul
     top: 26vh;
 
     margin: 2rem var(--mar);
-    
 
     line-height: 9vh;
     text-align: center;
@@ -269,17 +269,37 @@ blockquote:after
 #intro #social {
   display: flex;
   float: right;
-  /* margin: 0; */
+  justify-content: flex-end;
+  position: relative;
+  right: 3rem;
 }
 
 #intro #social li {
   display: inline-block;
   font-size: 8rem;
-  flex: 1;
-  width: 10rem;
-  /* padding-left: rem; */
+  width: 2rem;
+  margin: 0 5rem;
+  justify-content: center;
 }
 
+.social-icons::after {
+    content: '';
+    color: rgb(226, 37, 219);
+    float: right;
+    margin: 0 auto;
+    height: 6rem;
+    width: 6px;
+    background-color: rgb(226, 37, 219);
+    border-radius: 3px;
+    position: relative;
+    right: -3rem;
+    top: -7rem;
+}
+
+.ig {
+    position: relative;
+    right: -2.5rem;
+}
 
 #social a:link,
 #social a:visited,
@@ -483,7 +503,6 @@ blockquote:after
     border-radius: 3px;
     position: sticky;
     top: 0;
-    z-index: -99;
     /* margin-left: -3px; */
 }
 
@@ -1181,4 +1200,47 @@ blockquote:after
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: transparent; }
+}
+
+/* EXPERIMENTAL STUFF BELOW */
+
+/* The embedded iframe (Google Form) */
+.gform {
+    margin: 0;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    float: right;
+    width: 40%;
+    height: 75vh;
+    overflow-x: hidden; /* Doesn't work properly yet */
+}
+
+.contact-details {
+    margin-top: 6rem;
+    margin-right: 10rem;
+}
+
+#contact-us, #mailing-address, #follow-us {
+    color: white;
+    float: left;
+    padding: 5rem;
+}
+
+.contact-us, .mailing-address, .follow-us {
+    float: right;
+    color: white;
+    padding: 5rem;
+}
+
+address {
+    text-decoration-style: none;
+}
+
+.contact-sep {
+    width: 61.75%;
+}
+
+.follow-us a i {
+    font-size: 5rem;
+    margin: 2rem;
 }
