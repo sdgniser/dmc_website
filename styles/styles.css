@@ -503,6 +503,7 @@ blockquote:after
     border-radius: 3px;
     position: sticky;
     top: 0;
+    z-index: -99;
     /* margin-left: -3px; */
 }
 
