@@ -67,14 +67,14 @@ jQuery(window).scroll(function() {
         jQuery('body').removeClass('scrolled1');
 	}
 	
-	if (scrolledFromtop > 2*windowHeight) {
+	if (scrolledFromtop > 1.98*windowHeight) {
         jQuery('body').addClass('scrolled2');
 	}
 	else {
         jQuery('body').removeClass('scrolled2');
 	}
 	
-	if (scrolledFromtop > 3*windowHeight) {
+	if (scrolledFromtop > 2.98*windowHeight) {
         jQuery('body').addClass('scrolled3');
 	}
 	else {
