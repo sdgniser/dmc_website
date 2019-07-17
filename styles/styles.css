@@ -21,7 +21,7 @@
     /* overflow: hidden; */
 
     --bg: #000;
-    --fg0: #ebd4cb;
+    --fg0: white;
     --fg1: #da9f93;
     --sec0: #d90368;
     --sec1: #890620;
@@ -181,15 +181,15 @@ footer
     /* background-color: pink; */
     border-radius: 5px;
 
-    color: rgb(5, 153, 138);
-    font: italic bold 1.5rem 'Segoe UI', cursive;
+    color: white;
+    font: bold 1.5rem Gothic_Bold, cursive;
     text-align: center;
     line-height: 2.2rem;
 }
 
 #selfref
 {
-    color: rgb(5, 153, 138) !important;
+    color: white;
     border-bottom: 1.5px dotted rgb(125, 165, 61);
 }
 
