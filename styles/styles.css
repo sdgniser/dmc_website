@@ -13,7 +13,7 @@
     --nav-link-icon-font-size: 2vw;
     --tile-ttl-font-size: 5vw;
     --mar: 1rem;
-    --logowidth: 10rem;
+    --logowidth: 7.2rem;
     --carousel-height: 75vh;
     --carousel-width: 75vw;
     --width-person: 13vw;
@@ -120,7 +120,7 @@ ul
 
 #logo
 {
-    max-width: 85%;
+    max-width: var(--logowidth);
     border-radius: 50%;
     transition: 0.3s ease;
 }
