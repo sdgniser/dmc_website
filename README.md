@@ -8,7 +8,7 @@ Repository for the website of Drama &amp; Music Club
   <li>
   The site needs content:
     <ul>
-    <li>Introductory Text</li>
+      <li><del>Introductory Text</del></li>
     <li>Pictures of events</li>
     <li>Details of events</li>
       <li><del>Details of members</del></li>
@@ -18,11 +18,11 @@ Repository for the website of Drama &amp; Music Club
   </li>
   <br>
   <li>
-    The scrolling action in Events Section needs improvements, such as: a shadow effect or perhaps arrows, to make the user aware of the existence of a scrollable area. Also, the spacing of the two side-by-side divs, as well as, the timeline needs to be more adaptive to neighbouring content.
+    The scrolling action on the page and in sections, like .timeline in #events needs improvements. It can be janky, sometimes, at the moment.
   </li>
   <br>
   <li>
-    A way to pull event-images from a web source (GDrive...), would cut the site loading time, by quite a bit. - Implemented for "member-images" | Follows the process, discussed <a href="https://productforums.google.com/forum/#!topic/drive/yU_yF9SI_z0/discussion">here</a>. | ISSUES: The process is manual and must be repeated for each image.
+    <del>A way to pull event-images from a web source (GDrive...), would cut the site loading time, by quite a bit. - Implemented for "member-images" | Follows the process, discussed <a href="https://productforums.google.com/forum/#!topic/drive/yU_yF9SI_z0/discussion">here</a>. | ISSUES: The process is manual and must be repeated for each image.</del> ⬅ This is impractical. Stick to links to GDrive Folders.
   </li>
   <br>
  </ol>
