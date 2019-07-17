@@ -98,6 +98,22 @@ setInterval(function() {
 }, 4000);
 
 
+// For smooth scrolling
+$(function() {
+	$.scrollify({
+		section: ".tiles",
+		sectionName: "hello",
+		scrollSpeed: 100,
+		easing: "easeOutExpo",
+		touchScroll: true,
+		setHeights: false,
+		standardScrollElements: '.timeline',
+		offset: -8
+	});
+  });
+
+// $.scrollify.update()
+
 // For bobbing navbar buttons - on hover - DOESN'T WORK
 // let navL = document.querySelectorAll('.navicon');
 

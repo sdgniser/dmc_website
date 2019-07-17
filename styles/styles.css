@@ -69,9 +69,10 @@ body
     grid-template-columns: minmax(10rem, 20rem) 94%;
     grid-row-gap: 1.5rem;
 
-    scroll-snap-type: mandatory;
+    /* scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
+    scroll-padding: 0.8rem 0 0.8rem 0; */
 }
 
 /* Hiding the scrollbar on the page */
@@ -321,7 +322,7 @@ blockquote:after
   color: white;
   opacity: 0.5;
   filter: blur(1px);
-  transition: 1s ease;
+  transition: 0.8s ease;
 }
 
 #social a:hover,
@@ -392,10 +393,6 @@ blockquote:after
     position: relative;
     grid-area: content;
 
-    scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
-
     /* overflow: auto; */
 
     /* Subject to change */
@@ -407,7 +404,8 @@ blockquote:after
 /* For all the tiles -- Individual tiles can be styled, well, individually */
 .tiles
 {
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
+    
     height: 92.5vh;
     margin: auto var(--mar);
     margin-left: 0;
