@@ -54,3 +54,46 @@ ig.addEventListener('mouseout', unblurBg);
         }
     });
 })(jQuery)
+
+
+// For changing BG on scroll
+jQuery(window).scroll(function() {
+	var windowHeight = jQuery(window).height(); // distance to trigger
+    var scrolledFromtop = jQuery(window).scrollTop();
+    if (scrolledFromtop > windowHeight) {
+        jQuery('body').addClass('scrolled1');
+	}
+	else {
+        jQuery('body').removeClass('scrolled1');
+	}
+	
+	if (scrolledFromtop > 2*windowHeight) {
+        jQuery('body').addClass('scrolled2');
+	}
+	else {
+        jQuery('body').removeClass('scrolled2');
+	}
+	
+	if (scrolledFromtop > 3*windowHeight) {
+        jQuery('body').addClass('scrolled3');
+	}
+	else {
+        jQuery('body').removeClass('scrolled3');
+	}
+});
+
+
+// For bobbing navbar buttons - on hover - DOESN'T WORK
+// let navL = document.querySelectorAll('.navicon');
+
+// var navAnimation = anime({
+// 	targets: '.navicon',
+// 	translateY: -100,
+// 	direction: alternate,
+// 	duration: 4000,
+// 	// easing: 'easeOutElastic(1, .8)',
+// 	loop: true,
+// 	autoplay: false
+// });
+
+// document.querySelectorAll('.navicon').onclick = navAnimation.restart;

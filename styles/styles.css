@@ -26,32 +26,37 @@
     --sec0: #d90368;
     --sec1: #890620;
     --sec2: #96cb7f;
+
+    --fb: #3b5998;
+    --yt: red;
+    --ig: #fb3958;
+
     scroll-behavior: smooth;
 }
 
 @font-face {
     font-family: Music;
-    src: url('../AlphaMusicMan.ttf');
+    src: url('../fonts/AlphaMusicMan.ttf');
 }
 
 @font-face {
     font-family: Decoration;
-    src: url('../CopalStdDecorated.otf');
+    src: url('../fonts/CopalStdDecorated.otf');
 }
 
 @font-face {
     font-family: Gothic;
-    src: url('../century.ttf');
+    src: url('../fonts/century.ttf');
 }
 
 @font-face {
     font-family: Gothic_Bold;
-    src: url('../centuryb.ttf');
+    src: url('../fonts/centuryb.ttf');
 }
 
 body
 {
-    background: black url('../images/pics/bg.JPG') center/cover no-repeat fixed;
+    background: black url('../images/backgrounds/webp/madam.webp') center/cover no-repeat fixed;
     margin: 0;
 
     display: grid;
@@ -62,6 +67,18 @@ body
 
     grid-template-columns: minmax(10rem, 20rem) 92%;
     grid-row-gap: 1.5rem;
+}
+
+body.scrolled1 {
+    background: black url('../images/backgrounds/webp/apratim.webp') center/cover no-repeat fixed;
+}
+
+body.scrolled2 {
+    background: black url('../images/backgrounds/webp/satyam.webp') center/cover no-repeat fixed;
+}
+
+body.scrolled3 {
+    background: black url('../images/backgrounds/webp/jamal.webp') center/cover no-repeat fixed;
 }
 
 a:hover, a:link, a:active, a:any-link, a:visited
@@ -75,27 +92,13 @@ ul
     list-style-type: none;
 }
 
-/* #side-wrapper
-{
-    grid-area: side;
-    text-align: center;
-    filter: blur(20px);
-} */
-
 #side {
+    background: transparent;
     grid-area: side;
     text-align: center;
     backdrop-filter: blur(20px);
     /* width: auto; */
 }
-
-/*#side {
-    float: left;
-    position: fixed;
-    top: 0;
-    left: 0;
-    max-width: 15%;
-}*/
 
 /* LOGO Image */
 #logo-link
@@ -209,20 +212,20 @@ footer
     bottom: 0;
     left: 0;
     right: 0;
-    background: black url('../images/pics/bg.JPG') center/cover no-repeat fixed;
+    background: black url('../images/backgrounds/webp/madam.webp') center/cover no-repeat fixed;
     z-index: -1;
     transition: all 1s ease;
 }
 
 .blurimage {
-    filter: blur(20px);
+    filter: blur(30px);
 }
 
 #ttl
 {
     color: var(--ttl-color);
     font-family: Music, serif;
-    font-size: 11rem;
+    font-size: 7vw; /* CHANGED FROM 11rem - EXPERIMENTAL - RESP */
     font-weight: 500;
 
     text-shadow: 0px 0px 5px rgb(185, 139, 79);
@@ -321,19 +324,19 @@ blockquote:after
 #social .fb a:hover,
 #social .fb a:active,
 #social .fb .on {
-    color: #39569c;
+    color: var(--fb);
 }
 
 #social .yt a:hover,
 #social .yt a:active,
 #social .yt .on {
-    color: #ff0000;
+    color:var(--yt);
 }
 
 #social .ig a:hover,
 #social .ig a:active,
 #social .ig .on {
-    color: #cd486d;
+    color: var(--ig);
 }
 
 
@@ -702,6 +705,9 @@ blockquote:after
     z-index: 10;
 
     transition: all 0.2s ease;
+    
+    
+    font-size: 2.5vw; /* EXPERIMENTAL - RESP */
 }
 
 .person-filter
@@ -765,13 +771,19 @@ blockquote:after
 .fb:hover
 {
     opacity: 1;
-    color: #3b5998; /* Actual FB Logo Color */
+    color: var(--fb); /* Actual FB Logo Color */
 }
 
 .insta:hover
 {
     opacity: 1;
-    color: #fb3958; /* Actual Insta Logo Color - Just the Reddish Pink */
+    color: var(--ig); /* Actual Insta Logo Color - Just the Reddish Pink */
+}
+
+.yt:hover
+{
+    opacity: 1;
+    color: var(--yt); /* Actual YT Logo Color */
 }
 
 #gallery
@@ -978,7 +990,7 @@ blockquote:after
   overflow: hidden;
 }
 /**
-  * Theming
+  * Themeing
 */
 .carousel-container { /**/
   display: inline-grid;
