@@ -95,7 +95,7 @@ setInterval(function() {
   $('.backgroundimagehack').css('background-image', 'url("' + urls[count] + '")');
   count++;
   count %= urls.length;
-}, 2000);
+}, 4000);
 
 
 // For bobbing navbar buttons - on hover - DOESN'T WORK
