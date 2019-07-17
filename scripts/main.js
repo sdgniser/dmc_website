@@ -56,12 +56,15 @@ ig.addEventListener('mouseout', unblurBg);
 })(jQuery)
 
 
+// let t = document.querySelector('.tiles');
+
 // For changing BG on scroll
 jQuery(window).scroll(function() {
 	var windowHeight = jQuery(window).height(); // distance to trigger
     var scrolledFromtop = jQuery(window).scrollTop();
     if (scrolledFromtop > windowHeight) {
-        jQuery('body').addClass('scrolled1');
+		jQuery('body').addClass('scrolled1');
+		// t.classList.add('scrolled10');
 	}
 	else {
         jQuery('body').removeClass('scrolled1');
