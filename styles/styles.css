@@ -424,7 +424,7 @@ blockquote:after
 
     padding: 2.5rem;
 
-    border-radius: 20px;
+    /* border-radius: 20px; */
     border: 3px dashed rgb(194, 173, 150);
     /* background-color: rgba(23, 121, 128, 0.927); */
     backdrop-filter: blur(10px); /* Non-standard - Safari only (Looks good though) */
