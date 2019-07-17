@@ -59,31 +59,43 @@ ig.addEventListener('mouseout', unblurBg);
 // let t = document.querySelector('.tiles');
 
 // For changing BG on scroll
-jQuery(window).scroll(function() {
-	var windowHeight = jQuery(window).height(); // distance to trigger
-    var scrolledFromtop = jQuery(window).scrollTop();
-    if (scrolledFromtop > windowHeight) {
-		jQuery('body').addClass('scrolled1');
-		// t.classList.add('scrolled10');
-	}
-	else {
-        jQuery('body').removeClass('scrolled1');
-	}
+// jQuery(window).scroll(function() {
+// 	var windowHeight = jQuery(window).height(); // distance to trigger
+//     var scrolledFromtop = jQuery(window).scrollTop();
+//     if (scrolledFromtop > windowHeight) {
+// 		jQuery('body').addClass('scrolled1');
+// 		// t.classList.add('scrolled10');
+// 	}
+// 	else {
+//         jQuery('body').removeClass('scrolled1');
+// 	}
 	
-	if (scrolledFromtop > 1.98*windowHeight) {
-        jQuery('body').addClass('scrolled2');
-	}
-	else {
-        jQuery('body').removeClass('scrolled2');
-	}
+// 	if (scrolledFromtop > 1.98*windowHeight) {
+//         jQuery('body').addClass('scrolled2');
+// 	}
+// 	else {
+//         jQuery('body').removeClass('scrolled2');
+// 	}
 	
-	if (scrolledFromtop > 2.98*windowHeight) {
-        jQuery('body').addClass('scrolled3');
-	}
-	else {
-        jQuery('body').removeClass('scrolled3');
-	}
-});
+// 	if (scrolledFromtop > 2.98*windowHeight) {
+//         jQuery('body').addClass('scrolled3');
+// 	}
+// 	else {
+//         jQuery('body').removeClass('scrolled3');
+// 	}
+// });
+
+// For changing BG Image at set intervals
+var urls = ['../images/backgrounds/webp/madam.webp', '../images/backgrounds/webp/apratim.webp', '../images/backgrounds/webp/satyam.webp', '../images/backgrounds/webp/jamal.webp'];
+
+var count = 1;
+// $('body').css('background-image', 'url("' + urls[0] + '")');
+setInterval(function() {
+  $('body').css('background-image', 'url("' + urls[count] + '")');
+  $('.backgroundimagehack').css('background-image', 'url("' + urls[count] + '")');
+  count++;
+  count %= urls.length;
+}, 2000);
 
 
 // For bobbing navbar buttons - on hover - DOESN'T WORK
