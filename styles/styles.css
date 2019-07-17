@@ -10,10 +10,11 @@
 
     --person-border-color: white;
     --ttl-color: white;
-    --nav-link-icon-font-size: 2vw;
+    --nav-link-icon-font-size: 3.2rem;;
     --tile-ttl-font-size: 5vw;
     --mar: 1rem;
     --logowidth: 7.2rem;
+
     --carousel-height: 75vh;
     --carousel-width: 75vw;
     --width-person: 13vw;
@@ -144,7 +145,7 @@ ul
 .nav-links
 {
     font-family: Monoton;
-    font-size: 4rem;
+    font-size: var(--nav-link-icon-font-size);
     color: var(--fg0);
 
     margin: 0;
