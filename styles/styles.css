@@ -33,6 +33,7 @@
     --ig: #fb3958;
 
     scroll-behavior: smooth;
+    /* overflow-x: hidden; */ /* FIXES THE CLIPPING ISSUE (IT'S NOT CLIPPING ANYWAY) - BUT MAKES HORIZONTAL SCROLLING INPOSSIBLE - RESP */
 }
 
 @font-face {
