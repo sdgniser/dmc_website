@@ -422,19 +422,9 @@ blockquote:after
     top: 0rem;
     margin: 0.5rem;
     padding: 0.1rem;
-    /* For the sake of symmetry */
-    /* margin-right: 1.5rem; */
-
     /* background-color: rgb(129, 124, 43); /* Alt to below */
     background: var(--sec0);
-/*    linear-gradient(
-      to right, */
-      /* #833ab4, */
-/*      rgb(245, 58, 58), 
-      #f06d06, 
-      rgb(255, 255, 0),
-      green
-    );*/
+
     z-index: 10;
     border-radius: 5px;
     border-color: transparent;
@@ -636,13 +626,12 @@ blockquote:after
 /* Icon */
 .entry label::after {
     position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    width: 3em;
-    height: 3em;
-    line-height: 3;
+    bottom: 10%;
+    right: 48%;
+    /* display: block; */
+
     text-align: center;
+     
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s;
@@ -650,7 +639,7 @@ blockquote:after
 
 .entry input[type=checkbox] + label::after {
     content: "▾"; /* EXPERIMENTAL DOWN ARROW */
-    right: 48%;
+    
 }
 
 .entry input[type=checkbox]:checked + label::after {
@@ -883,6 +872,7 @@ blockquote:after
   height: 100%;
   height: var(--carousel-height);
   width: var(--carousel-width);
+  border-radius: 1.5rem;
   overflow: hidden;
   text-align: center;
   position: relative;
@@ -1079,9 +1069,6 @@ blockquote:after
   display: inline-grid;
 
   margin-top: 6rem;
-}
-.my-carousel {
-  border-radius: 1.5rem;
 }
  .carousel__indicator {
   height: 3rem;
