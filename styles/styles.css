@@ -649,8 +649,6 @@ blockquote:after
 
 .entry input[type=checkbox]:checked + label {
     border-bottom: 1.5px dotted #cfab0cf5;
-    /* border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0; */
 }
 
 /* Text in the entry - <p> */
