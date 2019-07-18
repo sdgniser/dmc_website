@@ -68,11 +68,6 @@ body
 
     grid-template-columns: minmax(10rem, 20rem) 94%;
     grid-row-gap: 1.5rem;
-
-    /* scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
-    scroll-padding: 0.8rem 0 0.8rem 0; */
 }
 
 /* Hiding the scrollbar on the page */
@@ -404,15 +399,13 @@ blockquote:after
 /* For all the tiles -- Individual tiles can be styled, well, individually */
 .tiles
 {
-    /* scroll-snap-align: start; */
-    
     height: 92.5vh;
     margin: auto var(--mar);
-    margin-left: 0;
+    /* margin-left: 0; */
 
     padding: 2.5rem;
 
-    border-radius: 20px;
+    /* border-radius: 2rem; */
 
     border: 3px dashed rgb(194, 173, 150);
 
@@ -430,7 +423,7 @@ blockquote:after
     margin: 0.5rem;
     padding: 0.1rem;
     /* For the sake of symmetry */
-    margin-right: 1.5rem;
+    /* margin-right: 1.5rem; */
 
     /* background-color: rgb(129, 124, 43); /* Alt to below */
     background: var(--sec0);
@@ -528,7 +521,6 @@ blockquote:after
 
 .entry
 {
-    border-radius: 1.5rem;
     margin: 2.5rem 5rem;
     margin-top: 0;
     margin-right: 0;
@@ -536,6 +528,7 @@ blockquote:after
     background-color: var(--sec0);
     
     border: 1px solid #cfab0cf5;
+    /* border-radius: 1.5rem; */
 
     background: inherit;
 }
@@ -574,7 +567,6 @@ blockquote:after
     font-family: Gothic_Bold;
     font-weight: 200;
     font-size: 1.5vw;
-
 }
 
 .entry-date
@@ -594,8 +586,8 @@ blockquote:after
     background-color: rgba(0, 255, 200, 0.452);
     backdrop-filter: blur(20px);
 
-    border-bottom-left-radius: 1.4rem;
-    border-bottom-right-radius: 1.4rem;
+    /* border-bottom-left-radius: 1.4rem;
+    border-bottom-right-radius: 1.4rem; */
     
     font-family: Gothic;
     font-size: 2rem;
@@ -619,8 +611,7 @@ blockquote:after
     margin: 0;
     padding: 1.2rem; 
 
-    border-bottom: 1.5px dotted #cfab0cf5;
-    border-radius: 1.4rem;
+    /* border-radius: 1.4rem; */
     
     background-color: rgba(0, 238, 255, 0.555);
     
@@ -668,8 +659,18 @@ blockquote:after
 
 .entry input[type=checkbox]:checked + label {
     border-bottom: 1.5px dotted #cfab0cf5;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; */
+}
+
+/* Text in the entry - <p> */
+.entry-text {
+    float: right;
+}
+
+/* Any image in the entry - <img> */
+.entry-image {
+    float: left;
 }
 
 #team

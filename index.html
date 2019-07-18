@@ -51,11 +51,11 @@
             <nav id="nav">
                 <ul id="nav-list">
                     <!-- <li class="ulist"><a tabindex="0" class="nav-links" href="#" title="Home"><i class="fa fa-home"></i></li> -->
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#events" title="Our Club Activities"><i class="fa fa-calendar navicon"></i></li>
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#gallery" title="Image Gallery"><i class="fas fa-image navicon"></i></a></li>
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#team" title="Our Team"><i class="fas fa-id-badge navicon"></i></a></li>
+                    <li class="ulist"><a tabindex="0" class="nav-links" href="#event-sep" title="Our Club Activities"><i class="fa fa-calendar navicon"></i></li>
+                    <li class="ulist"><a tabindex="0" class="nav-links" href="#gallery-sep" title="Image Gallery"><i class="fas fa-image navicon"></i></a></li>
+                    <li class="ulist"><a tabindex="0" class="nav-links" href="#team-sep" title="Our Team"><i class="fas fa-id-badge navicon"></i></a></li>
                     <li class="ulist"><a tabindex="0" class="nav-links" href="#blog" title="Visit our Blog"><i class="fas fa-blog navicon"></i></a></li>
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#contact" title="Connect with us"><i class="fas fa-comments navicon"></i></a></li>
+                    <li class="ulist"><a tabindex="0" class="nav-links" href="#contact-sep" title="Connect with us"><i class="fas fa-comments navicon"></i></a></li>
                 </ul>
             </nav>
             <footer>
@@ -66,7 +66,9 @@
        
         <!-- Main content -->
         <main class="content">
-            <hr class="separator">
+
+            <hr class="separator" id="top">
+
             <section class="tiles tile1" id="intro">
               <div class="backgroundimagehack"></div>
                 <!--blockquote id="hello"-->
@@ -106,7 +108,7 @@
                 </ul>
             </section>
 
-            <hr class="separator">
+            <hr class="separator" id="event-sep">
 
             <!-- EVENTS Timeline -->
             <section class="tiles tile2" id="events">
@@ -135,10 +137,38 @@
                             <p class="entry-text">This is a demonstration of having images, of desired size (such as event posters), inside the timeline-entries.</p>
                         </div>
                     </div>
+                    <div class="entry">
+                        <input id="entry-check" type="checkbox" name="tabs">
+                        <label for="entry-check"><h2 class="entry-title">SPIC MACAY 2019<span class="entry-date">January 31, 2019</span></h2></label>
+                        <div class="entry-detail">
+                            <p class="entry-text">This is a demonstration of having images, of desired size (such as event posters), inside the timeline-entries.</p>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <input id="entry-check" type="checkbox" name="tabs">
+                        <label for="entry-check"><h2 class="entry-title">SPIC MACAY 2019<span class="entry-date">January 31, 2019</span></h2></label>
+                        <div class="entry-detail">
+                            <p class="entry-text">This is a demonstration of having images, of desired size (such as event posters), inside the timeline-entries.</p>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <input id="entry-check" type="checkbox" name="tabs">
+                        <label for="entry-check"><h2 class="entry-title">SPIC MACAY 2019<span class="entry-date">January 31, 2019</span></h2></label>
+                        <div class="entry-detail">
+                            <p class="entry-text">This is a demonstration of having images, of desired size (such as event posters), inside the timeline-entries.</p>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <input id="entry-check" type="checkbox" name="tabs">
+                        <label for="entry-check"><h2 class="entry-title">SPIC MACAY 2019<span class="entry-date">January 31, 2019</span></h2></label>
+                        <div class="entry-detail">
+                            <p class="entry-text">This is a demonstration of having images, of desired size (such as event posters), inside the timeline-entries.</p>
+                        </div>
+                    </div>
                 </section>
             </section>
 
-            <hr class="separator">
+            <hr class="separator" id="gallery-sep">
 
             <section class="tiles tile3" id="gallery">
                 <!-- From here: https://codepen.io/jh3y/pen/WwVKLN With almost no modifications - except font, or font-size etc. -->
@@ -184,7 +214,8 @@
                 </div>
             </section>
   
-            <hr class="separator">
+            <hr class="separator" id="team-sep">
+
             <section class="tiles tile4" id="team">
                 <div id="tile-ttl">Members</div>
                 <section class="fic">
@@ -304,7 +335,7 @@
                 </section>
             </section>
 
-            <hr class="separator">
+            <hr class="separator" id="contact-sep">
 
             <section class="tiles tile5" id="contact">
                 <div id="tile-ttl">Connect With Us</div>
@@ -335,7 +366,7 @@
                 </div>
             </section>
 
-            <hr class="separator">
+            <hr class="separator" id="end">
 
         </main>
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
