@@ -403,7 +403,7 @@ blockquote:after
 {
     height: 92.5vh;
     margin: auto var(--mar);
-    /* margin-left: 0; */
+    margin-left: 0;
 
     padding: 2.5rem;
 
