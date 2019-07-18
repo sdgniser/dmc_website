@@ -17,6 +17,7 @@
 
     --carousel-height: 75vh;
     --carousel-width: 75vw;
+    --timeline-height: 100vh;
     --width-person: 13vw;
     --height-person: 13vw;
     /* overflow: hidden; */
@@ -483,7 +484,7 @@ blockquote:after
 {
     margin: 0 auto;
     margin-top: 6rem;
-    /* height: 100vh; */
+    height: var(--timeline-height);
 
     background: inherit;
     overflow: scroll;
@@ -500,7 +501,7 @@ blockquote:after
     content: '';
     float: left;
     margin: 0 1.5rem;;
-    height: 120vh;
+    height: var(--timeline-height);
     width: 6px;
     background-color: #890620;
     border-radius: 3px;
@@ -621,7 +622,6 @@ blockquote:after
 /* :checked */
 .entry input:checked ~ .entry-detail {
     max-height: 100vh;
-    padding: 1rem;
 }
 
 /* Icon */
@@ -656,11 +656,13 @@ blockquote:after
 /* Text in the entry - <p> */
 .entry-text {
     float: right;
+    margin: 1rem;
 }
 
 /* Any image in the entry - <img> */
 .entry-image {
     float: left;
+    margin: 1rem;
 }
 
 #team
