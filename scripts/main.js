@@ -1,3 +1,6 @@
+
+
+// BG Image Hack
 let header = document.querySelector('#ttl');
 let introTile = document.querySelector('#intro');
 let bg = document.querySelector('.backgroundimagehack');

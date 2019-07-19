@@ -14,7 +14,7 @@
         <meta name="author" content="Drama & Music Club">
         <!-- <meta name="description" content="TO BE EDITED."> ** -->
 
-        <!--  -->
+        <!-- FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Roboto|Flamenco|Source+Serif+Pro|Aleo|Kanit|Signika|Cinzel+Decorative|Amatic+SC|Dancing+Script|Great+Vibes|Lobster|Monoton|Niconne|Oleo+Script|Parisienne|Sacramento|Satisfy|Special+Elite|Tangerine" rel="stylesheet">
         <!-- Font Awesome - For icons - Up to date, as on 29/05/2019 -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -22,10 +22,8 @@
         <!-- Favicon - More can be added, depending on the devices, we plan to support -->
         <link rel="shortcut icon" href="images/favicomatic/favicon-32x32.png"> 
 
-        <!-- slick for carousel in gallery -->
-        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-        <!-- Add the new slick-theme.css if you want the default styling -->
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <!-- For the carousel -->
+        <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
         <!-- Stylesheet -->
         <link href="styles/styles.css" rel="stylesheet" type="text/css">
@@ -202,23 +200,26 @@
             <section class="tiles tile3" id="gallery">
                 <!-- From here: https://codepen.io/jh3y/pen/WwVKLN With almost no modifications - except font, or font-size etc. -->
                 <div id="tile-ttl">Gallery</div>
-                <div class="slick_carousel">
-                    <div class="gallery-img">
-                        <img src="https://unsplash.it/1500?random">
-                    </div>
-                    <div class="gallery-img">
-                        <img src="https://unsplash.it/1500?random">
-                    </div>
-                    <div class="gallery-img">
-                        <img src="https://unsplash.it/1500?random">
-                    </div>
-                    <div class="gallery-img">
-                        <img src="https://unsplash.it/1500?random">
-                    </div>
-                    <div class="gallery-img">
-                        <img src="https://unsplash.it/1500?random">
-                    </div>
+                <div class="container">
+                    <ul id="partial-view">
+                        <li>
+                            <img src="https://picsum.photos/1920/1280/?random" />
+                        </li>
+                        <li>
+                            <img src="https://picsum.photos/1920/1281/?random" />
+                        </li>
+                        <li>
+                            <img src="https://picsum.photos/1920/1282/?random" />
+                        </li>
+                        <li>
+                            <img src="https://picsum.photos/1920/1279/?random" />
+                        </li>
+                        <li>
+                            <img src="https://picsum.photos/1920/1283/?random" />
+                        </li>
+                    </ul>
                 </div>
+            </div>
                 <!-- <div class="carousel-container">
                     <div class="carousel">
                         <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked" />
@@ -418,38 +419,25 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="scripts/jquery.scrollify.js"></script>
-
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
-        <!-- <script src="scripts/anime.min.js"></script> -->
-        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
-        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
         <script type="text/javascript">
-            // For slick carousel
+            // For the carousel
             $(document).ready(function(){
-                $('.slick_carousel').slick({
-                    autoplay: true,
-                    autoplaySpeed: 3000,
-                    arrows: true, // DEFAULT
+                var partialView = $('#partial-view').partialViewSlider();
 
-                    centerMode: true,
-
-                    cssEase: 'ease',
-                    focusOnSelect: true,
-                    infinite: true,
-
-                //   mobileFirst: false
-
-                    pauseOnHover: true, // D
-                    pauseOFocus: true, // D
-
-                    slidesToScroll: 1, // D
-                    slidesToShow: 3,
-                    dots:true,
-                    swipeToSlide: true
+                $('#prev').on('click', function(){
+                    partialView.prev();
+                });
+                $('#next').on('click', function(){
+                    partialView.next();
+                });
+                $('#play').on('click', function(){
+                    partialView.play();
+                });
+                $('#pause').on('click', function(){
+                    partialView.pause();
                 });
             });
         </script>
-        <script src="scripts/main.js"></script>
     </body>
 </html>
