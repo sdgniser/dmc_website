@@ -43,11 +43,6 @@
 }
 
 @font-face {
-    font-family: Decoration;
-    src: url('../fonts/CopalStdDecorated.otf');
-}
-
-@font-face {
     font-family: Gothic;
     src: url('../fonts/century.ttf');
 }
@@ -449,20 +444,15 @@ blockquote:after
 
     font-family: Monoton;
     font-size: var(--tile-ttl-font-size);
-    /* EXPERIMENTAL */
-    /* color: rgb(214, 203, 156);*/
+
     color: var(--fg0);
-    /* color: darkslategrey; */
 
     font-weight: 100;
     margin: 2rem auto;
     padding: 2rem;
 
-    /* text-decoration-line: overline underline; */
-    text-decoration-style: dotted;
-    /*text-decoration-color:rgb(214, 203, 156);*/
-    text-decoration-color: var(--fg0);
-
+    /* text-decoration-style: dotted;
+    text-decoration-color: var(--fg0); */
 }
 
 #events
@@ -858,7 +848,7 @@ blockquote:after
 /* The Carousel */
 .partialViewSlider-outerwrapper{
     position: relative;
-    padding: 4rem 6rem;
+    padding: 8rem 6rem;
 }
 .partialViewSlider-outerwrapper.partialViewSlider-outsideControls{
     padding: 0 6%;
