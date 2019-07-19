@@ -425,7 +425,7 @@ setInterval(function() {
 $(function() {
 	$.scrollify({
 		section: ".tiles",
-		sectionName: "hello",
+		sectionName: "section-name",
 		scrollSpeed: 100,
 		easing: "easeOutExpo",
 		touchScroll: true,
