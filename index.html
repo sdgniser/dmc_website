@@ -200,25 +200,28 @@
             <section class="tiles tile3" id="gallery">
                 <!-- From here: https://codepen.io/jh3y/pen/WwVKLN With almost no modifications - except font, or font-size etc. -->
                 <div id="tile-ttl">Gallery</div>
-                <div class="container">
-                    <ul id="partial-view">
-                        <li>
-                            <img src="https://picsum.photos/1920/1280/?random" />
-                        </li>
-                        <li>
-                            <img src="https://picsum.photos/1920/1281/?random" />
-                        </li>
-                        <li>
-                            <img src="https://picsum.photos/1920/1282/?random" />
-                        </li>
-                        <li>
-                            <img src="https://picsum.photos/1920/1279/?random" />
-                        </li>
-                        <li>
-                            <img src="https://picsum.photos/1920/1283/?random" />
-                        </li>
-                    </ul>
-                </div>
+                <!-- Experimental Carousel Alert -->
+            <div class="jquery-script-clear"></div>
+            <div class="container">
+                <ul id="partial-view">
+                    <li>
+                    <img src="https://picsum.photos/1920/1280/?random" />
+                    </li>
+                    <li>
+                    <img src="https://picsum.photos/1920/1281/?random" />
+                    </li>
+                    <li>
+                    <img src="https://picsum.photos/1920/1282/?random" />
+                    </li>
+                    <li>
+                    <img src="https://picsum.photos/1920/1279/?random" />
+                    </li>
+                    <li>
+                    <img src="https://picsum.photos/1920/1283/?random" />
+                    </li>
+                </ul>
+            </div>
+            </div>
             </div>
                 <!-- <div class="carousel-container">
                     <div class="carousel">
@@ -418,26 +421,6 @@
         </main>
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="scripts/jquery.scrollify.js"></script>
-        <script type="text/javascript">
-            // For the Carousel
-            $(document).ready(function(){
-                var partialView = $('#partial-view').partialViewSlider();
-
-                $('#prev').on('click', function(){
-                    partialView.prev();
-                });
-                $('#next').on('click', function(){
-                    partialView.next();
-                });
-                $('#play').on('click', function(){
-                    partialView.play();
-                });
-                $('#pause').on('click', function(){
-                    partialView.pause();
-                });
-            });
-        </script>
         <script type="text/javascript" src="scripts/main.js"></script>
     </body>
 </html>
