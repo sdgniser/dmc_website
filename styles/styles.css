@@ -383,10 +383,12 @@ blockquote:after
     font-weight: 600;
     line-height: 2.5rem;
 
-    animation-duration: 2s; /* DUE TO THE PRELOADER, THIS MAY NOT SEEM LIKE THE APPARENT DURATION - EXP - RESP */
+    /* DUE TO THE PRELOADER, THIS MAY NOT SEEM LIKE THE APPARENT DURATION - EXP - RESP */
+    /* Causes issues with scrollify */
+    /* animation-duration: 2s;
     transition-timing-function: ease-in;
     animation-fill-mode: both;
-    animation-name: fadeInUp;
+    animation-name: fadeInUp; */
 }
 
 /* For all the tiles -- Individual tiles can be styled, well, individually */
