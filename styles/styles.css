@@ -382,6 +382,11 @@ blockquote:after
     font: 2rem 'Source Serif Pro', serif;
     font-weight: 600;
     line-height: 2.5rem;
+
+    animation-duration: 2s; /* DUE TO THE PRELOADER, THIS MAY NOT SEEM LIKE THE APPARENT DURATION - EXP - RESP */
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
 }
 
 /* For all the tiles -- Individual tiles can be styled, well, individually */
@@ -1110,8 +1115,20 @@ blockquote:after
   50% { border-color: transparent; }
 }
 
-/* EXPERIMENTAL STUFF BELOW */
+/* For the fadeInUp effect */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
 
+/* EXPERIMENTAL STUFF BELOW */
 
 /* The embedded iframe (Google Form) */
 .gform {
