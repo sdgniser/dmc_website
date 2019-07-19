@@ -117,46 +117,96 @@ $('.ml1 .letters').each(function(){
 	$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
 	});
 
-	anime.timeline({loop: false})
-	.add({
-		targets: '.ml1 .letter',
-		scale: [0.3,1],
-		opacity: [0,1],
-		translateZ: 0,
-		easing: "easeOutExpo",
-		duration: 600,
-		delay: function(el, i) {
-		return 70 * (i+1)
-		}
-	}).add({
-		targets: '.ml1 .line',
-		scaleX: [0,1],
-		opacity: [0.5,1],
-		easing: "easeOutExpo",
-		duration: 700,
-		offset: '-=875',
-		delay: function(el, i, l) {
-		return 80 * (l - i);
-		}
-	}).add({
-		targets: '.ml1',
-		opacity: 0,
-		duration: 1000,
-		easing: "easeOutExpo",
-		delay: 1000
-	});
+anime.timeline({loop: false})
+.add({
+	targets: '.ml1 .letter',
+	scale: [0.3,1],
+	opacity: [0,1],
+	translateZ: 0,
+	easing: "easeOutExpo",
+	duration: 600,
+	delay: function(el, i) {
+	return 70 * (i+1)
+	}
+}).add({
+	targets: '.ml1 .line',
+	scaleX: [0,1],
+	opacity: [0.5,1],
+	easing: "easeOutExpo",
+	duration: 700,
+	offset: '-=875',
+	delay: function(el, i, l) {
+	return 80 * (l - i);
+	}
+}).add({
+	targets: '.ml1',
+	opacity: 0,
+	duration: 1000,
+	easing: "easeOutExpo",
+	delay: 1000
+});
 
-// For bobbing navbar buttons - on hover - DOESN'T WORK
-// let navL = document.querySelectorAll('.navicon');
+// For the partialViewSlider Gallery
+$('#partial-view').partialViewSlider({
 
-// var navAnimation = anime({
-// 	targets: '.navicon',
-// 	translateY: -100,
-// 	direction: alternate,
-// 	duration: 4000,
-// 	// easing: 'easeOutElastic(1, .8)',
-// 	loop: true,
-// 	autoplay: false
-// });
+	// 70%
+	width: 70,
+  
+	// shows controls
+	controls: true,
+  
+	// inside, outside, neighbors
+	controlsPosition: 'inside', 
+  
+	// shows background
+	backdrop: true,
+  
+	// shows pagination dots
+	dots: true,
+  
+	// enable autoplay
+	auto: true,
+  
+	// transition speed in ms
+	transitionSpeed: 400,
+  
+	// autoplay delay in ms
+	delay: 4000,
+  
+	// enable pause on hover
+	pauseOnHover: true,
+  
+	// enable keyboard interactions
+	keyboard: true,
+  
+	// enable perspective mode
+	perspective: false,
+  
+	// show multiple items at once. 
+	// this is an object of resolutions and number of items above that resolution. 
+	items: {"0": 3},
+  
+	// custom next/prev arrows
+	prevHtml: '<i class="material-icons">chevron_left</i>',
+	nextHtml: '<i class="material-icons">chevron_right</i>'
+});
 
-// document.querySelectorAll('.navicon').onclick = navAnimation.restart;
+var mySlider = $('#partial-view').partialViewSlider();
+// back to previous image
+// mySlider.prev();
+
+// go to next image
+// mySlider.next();
+
+// pause the slider
+// mySlider.pause();
+
+// resume the slider
+// mySlider.play();
+
+//   $('#partial-view').partialViewSlider({
+
+// 	onLoad: function() {},
+// 	onSlideEnd : function() {}
+  
+//   });
