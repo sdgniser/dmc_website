@@ -867,7 +867,6 @@ blockquote:after
   border-radius: 1.5rem;
   overflow: hidden;
   text-align: center;
-  position: relative;
   padding: 0;
   list-style: none;
 
@@ -1316,4 +1315,16 @@ address {
 .follow-us a i {
     font-size: 5rem;
     margin: 2rem;
+}
+
+.slick_carousel {
+	width:90%;
+	margin:0px auto;
+}
+.slick-slide {
+	margin:10px;
+}
+.slick-slide img {
+	width:100%;
+	border: 2px solid #fff;
 }
