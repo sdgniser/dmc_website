@@ -1,3 +1,20 @@
+$(document).ready(function(){
+	var partialView = $('#partial-view').partialViewSlider();
+
+	$('#prev').on('click', function(){
+		partialView.prev();
+	});
+	$('#next').on('click', function(){
+		partialView.next();
+	});
+	$('#play').on('click', function(){
+		partialView.play();
+	});
+	$('#pause').on('click', function(){
+		partialView.pause();
+	});
+});
+
 let header = document.querySelector('#ttl');
 let introTile = document.querySelector('#intro');
 let bg = document.querySelector('.backgroundimagehack');
