@@ -191,7 +191,22 @@ $('#partial-view').partialViewSlider({
 	nextHtml: '<i class="material-icons">chevron_right</i>'
 });
 
-var mySlider = $('#partial-view').partialViewSlider();
+$(document).ready(function(){
+	var partialView = $('#partial-view').partialViewSlider();
+
+	$('#prev').on('click', function(){
+		partialView.prev();
+	});
+	$('#next').on('click', function(){
+		partialView.next();
+	});
+	$('#play').on('click', function(){
+		partialView.play();
+	});
+	$('#pause').on('click', function(){
+		partialView.pause();
+	});
+});
 // back to previous image
 // mySlider.prev();
 
