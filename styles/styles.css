@@ -108,7 +108,7 @@ ul
 {
     display: block;
     position: sticky;
-    top: 0;
+    top: 3rem;
     margin: 3rem auto;
     max-width: var(--logowidth);
     border-radius: 50%;
