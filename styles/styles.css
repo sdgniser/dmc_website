@@ -1157,7 +1157,7 @@ blockquote:after
 
 #contact-logo {
     margin: 3rem auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     width: 10rem;
     border-radius: 50%;
 }
@@ -1174,13 +1174,14 @@ blockquote:after
 }
 
 #niser-logo {
+    margin-bottom: 2rem;
     width: 18rem;
     border-radius: 50%;
 }
 
 .mailing-address {
     margin: 5rem 0;
-    margin-bottom: 2rem;
+    margin-bottom: 7.5rem;
     font-size: 3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 4rem;
