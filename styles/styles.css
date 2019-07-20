@@ -1189,7 +1189,7 @@ blockquote:after
 
 .mailing-address a {
     color: white;
-    /* text-decoration: underline dotted red; */
+    text-decoration: underline dotted palegoldenrod !important;
 }
 
 .follow-us {
