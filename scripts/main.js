@@ -431,7 +431,7 @@ $(function() {
 		touchScroll: true,
 		setHeights: false,
 		standardScrollElements: '.timeline',
-		offset: -8
+		offset: -8,
 	});
   });
 

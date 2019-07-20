@@ -109,7 +109,9 @@ ul
     display: block;
     position: sticky;
     top: 0;
-    padding: 5rem 0;
+    margin: 3rem auto;
+    max-width: var(--logowidth);
+    border-radius: 50%;
 }
 
 #logo
@@ -383,12 +385,7 @@ blockquote:after
     font-weight: 600;
     line-height: 2.5rem;
 
-    /* DUE TO THE PRELOADER, THIS MAY NOT SEEM LIKE THE APPARENT DURATION - EXP - RESP */
-    /* Causes issues with scrollify */
-    /* animation-duration: 2s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-    animation-name: fadeInUp; */
+    
 }
 
 /* For all the tiles -- Individual tiles can be styled, well, individually */
@@ -405,6 +402,13 @@ blockquote:after
     border: 3px dashed rgb(194, 173, 150);
 
     backdrop-filter: blur(15px); /* Non-standard - Safari only (Looks good though) */
+
+    /* DUE TO THE PRELOADER, THIS MAY NOT SEEM LIKE THE APPARENT DURATION - EXP - RESP */
+    /* Causes issues with scrollify */
+    /* animation-duration: 2s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-name: fadeInUp; */
 }
 
 /* .scrolled10 {
@@ -1090,7 +1094,7 @@ blockquote:after
   color: white;
   text-align: center;
   animation: 
-    typing 1.9s ease-out,/*steps(45, end),*/ /* Change the timing to your liking - N.B.: larger font-size implies longer rendering time */
+    typing 1.9s ease-out, /*steps(45, end),*/ /* Change the timing to your liking - N.B.: larger font-size implies longer rendering time */
     blink-caret .5s step-end infinite;
 }
 
