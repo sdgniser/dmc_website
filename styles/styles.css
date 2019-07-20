@@ -345,43 +345,6 @@ blockquote:after
     color: var(--ig);
 }
 
-
-#spic
-{
-    grid-area: spic;
-    padding: 2rem;
-
-    padding-top: 0;
-
-    color: darkkhaki;
-    font-family: cursive;
-    font-weight: 100;
-    font-size: 1.8rem;
-
-    text-align: center;
-}
-
-#spic-link
-{
-    width: 20rem;
-}
-
-#spic-logo
-{
-    background: #f06b066e;
-    border: 2px solid red;
-    border-radius: 8px;
-
-    width: 20rem;
-
-    transition: all 0.5s ease; 
-}
-
-#spic-logo:hover
-{
-    transform: scale(1.1);
-}
-
 /* MAIN CONTENT */
 .content
 {
@@ -1147,20 +1110,35 @@ blockquote:after
 /* EXPERIMENTAL STUFF BELOW */
 
 /* The embedded iframe (Google Form) */
-.gform {
-    /* grid-area: form;  */
+/* .gform {
     margin: 0;
     margin-top: 6rem;
     margin-bottom: 3rem;
     float: right;
     width: 40%;
-    height: 75vh;
-    overflow-x: hidden; /* Doesn't work properly yet */
+    height: 75vh; */
+    /* overflow-x: hidden;  */
+    /* Doesn't work properly yet */
+/* } */
+
+.connect {
+    display: grid;
+    grid-template-areas:
+        "details spic";
+
+    grid-template-columns: 60% 40%;
+    grid-column-gap: 5rem;
+
+    margin-top: 8rem;
+
+    color: white;
 }
 
+
 .contact-details {
-    margin-top: 6rem;
-    margin-right: 10rem;
+    grid-area: details;
+
+    border-right: 1rem inset red;
 
     /* display: grid;
     grid-template-areas:
@@ -1171,16 +1149,35 @@ blockquote:after
     grid-template-columns: 40% 60%; */
 }
 
-#contact-us, #mailing-address, #follow-us {
-    color: white;
+.contact-us p {
     float: left;
-    padding: 5rem;
+}
+
+.contact-us-details {
+    float: right;
+}
+
+.mailing-address p {
+    float: left;
+}
+
+.mailing-address address {
+    float: right;
+}
+
+.follow-us p {
+    float: left;
+}
+
+.follow-us a {
+    float: right;
 }
 
 .contact-us, .mailing-address, .follow-us {
-    float: right;
-    color: white;
+    /* float: right; */
+    /* color: white; */
     padding: 5rem;
+    padding-left: 2rem;
 }
 
 address {
@@ -1188,10 +1185,51 @@ address {
 }
 
 .cont-sep {
-    width: 61.75%;
+    /* display: block; */
+    width: 96%;
+    margin: 2rem auto;
 }
 
 .follow-us a i {
+    color: white;
     font-size: 5rem;
     margin: 2rem;
+}
+
+.spic
+{
+    
+    padding: 2rem;
+    height: 100%;
+
+    /* padding-top: 0; */
+
+    /* color: darkkhaki;
+    font-family: cursive;
+    font-weight: 100;
+    font-size: 1.8rem; */
+
+    text-align: center;
+}
+
+.spic-link
+{
+    grid-area: spic;
+    width: 10rem;
+}
+
+.spic-logo
+{
+    background: pink;
+    /* border: 2px inset red; */
+    /* border-radius: 8px; */
+
+    width: 10rem;
+
+    transition: all 0.5s ease; 
+}
+
+.spic-logo:hover
+{
+    transform: scale(1.1);
 }
