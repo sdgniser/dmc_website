@@ -48,6 +48,8 @@
     --fb: #3b5998;
     --yt: red;
     --ig: #fb3958;
+    --mail-col: rgb(0, 120, 212);
+    --whatsapp-col: rgb(0, 230, 118);
 
     scroll-behavior: smooth;
     /* overflow-x: hidden; */ /* FIXES THE CLIPPING ISSUE (IT'S NOT CLIPPING ANYWAY) - BUT MAKES HORIZONTAL SCROLLING INPOSSIBLE - RESP */
@@ -440,9 +442,6 @@ blockquote:after
     font-weight: 100;
     margin: 2rem auto;
     padding: 2rem;
-
-    /* text-decoration-style: dotted;
-    text-decoration-color: var(--fg0); */
 }
 
 #events
@@ -1119,7 +1118,6 @@ blockquote:after
     }
   }
 
-/* EXPERIMENTAL STUFF BELOW */
 
 /* The embedded iframe (Google Form) */
 /* .gform {
@@ -1133,86 +1131,92 @@ blockquote:after
     /* Doesn't work properly yet */
 /* } */
 
-#contact {
-    text-align: center;
-
-    /* background: var(--contact-col); */
-}
-
+/* For the "Connect With Us" Tile */
 .connect {
     display: grid;
     grid-template-areas:
         "details spic";
 
     grid-column-gap: 5rem;
+    grid-template-columns: 70% 25%;
 
-    margin-top: 8rem;
+    margin: 8rem auto;
+    height: 80%;
 
     color: white;
 }
-
 
 .contact-details {
     grid-area: details;
 
     border-right: 2px inset red;
-    /* border-radius: 2px; */
 
-    /* display: grid;
-    grid-template-areas:
-        "details form"
-        "details form"
-        "spic form";
-
-    grid-template-columns: 40% 60%; */
+    text-align: center;
+    align-content: center;
 }
 
-.contact-us p {
-    float: left;
+#contact-logo {
+    margin: 3rem auto;
+    margin-bottom: 2rem;
+    width: 10rem;
+    border-radius: 50%;
 }
 
-.contact-us-details {
-    float: right;
+#contact-ttl {
+    margin: 2rem auto;
+
+    color: var(--ttl-color);
+    font-family: Rubik, serif;
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 6rem;
+    text-shadow: 0px 0px 5px rgb(185, 139, 79);
 }
 
-.mailing-address p {
-    float: left;
+#niser-logo {
+    width: 18rem;
+    border-radius: 50%;
 }
 
-.mailing-address address {
-    float: right;
+.mailing-address {
+    margin: 5rem 0;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 4rem;
+    text-align: center;
 }
 
-.follow-us p {
-    float: left;
+.mailing-address a {
+    color: white;
+    /* text-decoration: underline dotted red; */
+}
+
+.follow-us {
+    font-size: 6rem;
 }
 
 .follow-us a {
-    float: right;
-}
-
-.contact-us, .mailing-address, .follow-us {
-    /* float: right; */
-    /* color: white; */
-    padding: 5rem;
-    padding-left: 2rem;
-}
-
-address {
-    text-decoration-style: none;
-}
-
-.cont-sep {
-    /* display: block; */
-    width: 96%;
-    margin: 6rem auto;
+    color: white;
+    margin: 2rem;
 }
 
 .follow-us a i {
-    color: white;
-    font-size: 5rem;
-    margin: 2rem;
+    transition: 0.6s;
 }
+
+.mail:hover {
+    color: var(--mail-col);
+}
+
+.whatsapp:hover {
+    color: var(--whatsapp-col);
+}
+
+/* .cont-sep {
+    width: 96%;
+    margin: 6rem auto;
+} */
 
 .spic
 {
