@@ -20,7 +20,17 @@
     --timeline-height: 100vh;
     --width-person: 13vw;
     --height-person: 13vw;
-    /* overflow: hidden; */
+
+    /* Colors, Spandan gave me */
+    --col0: #9bc0ff;
+    --col1: #ff847e;
+    --col2: #99dd9b;
+    --col3: #f8c28d;
+    --col4: #d4b89b;
+    --col5: #f9df82;
+    --col6: #97e0d4;
+    --col7: #be9bff;
+    --col8: #b2b7be;
 
     --bg: #000;
     --fg0: white;
