@@ -8,26 +8,27 @@
 
     box-sizing: border-box;
 
+    --main-ttl-font-size: 11rem;
+
+    --entry-title-font-size: 3.2rem;
+    --entry-date-font-size: 2.8rem;
+
+    --person-details-font-size: 4rem;
+
     --person-border-color: white;
     --ttl-color: white;
-    --nav-link-icon-font-size: 3.5rem;;
-    --tile-ttl-font-size: 5vw;
+    --nav-link-icon-font-size: 3.5rem;
+    --tile-ttl-font-size: 9rem;
     --mar: 1rem;
     --logowidth: 7.2rem;
 
-    --carousel-height: 75vh;
-    --carousel-width: 75vw;
-    --timeline-height: 100vh;
-    --width-person: 13vw;
-    --height-person: 13vw;
+    --carousel-height: 75%;
+    --carousel-width: 75%;
+    --timeline-height: 90%;
+    --width-person: 24rem;
+    --height-person: 24rem;
 
-    /* 4-Color Palette */
-    --events-col: rgba(253, 219, 209, 0.25);
-    --gallery-col: rgba(184, 225, 231, 0.25);
-    --team-col: rgba(186, 221, 195, 0.25);
-    --contact-col: rgba(225, 187, 238, 0.25);
-
-    /* Colors, Spandan gave me */
+    /* Colors (Spandan) */
     --col0: #9bc0ff;
     --col1: #ff847e;
     --col2: #99dd9b;
@@ -147,11 +148,11 @@ ul
 #nav
 {
     position: sticky;
-    top: 26vh;
+    top: 32vh;
 
     margin: 2rem var(--mar);
 
-    line-height: 9vh;
+    line-height: 8vh;
     text-align: center;
 }
 
@@ -244,7 +245,7 @@ footer
 {
     color: var(--ttl-color);
     font-family: Music, serif;
-    font-size: 7vw; /* CHANGED FROM 11rem - EXPERIMENTAL - RESP */
+    font-size: var(--main-ttl-font-size);
     font-weight: 500;
 
     text-shadow: 0px 0px 5px rgb(185, 139, 79);
@@ -365,8 +366,6 @@ blockquote:after
     font: 2rem 'Source Serif Pro', serif;
     font-weight: 600;
     line-height: 2.5rem;
-
-    
 }
 
 /* For all the tiles -- Individual tiles can be styled, well, individually */
@@ -444,19 +443,17 @@ blockquote:after
     padding: 2rem;
 }
 
-#events
+/* #events
 {
     overflow: hidden;
     max-height: 100vh;
-
-    /* background: var(--events-col); */
-}
+} */
 
 /* The actual timeline (the vertical ruler) */
 .timeline
 {
     margin: 0 auto;
-    margin-top: 6rem;
+    margin-top: 10rem;
     height: var(--timeline-height);
 
     background: inherit;
@@ -468,7 +465,7 @@ blockquote:after
     width: 0 !important;
 }
 
-/* The dots on the timeline */
+/* The time"line" */
 .timeline::before
 {
     content: '';
@@ -531,7 +528,7 @@ blockquote:after
     color: white;
     font-family: Gothic_Bold;
     font-weight: 200;
-    font-size: 1.5vw;
+    font-size: var(--entry-title-font-size);
 }
 
 .entry-date
@@ -539,7 +536,7 @@ blockquote:after
     float: right;
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.2vw;
+    font-size: var(--entry-date-font-size);
 }
 
 .entry-detail
@@ -583,7 +580,7 @@ blockquote:after
     color: white;
     font-family: Gothic_Bold;
     font-weight: 200;
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
 
     cursor: pointer;
 }
@@ -637,12 +634,13 @@ blockquote:after
 
 #team
 {
-    height: auto; /* Overrides .tiles */
+    /* Delete the line, below, to make scrollify work perfectly, but wreck the layout (if there are > 10 people) and vice-versa */
+    height: auto;
 
-    /* background: var(--team-col); */
+    text-align: center;
 }
 
-.fic
+/* .fic
 {
     display: grid;
     grid-template-areas:
@@ -651,9 +649,9 @@ blockquote:after
     grid-template-columns: 65% 35%;
     grid-row-gap: 5rem;
     margin-top: 9vh;
-}
+} */
 
-.fic-image
+/* .fic-image
 {
 
     grid-area: fic-image;
@@ -661,9 +659,9 @@ blockquote:after
     margin: 6rem auto;
 
     text-align: center;
-}
+} */
 
-.fic-image img
+/* .fic-image img
 {
     margin: 0 auto;
 
@@ -671,58 +669,44 @@ blockquote:after
     height: 18vw;
 
     border-radius: 2rem;
-    /*box-shadow: 0 0 20px 0px rgba(213, 202, 155, 0.938);*/
-}
+} */
 
-.fic-words
+/* .fic-words
 {
     grid-area: fic-words;
     padding: 5rem;
     margin-bottom: 2rem;
     border-radius: 1.5rem;
 
-    /* background: linear-gradient(
-        to right,
-        rgba(255, 81, 0, 0.5),
-        rgba(0, 102, 255, 0.5)
-    ); */
-
     text-align: right;
     color: white;
     font-family: Gothic_Bold ;
     font-weight: 100;
     font-size: 2rem;
-}
+} */
 
-.fic-name
+/* .fic-name
 {
     display: grid;
     margin: 0 auto;
-
-    /* background: linear-gradient(
-    to right,
-        rgba(255, 136, 0, 0.68),
-        rgba(255, 255, 0, 0.68),
-        rgba(10, 184, 10, 0.68)
-    ); */
     
-    color: var(--sec0)/*rgb(13, 113, 228)*/;
+    color: var(--sec0);
 	font-family: Helvetica, sans-serif;
 	font-weight: 600;
     
     font-size: 2.25rem;
     
     border-radius: 5px;
-}
+} */
 
 .group
 {
-    display: grid;
-    grid-template-areas:
-        "person1 person2 person3 person4 person5";
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     
-    grid-row-gap: 5rem;
-    margin: 4vh auto;
+    margin: 2rem auto;
 }
 
 .person
@@ -730,10 +714,7 @@ blockquote:after
     width: var(--width-person);
     height: var(--height-person);
 
-    margin: 6rem auto;
-    margin-top: 0;
-
-    text-align: center;
+    margin: 5rem 4.7rem;
 
     transition: 0.3s ease;
 }
@@ -754,7 +735,7 @@ blockquote:after
     transition: all 0.2s ease;
     
     
-    font-size: 2.5vw; /* EXPERIMENTAL - RESP */
+    font-size: var(--person-details-font-size);
 }
 
 .person-filter
@@ -773,13 +754,6 @@ blockquote:after
     display: grid;
     margin: 1rem auto;
     margin-top: -4rem;
-
-    /* background: linear-gradient(
-    to right,
-        rgba(255, 136, 0, 0.68),
-        rgba(255, 255, 0, 0.68),
-        rgba(10, 184, 10, 0.68)
-    ); */
     
     color: var(--sec0);
 	font-family: Helvetica, sans-serif;
@@ -833,13 +807,6 @@ blockquote:after
     color: var(--yt); /* Actual YT Logo Color */
 }
 
-#gallery
-{
-    text-align: center;
-
-    /* background: var(--gallery-col); */
-}
-
 /* The Carousel */
 .partialViewSlider-outerwrapper{
     position: relative;
@@ -880,13 +847,13 @@ blockquote:after
     opacity: 1;
 }
 .partialViewSlider-wrapper ul > li > img{
-    width: 100%;
+    width: 105%;
     display: block;
 }
 .partialViewSlider-backdrop{
     position: absolute;
-    height: 100%;
     top: 0;
+    height: 98.25%;
     background: rgba(0, 0, 0, 0.5);
 }
 .partialViewSlider-backdrop.partialViewSlider-right{
@@ -950,65 +917,6 @@ blockquote:after
 .partialViewSlider-dots li.active a:before{
     background: #FFF;
 }
-
-/* For Responsiveness: Media Rules */
-/* @media screen and (max-width: 1366px)
-{
-    
-}
-
-@media screen and (max-width: 960px)
-{
-    
-}
-
-@media screen and (max-width: 640px)
-{
-    :root
-    {
-        --mar: 0.5rem;
-    }
-    body
-    {
-        grid-column-gap: 0.2rem;
-        grid-row-gap: 0.8rem;
-    }
-    #ttl
-    {
-        font-size: 4.5rem;
-    }
-    #nav
-    {
-        width: 7rem;
-    }
-    .navicons
-    {
-        width: 4rem;
-        padding: 1rem 0.76rem;
-    }
-    .nav-links
-    {
-        font-size: 4rem;
-    }
-    .nav-links:hover .revealed
-    {
-        display: block;
-        margin-top: 0.5rem;
-        line-height: 3.8rem;
-    }
-}
-
-@media screen and (max-width: 360px)
-{
-    #logo
-    {
-        width: 8rem;
-    }
-    #ttl
-    {
-        font-size: 4rem;
-    }
-} */
 
 .ml1 {
     /* grid-area: content; */
@@ -1118,41 +1026,26 @@ blockquote:after
     }
   }
 
-
-/* The embedded iframe (Google Form) */
-/* .gform {
-    margin: 0;
-    margin-top: 6rem;
-    margin-bottom: 3rem;
-    float: right;
-    width: 40%;
-    height: 75vh; */
-    /* overflow-x: hidden;  */
-    /* Doesn't work properly yet */
-/* } */
-
 /* For the "Connect With Us" Tile */
 .connect {
-    display: grid;
+    /* display: grid;
     grid-template-areas:
         "details spic";
 
     grid-column-gap: 5rem;
-    grid-template-columns: 70% 25%;
+    grid-template-columns: 70% 25%; */
 
-    margin: 8rem auto;
+    margin: 6rem;
     height: 80%;
+
+    border: none; /* Overrides .tiles */
 
     color: white;
 }
 
 .contact-details {
-    grid-area: details;
-
-    border-right: 2px inset red;
-
+    /* grid-area: details; */
     text-align: center;
-    align-content: center;
 }
 
 #contact-logo {
@@ -1214,14 +1107,16 @@ blockquote:after
     color: var(--whatsapp-col);
 }
 
+/* CAUTION - COMMENT GRAVEYARD AHEAD */
+
 /* .cont-sep {
     width: 96%;
     margin: 6rem auto;
 } */
 
-.spic
+/* .spic
 {
-    padding: 2rem;
+    padding: 2rem; */
     /* height: 100%; */
 
     /* padding-top: 0; */
@@ -1230,28 +1125,72 @@ blockquote:after
     font-family: cursive;
     font-weight: 100;
     font-size: 1.8rem; */
-
+/* 
     text-align: center;
-}
+} */
 
-.spic-link
+/* .spic-link
 {
     grid-area: spic;
     width: 10rem;
-}
+} */
 
-.spic-logo
+/* .spic-logo
 {
-    background: pink;
+    background: pink; */
     /* border: 2px inset red; */
     /* border-radius: 8px; */
 
-    width: 10rem;
+    /* width: 10rem;
 
     transition: all 0.5s ease; 
-}
+} */
 
-.spic-logo:hover
+/* .spic-logo:hover
 {
     transform: scale(1.1);
+} */
+
+/* Media Rules */
+
+@media screen and (min-width: 960px) and (max-width: 1875px)
+{
+
 }
+
+@media screen and (min-width: 960px) and (max-width: 1124px)
+{
+  
+}
+
+@media screen and (max-width: 902px)
+{
+
+}
+
+@media screen and (max-width: 960px)
+{
+
+}
+
+@media screen and (max-width: 601px)
+{
+
+}
+
+@media screen and (max-width: 415px)
+{
+
+}
+
+/* For phones (portrait) */
+@media screen and (max-height: 880px)
+{
+
+}
+/* For phones (landscape) */
+@media screen and (max-height: 415px)
+{
+
+}
+
