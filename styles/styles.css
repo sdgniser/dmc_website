@@ -19,14 +19,18 @@
     --ttl-color: white;
     --nav-link-icon-font-size: 3.5rem;
     --tile-ttl-font-size: 9rem;
-    --mar: 1rem;
+    --tiles-margin: 1rem;
     --logowidth: 7.2rem;
 
     --carousel-height: 75%;
     --carousel-width: 75%;
-    --timeline-height: 90%;
+
+    --timeline-height: 88%;
+
     --width-person: 24rem;
     --height-person: 24rem;
+
+    --contact-ttl-font-size: 6rem;
 
     /* Colors (Spandan) */
     --col0: #9bc0ff;
@@ -82,8 +86,13 @@ body
         "side content"
         "side content";
 
-    grid-template-columns: minmax(10rem, 20rem) 94%;
+    grid-template-columns: minmax(8rem, 18rem) 92%;
+
     grid-row-gap: 1.5rem;
+    grid-column-gap: 0;
+
+    /* To match up the transition with div.backgroundimagehack */
+    transition: all 1s ease;
 }
 
 /* Hiding the scrollbar on the page */
@@ -150,7 +159,7 @@ ul
     position: sticky;
     top: 32vh;
 
-    margin: 2rem var(--mar);
+    margin: 2rem 0;
 
     line-height: 8vh;
     text-align: center;
@@ -158,7 +167,6 @@ ul
 
 .nav-links
 {
-    font-family: Monoton;
     font-size: var(--nav-link-icon-font-size);
     color: var(--fg0);
 
@@ -185,7 +193,7 @@ footer
     position: sticky;
     /* top: calc(92rem - 5rem); *** */
     top: 88vh;
-    margin: 0 var(--mar);
+    margin: 0 var(--tiles-margin);
     margin-bottom: 2rem;
     padding: 1.4rem;
 
@@ -193,7 +201,7 @@ footer
     border-radius: 5px;
 
     color: white;
-    font: bold 1.5rem Gothic_Bold, cursive;
+    font: bold 1.5rem Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     line-height: 2.2rem;
 }
@@ -250,12 +258,14 @@ footer
 
     text-shadow: 0px 0px 5px rgb(185, 139, 79);
     transition: 0.3s ease;
+
+    line-height: 7.5rem;
 }
 
 blockquote {
-    color: rgba(82, 134, 57, 0.884);
+    margin: 1rem;
     color: white;
-    font-family: Gothic;
+    font-family: Gothic, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /* From: https://stackoverflow.com/questions/16325687/make-big-quotes-with-blockquote */
 /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
@@ -372,8 +382,8 @@ blockquote:after
 .tiles
 {
     height: 92.5vh;
-    margin: auto var(--mar);
-    margin-left: 0;
+    margin: auto 0;
+    /* margin-left: 0; */
 
     padding: 2.5rem;
 
@@ -400,7 +410,8 @@ blockquote:after
     position: sticky;
     top: 0rem;
     margin: 0.5rem;
-    margin-right: 1.5rem; /* Symmetry considerations */
+     /* Symmetry considerations */
+    /* margin-right: 1.5rem; */
     padding: 0.1rem;
 
     background: var(--sec0);
@@ -433,7 +444,7 @@ blockquote:after
 {
     text-align: center;
 
-    font-family: Monoton;
+    font-family: Monoton, sans-serif;
     font-size: var(--tile-ttl-font-size);
 
     color: var(--fg0);
@@ -441,13 +452,16 @@ blockquote:after
     font-weight: 100;
     margin: 2rem auto;
     padding: 2rem;
+
+    line-height: 5.5rem;
 }
 
-/* #events
+#events
 {
     overflow: hidden;
-    max-height: 100vh;
-} */
+
+    padding: 2rem;
+}
 
 /* The actual timeline (the vertical ruler) */
 .timeline
@@ -526,7 +540,7 @@ blockquote:after
     padding: 1rem;
 
     color: white;
-    font-family: Gothic_Bold;
+    font-family: Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 200;
     font-size: var(--entry-title-font-size);
 }
@@ -551,7 +565,7 @@ blockquote:after
     /* border-bottom-left-radius: 1.4rem;
     border-bottom-right-radius: 1.4rem; */
     
-    font-family: Gothic;
+    font-family: Gothic, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2rem;
     font-weight: 200;
 
@@ -578,7 +592,7 @@ blockquote:after
     background-color: rgba(0, 238, 255, 0.555);
     
     color: white;
-    font-family: Gothic_Bold;
+    font-family: Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 200;
     /* font-size: 1.5vw; */
 
@@ -610,6 +624,8 @@ blockquote:after
 
 .entry input[type=checkbox] + label::after {
     content: "⮛"; /* EXPERIMENTAL DOWN ARROW */
+    position: absolute;
+    bottom: 31%;
 }
 
 .entry input[type=checkbox]:checked + label::after {
@@ -680,7 +696,7 @@ blockquote:after
 
     text-align: right;
     color: white;
-    font-family: Gothic_Bold ;
+    font-family: Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
     font-size: 2rem;
 } */
@@ -1027,6 +1043,13 @@ blockquote:after
   }
 
 /* For the "Connect With Us" Tile */
+
+/* Removing border messes up the look */
+/* #contact {
+    border: none;
+} */
+
+
 .connect {
     /* display: grid;
     grid-template-areas:
@@ -1036,9 +1059,7 @@ blockquote:after
     grid-template-columns: 70% 25%; */
 
     margin: 6rem;
-    height: 80%;
-
-    border: none; /* Overrides .tiles */
+    /* height: 80%; */
 
     color: white;
 }
@@ -1060,7 +1081,7 @@ blockquote:after
 
     color: var(--ttl-color);
     font-family: Rubik, serif;
-    font-size: 6rem;
+    font-size: var(--contact-ttl-font-size);
     font-weight: 500;
     line-height: 6rem;
     text-shadow: 0px 0px 5px rgb(185, 139, 79);
@@ -1088,11 +1109,16 @@ blockquote:after
 
 .follow-us {
     font-size: 6rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .follow-us a {
     color: white;
-    margin: 2rem;
+    margin: 1rem 2rem;
 }
 
 .follow-us a i {
@@ -1153,44 +1179,171 @@ blockquote:after
 
 /* Media Rules */
 
-@media screen and (min-width: 960px) and (max-width: 1875px)
+/* @media screen and (min-width: 960px) and (max-width: 1875px)
 {
 
-}
+} */
 
-@media screen and (min-width: 960px) and (max-width: 1124px)
+/* @media screen and (min-width: 960px) and (max-width: 1124px)
 {
   
+} */
+
+@media screen and (max-width: 1230px)
+{
+    :root {
+        --main-ttl-font-size: 9rem;
+        --tile-ttl-font-size: 7rem;
+    }
+    body {
+        grid-template-columns: minmax(8rem, 12rem) 90%;
+    }
+    /* #contact-logo {
+        margin: 0;
+        width: 8rem;
+        border-radius: 50%;
+    } */
+    /* #contact-ttl {
+        margin: 0;
+        line-height: 4rem;
+    } */
+    /* #niser-logo {
+        margin: 1rem;
+        width: 14rem;
+        border-radius: 50%;
+    } */
+    .mailing-address {
+        margin: 0;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+     
 }
 
-@media screen and (max-width: 902px)
+@media screen and (max-width: 1024px)
+{
+    :root {
+        --main-ttl-font-size: 8rem;
+        --tile-ttl-font-size: 6rem;
+
+        --entry-title-font-size: 3rem;
+        --entry-date-font-size: 2.6rem;
+
+        --contact-ttl-font-size: 5rem;
+    }
+    blockquote {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 840px)
+{
+    :root {
+        --main-ttl-font-size: 8rem;
+        --tile-ttl-font-size: 6rem;
+
+        --entry-title-font-size: 3rem;
+
+        --width-person: 20rem;
+        --height-person: 20rem;
+    }
+    body {
+        grid-template-columns: minmax(8rem, 12rem) 88%;
+    }
+    .entry-date {
+        display: none;
+    }
+    .entry label::after {
+        position: absolute;
+        top: 33.5%;
+        right: 12%;
+    }
+    #contact-logo {
+        margin: 0;
+    }
+    #contact-ttl {
+        margin: 0;
+    }
+    #niser-logo {
+        margin: 1rem;
+    }
+    .mailing-address {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    .follow-us {
+        font-size: 4.75rem;
+    }
+    blockquote {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 690px)
+{
+    :root {
+        --main-ttl-font-size: 6.5rem;
+        --tile-ttl-font-size: 5rem;
+
+        --entry-title-font-size: 2.7rem;
+
+        --contact-ttl-font-size: 3.5rem;
+
+        --timeline-height: 90%;
+    }
+    body {
+        grid-template-columns: minmax(8rem, 18rem) 84%;
+    }
+    /* blockquote {
+        font-size: 1.6rem;
+    } */
+    #intro {
+        text-align: center;
+    }
+    #intro #social li {
+        font-size: 6rem;
+    }
+    .social-icons::after {
+        height: 7rem;
+        width: 6px;
+        position: relative;
+        right: -4rem;
+        top: -6.65rem;
+    }
+    .timeline {
+        margin-top: 7rem;
+    }
+    #contact-logo {
+        width: 8rem;
+        border-radius: 50%;
+    }
+    #contact-ttl {
+        line-height: 4rem;
+    }
+    #niser-logo {
+        width: 14rem;
+        border-radius: 50%;
+    }
+    .mailing-address {
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+}
+
+/* @media screen and (max-width: 415px)
 {
 
-}
-
-@media screen and (max-width: 960px)
-{
-
-}
-
-@media screen and (max-width: 601px)
-{
-
-}
-
-@media screen and (max-width: 415px)
-{
-
-}
+} */
 
 /* For phones (portrait) */
-@media screen and (max-height: 880px)
+/* @media screen and (max-height: 880px)
 {
 
-}
+} */
 /* For phones (landscape) */
-@media screen and (max-height: 415px)
+/* @media screen and (max-height: 415px)
 {
 
-}
+} */
 

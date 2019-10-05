@@ -410,7 +410,7 @@ ig.addEventListener('mouseout', unblurBg);
 // });
 
 // For changing BG Image at set intervals
-var urls = ['../images/backgrounds/webp/madam.webp', '../images/backgrounds/webp/apratim.webp', '../images/backgrounds/webp/satyam.webp', '../images/backgrounds/webp/jamal.webp'];
+var urls = ['../images/backgrounds/madam.png', '../images/backgrounds/apratim.png', '../images/backgrounds/satyam.png', '../images/backgrounds/jamal.png'];
 
 var count = 1;
 // $('body').css('background-image', 'url("' + urls[0] + '")');
@@ -422,19 +422,33 @@ setInterval(function() {
 }, 4000);
 
 
-// For smooth scrolling
-$(function() {
-	$.scrollify({
-		section: ".tiles",
-		sectionName: "section-name",
-		scrollSpeed: 100,
-		easing: "easeOutExpo",
-		touchScroll: true,
-		setHeights: false,
-		// standardScrollElements: '.timeline', // Un-comment this to make .timeline scrollable - breaks Scrollify's scrolling though
-		offset: -8
-	});
-  });
+
+function disableScrollify(toggle){
+	if(toggle){
+		$.scrollify.destroy();
+	} else {
+		// For smooth scrolling
+		$.scrollify({
+			section: ".tiles",
+			sectionName: "section-name",
+			scrollSpeed: 100,
+			easing: "easeOutExpo",
+			touchScroll: true,
+			setHeights: false,
+			// standardScrollElements: '.timeline', // Un-comment this to make .timeline scrollable - breaks Scrollify's scrolling though
+			offset: -8
+		});
+	}
+}
+// To disable Scrollify on Phones/Tablets
+$(document).ready(function(){
+	if($(window).width() < 1200){
+		disableScrollify(true);
+	} else {
+		disableScrollify(false);
+	}
+});
+
 
 // PRELOADER - Wrap every letter in a span -- PERF NERF
 // $('.ml1 .letters').each(function(){
