@@ -440,7 +440,7 @@ blockquote:after
     border-color: transparent;
 }
 
-#tile-ttl
+.tile-ttl
 {
     text-align: center;
 
@@ -1314,18 +1314,26 @@ blockquote:after
     /* blockquote {
         font-size: 1.6rem;
     } */
+    .tile-ttl {
+        padding: 0rem;
+    }
     #intro {
         text-align: center;
     }
     #intro #social li {
-        font-size: 6rem;
+        font-size: 4.5rem;
+        margin: 0 3rem;
     }
     .social-icons::after {
         height: 7rem;
         width: 6px;
         position: relative;
-        right: -4rem;
-        top: -6.65rem;
+        right: -2.4rem;
+        top: -5.5rem;
+    }
+    .ig {
+        position: relative;
+        right: -1.4rem;
     }
     .timeline {
         margin-top: 7rem;
