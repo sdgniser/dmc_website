@@ -1320,6 +1320,11 @@ blockquote:after
     #intro {
         text-align: center;
     }
+    #intro #social {
+        justify-content: center;
+        position: relative;
+        right: 0;
+    }
     #intro #social li {
         font-size: 4.5rem;
         margin: 0 3rem;
