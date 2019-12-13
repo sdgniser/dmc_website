@@ -11,9 +11,10 @@
 
 
     /* SIDEBAR */
-    --side-width: 10rem;
-    --logowidth: 7.2rem;
+    --side-width: 11rem;
+    --logowidth: 8rem;
     --nav-link-icon-font-size: 3.5rem;
+    --navicon-hover-bg-col: darkslategray;
     
 
     /* LANDING */
@@ -176,7 +177,7 @@ ul
 {
     display: block;
     position: sticky;
-    top: 3rem;
+    top: 8rem;
     margin: 3rem auto;
     max-width: var(--logowidth);
     border-radius: 50%;
@@ -218,14 +219,37 @@ ul
 
 .navicon
 {
-    transition: 0.35s ease;
+    width: 4rem;
+    height: 4rem;
+
+    background: white;
+    border-radius: 50%;
+    margin: 1.5rem;
+    padding: 1.75rem;
+
+    transition: 0.4s ease;
 }
 
 .navicon:hover
 {
-    transform: scale(1.5);
-    color: rgb(244, 121, 131);
-    /* animation: perturbed 0.4s alternate ease-in-out infinite; */
+    transform: scale(1.2);
+    background: var(--navicon-hover-bg-col);
+}
+
+.fa-calendar {
+    color: var(--events-bg-col);
+}
+
+.fa-image {
+    color: var(--gallery-bg-col);
+}
+
+.fa-id-badge {
+    color: var(--members-bg-col);
+}
+
+.fa-phone-alt {
+    color: var(--contact-bg-col);
 }
 
 footer
@@ -499,7 +523,7 @@ blockquote:after
     font-size: var(--tile-ttl-font-size);
     text-transform: uppercase;
 
-    padding: 12rem 0 4rem 0;
+    padding: 10rem 0 4rem 0;
 
     line-height: 5.5rem;
     text-shadow: 0px 0px 5px rgb(185, 139, 79);
