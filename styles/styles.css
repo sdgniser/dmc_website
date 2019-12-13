@@ -35,8 +35,8 @@
 
     /* GALLERY */
     --gallery-bg-col: #ff847e;
-    --carousel-height: 55%;
-    --carousel-width: 55%;
+    /* --carousel-height: 55%;
+    --carousel-width: 55%; */
 
     /* FIC */
     --fic-bg-col: #be9bff;
@@ -198,7 +198,7 @@ ul
 #nav
 {
     position: sticky;
-    top: 32vh;
+    top: 27vh; /* PREV: 32vh */
 
     margin: 2rem 0;
 
@@ -242,6 +242,10 @@ ul
 
 .fa-image {
     color: var(--gallery-bg-col);
+}
+
+.fa-user-tie {
+    color: var(--fic-bg-col);
 }
 
 .fa-id-badge {
@@ -465,25 +469,6 @@ blockquote:after
 #social .ig a:active,
 #social .ig .on {
     color: var(--ig);
-}
-
-/* MAIN CONTENT */
-.content
-{
-    /* position: relative; */
-    /* grid-area: content; */
-
-    /* margin-left: var(--side-width); */
-    /* overflow: auto; */
-
-    /* Subject to change */
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; */
-
-    font: 2rem 'Source Serif Pro', serif;
-    font-weight: 600;
-    line-height: 2.5rem;
 }
 
 /* For all the tiles -- Individual tiles can be styled, well, individually */
@@ -711,6 +696,53 @@ blockquote:after
 #gallery
 {
     background-color: var(--gallery-bg-col);
+}
+
+.gallery-slider {
+    display: flex;
+    align-items: center;
+
+    margin: 6rem 6rem;
+    margin-top: 8rem;
+
+    height: 60vh;
+    
+
+    scroll-snap-type: x proximity;
+	-webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    /* overflow-y: visible; */
+    /* -webkit-scrollbar-track-color: red; */
+}
+
+.gallery-slider::-webkit-scrollbar {
+    /* width: 0 !important; */
+    width: 0.1em;
+    height: 0.5em;
+
+    border-radius: 20px;
+    box-shadow: 0 0 1px 1px paleturquoise;
+}
+
+.gallery-slider::-webkit-scrollbar-button {
+    background: #d4b89b;
+}
+.gallery-slider::-webkit-scrollbar-track-piece {
+    background: transparent; /*  #f9df82; */
+}
+.gallery-slider::-webkit-scrollbar-thumb {
+    background: #be9bff;
+}
+
+.gallery-pics {
+    position: relative;
+
+    width: 40vw;
+    height: 48vh;
+
+    text-align: center;
+    
+	scroll-snap-align: center;
 }
 
 #members

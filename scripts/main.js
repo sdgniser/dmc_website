@@ -57,7 +57,17 @@ an.addEventListener('mouseout', unblurBg);
 cu.addEventListener('mouseover', blurBg);
 cu.addEventListener('mouseout', unblurBg);
 
+const gallery_image_resizer = function() {
+	let items = document.querySelectorAll('.gallery-pics');
+	for (let i = 0; i < items.length; i++)
+		if (i % 2) {
+			items[i].style.minHeight = '56vh';
+			items[i].style.zIndex = '2';
+			items[i].style.boxShadow = '0 9px 6px -6px black';
+		}
+}
 
+gallery_image_resizer();
 
 // function disableScrollify(toggle){
 // 	if(toggle){
