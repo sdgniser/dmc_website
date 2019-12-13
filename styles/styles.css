@@ -882,7 +882,9 @@ blockquote:after
     grid-template-columns: 50% 50%;
 
     color: white;
-    padding: 2rem;
+
+    margin-top: 2.5rem;
+    padding: 2rem 0;
 }
 
 .contact-details {
@@ -901,7 +903,7 @@ blockquote:after
     border-radius: 50%;
 }
 
-#contact-ttl {
+#contact-ttl, #contact-spic-ttl {
     margin: 2rem auto;
 
     color: var(--ttl-color);
@@ -958,36 +960,27 @@ blockquote:after
     color: var(--whatsapp-col);
 }
 
-.spic
+.contact-spic
 {
+    grid-area: contact-spic;
     padding: 2rem;
-    height: 100%;
-
-    padding-top: 0;
-
-    color: darkkhaki;
-    font-family: cursive;
-    font-weight: 100;
-    font-size: 1.8rem;
 
     text-align: center;
 }
 
-.spic-link
-{
-    grid-area: spic;
-    width: 10rem;
+.contact-spic p {
+    padding: 2rem;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.9rem;
+
+    text-align: justify;
 }
 
 .spic-logo
 {
-    background: pink;
-    border: 2px inset red;
-    border-radius: 8px;
-
-    width: 10rem;
-
-    transition: all 0.5s ease; 
+    width: 20rem;
+    transition: all 0.4s ease; 
 }
 
 .spic-logo:hover
@@ -996,43 +989,6 @@ blockquote:after
 }
 
 /* CAUTION - CODE GRAVEYARD AHEAD */
-
-/* .spic
-{
-    padding: 2rem; */
-    /* height: 100%; */
-
-    /* padding-top: 0; */
-
-    /* color: darkkhaki;
-    font-family: cursive;
-    font-weight: 100;
-    font-size: 1.8rem; */
-/* 
-    text-align: center;
-} */
-
-/* .spic-link
-{
-    grid-area: spic;
-    width: 10rem;
-} */
-
-/* .spic-logo
-{
-    background: pink; */
-    /* border: 2px inset red; */
-    /* border-radius: 8px; */
-
-    /* width: 10rem;
-
-    transition: all 0.5s ease; 
-} */
-
-/* .spic-logo:hover
-{
-    transform: scale(1.1);
-} */
 
 /* Media Rules */
 
