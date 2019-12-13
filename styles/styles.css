@@ -140,6 +140,15 @@ ul
     list-style-type: none;
 }
 
+/* MAKING IMAGES NON-SELECTABLE/DRAGGABLE */
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 /* FOR .backgroundimagehack */
 .blurimage {
     filter: blur(10px);
@@ -742,7 +751,7 @@ blockquote:after
 
     text-align: center;
     
-	scroll-snap-align: center;
+    scroll-snap-align: center;
 }
 
 #members
