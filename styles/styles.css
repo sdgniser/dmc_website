@@ -783,10 +783,10 @@ blockquote:after
 .person-details
 {
     position: relative;
-    top: -13.5rem;
+    top: -11.8rem; /* PREV: 13.8rem */
 
     opacity: 0;
-    margin: 0 1.75rem;
+    margin: 0 1.4rem; /* PREV: 1.75rem */
 
     color: aliceblue;
     font-size: 5rem;
@@ -826,17 +826,12 @@ blockquote:after
 
 #person-dgn
 {
-    /* margin: 0 auto; */
     margin-top: 0.25rem;
     padding-top: 0.25rem;
 
     color: white;
-    /* font-family: cent */
     font-size: 2rem;
-    /* font-style: italic; */
     font-weight: 500;
-
-    /* border-top: 2px dashed rgb(0, 110, 255); */
 }
 
 
