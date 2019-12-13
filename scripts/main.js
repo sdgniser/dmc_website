@@ -1,26 +1,31 @@
 // BG Image Hack
 let header = document.querySelector('#ttl');
-let introTile = document.querySelector('#intro');
+let introTile = document.querySelector('#landing');
 let bg = document.querySelector('.backgroundimagehack');
 let fb = document.querySelector('#social .fb a');
 let yt = document.querySelector('#social .yt a');
 let ig = document.querySelector('#social .ig a');
+let an = document.querySelector('#landing-links .about-niser a');
+let cu = document.querySelector('#landing-links .contact-us a');
 
 function turnSocialOn() {
 	fb.classList.add('on');
 	yt.classList.add('on');
 	ig.classList.add('on');
+	an.classList.add('on');
+	cu.classList.add('on');
 }
 
 function turnSocialOff() {
 	fb.classList.remove('on');
 	yt.classList.remove('on');
 	ig.classList.remove('on');
+	an.classList.add('on');
+	cu.classList.add('on');
 }
 
 function blurBg() {
 	bg.classList.add('blurimage');
-
 }
 
 function unblurBg() {
@@ -45,6 +50,14 @@ yt.addEventListener('mouseout', unblurBg);
 
 ig.addEventListener('mouseover', blurBg);
 ig.addEventListener('mouseout', unblurBg);
+
+an.addEventListener('mouseover', blurBg);
+an.addEventListener('mouseout', unblurBg);
+
+cu.addEventListener('mouseover', blurBg);
+cu.addEventListener('mouseout', unblurBg);
+
+
 
 // function disableScrollify(toggle){
 // 	if(toggle){

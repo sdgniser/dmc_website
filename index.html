@@ -41,56 +41,60 @@
        
         <!-- Main content -->
         <main class="content">
-
-            <div id="side">
-                    <a tabindex="0" id="logo-link" href="#top" title="DMC Homepage" target="_top"><img id="logo" src="images/logo_smpl.png"></a>
-                    <nav id="nav">
-                        <ul id="nav-list">
-                            <li class="ulist"><a tabindex="0" class="nav-links" href="#events" title="Our Club Activities"><i class="fa fa-calendar navicon"></i></li>
-                            <li class="ulist"><a tabindex="0" class="nav-links" href="#gallery" title="Image Gallery"><i class="fas fa-image navicon"></i></a></li>
-                            <li class="ulist"><a tabindex="0" class="nav-links" href="#team" title="Our Team"><i class="fas fa-id-badge navicon"></i></a></li>
-                            <li class="ulist"><a tabindex="0" class="nav-links" href="#contact" title="Connect with us"><i class="fas fa-phone-alt navicon"></i></a></li>
-                        </ul>
-                    </nav>
-                    <footer>
-                        <i class="fas fa-bolt"></i> <a tabindex="0" id="selfref" href="https://sdgniser.github.io" title="Powered by Software Development Group, NISER" target="_blank">SDG<br>2019</a>
-                    </footer>
-                </div>
             
-            <section class="tiles" id="landing" data-section-name="landing">
-              <!-- <div class="backgroundimagehack"></div> -->
-                <!--blockquote id="hello"-->
+            <section id="landing" data-section-name="landing">
+                <div class="backgroundimagehack"></div>
                 <section class="intro">
-                    <blockquote>
-                        UNITING PEOPLE THROUGH MUSIC AND DRAMA, SINCE 2009
-                    </blockquote>
-
+                    <ul id="landing-links">
+                        <li class="about-niser">
+                            <a href="https://www.niser.ac.in/content/about" target="_blank" title="Link to NISER's About Page (Opens in new tab)">ABOUT NISER</a>
+                        </li>
+                        <li class="contact-us">
+                            <a href="#contact">CONTACT US</a>
+                        </li>
+                    </ul>
                     <h1>
                         <a id="ttl" href="index.html" title="Homepage of Drama & Music Club, NISER">
                             Drama 'N' Music Club
                         </a>
                     </h1>
                     <ul id="social">
-                    <li class="fb">
-                        <abbr title="DMC's Facebook">
-                            <a href="https://www.facebook.com/dmcniser/"><i class="fab fa-facebook-square social-icons"></i></a>
-                        </abbr>
-                    </li>
-
-                    <li class="yt">
-                        <abbr title="DMC's YouTube">
-                            <a href="https://www.youtube.com/channel/UCubV372_AWYjVIDRWw3UOBA"><i class="fab fa-youtube social-icons"></i></a>
-                        </abbr>
-                    </li>
-
-                    <li class="ig">
-                        <abbr title="DMC's Instagram">
-                            <a href="https://www.instagram.com/dmcniser/"><i class="fab fa-instagram"></i></a>
-                        </abbr>
-                    </li>
+                        <li class="fb">
+                            <abbr title="DMC's Facebook">
+                                <a href="https://www.facebook.com/dmcniser/" target="_blank" title="Link to DMC's Facebook (Opens in new tab)"><i class="fab fa-facebook-square social-icons"></i></a>
+                            </abbr>
+                        </li>
+                        <li class="ig">
+                            <abbr title="DMC's Instagram">
+                                <a href="https://www.instagram.com/dmcniser/" target="_blank" title="Link to DMC's Instagram (Opens in new tab)"><i class="fab fa-instagram social-icons"></i></a>
+                            </abbr>
+                        </li>
+                        <li class="yt">
+                            <abbr title="DMC's YouTube">
+                                <a href="https://www.youtube.com/channel/UCubV372_AWYjVIDRWw3UOBA" target="_blank" title="Link to DMC's YouTube (Opens in new tab)"><i class="fab fa-youtube"></i></a>
+                            </abbr>
+                        </li>
                     </ul>
+                    <blockquote>
+                        UNITING PEOPLE THROUGH MUSIC AND DRAMA, SINCE 2009
+                    </blockquote>
                 </section>
             </section>
+
+            <div id="side">
+                <a tabindex="0" id="logo-link" href="#top" title="DMC Homepage" target="_top"><img id="logo" src="images/logo_smpl.png"></a>
+                <nav id="nav">
+                    <ul id="nav-list">
+                        <li class="ulist"><a tabindex="0" class="nav-links" href="#events" title="Our Club Activities"><i class="fa fa-calendar navicon"></i></li>
+                        <li class="ulist"><a tabindex="0" class="nav-links" href="#gallery" title="Image Gallery"><i class="fas fa-image navicon"></i></a></li>
+                        <li class="ulist"><a tabindex="0" class="nav-links" href="#members" title="Our Team"><i class="fas fa-id-badge navicon"></i></a></li>
+                        <li class="ulist"><a tabindex="0" class="nav-links" href="#contact" title="Connect with us"><i class="fas fa-phone-alt navicon"></i></a></li>
+                    </ul>
+                </nav>
+                <footer>
+                    <i class="fas fa-bolt"></i> <a tabindex="0" id="selfref" href="https://sdgniser.github.io" title="Powered by Software Development Group, NISER" target="_blank">SDG<br>2019</a>
+                </footer>
+            </div>
 
             <!-- EVENTS Timeline -->
             <section class="tiles" id="events" data-section-name="events">
@@ -123,10 +127,14 @@
                 </section>
             </section>
 
+            <!-- DO NOT REMOVE -->
+            <section class="tiles" id="JUNK"></section> <!-- DO NOT REMOVE -->
+            <!-- DO NOT REMOVE -->
+
             <section class="tiles" id="gallery" data-section-name="gallery">
                 <!-- From here: https://codepen.io/jh3y/pen/WwVKLN With almost no modifications - except font, or font-size etc. -->
                 <div class="tile-ttl">Gallery</div>
-            
+                
             </section>
 
             <section class="tiles" id="fic" data-section-name="fic">
@@ -212,35 +220,34 @@
                 <div class="tile-ttl">Connect With Us</div>
 
                 <!-- Contact Details -->
-                <div class="connect">
+                <div class="contact-container">
                     <!-- Container with address and social links -->
                     <div class="contact-details">
                         <img id="contact-logo" src="images/logo_smpl.png">
                         <h1 id="contact-ttl">
                             Drama and Music Club
                         </h1>
-                        <div class="mailing-address">
-                            <img id="niser-logo" src="images/niser-logo-light.png">
+                        <div class="contact-niser">
+                            <img id="contact-niser-logo" src="images/niser-logo-light.png">
                             <address>
                                 <a href="https://www.niser.ac.in" target="_blank" title="NISER's Homepage">National Institute of Science Education and Research</a><br>
                                 Bhubaneswar, India
                             </address>
                         </div>
                         <div class="follow-us">
-                            <a href="https://www.facebook.com/dmcniser/" title="DMC's Facebook" target="_blank"><i class="fab fa-facebook-square fb"></i></a>
-                            <a href="https://www.youtube.com/channel/UCubV372_AWYjVIDRWw3UOBA" title="DMC's YouTube" target="_blank"><i class="fab fa-youtube yt"></i></a>
-                            <a href="https://www.instagram.com/dmcniser/" title="DMC's Instagram" target="_blank"><i class="fab fa-instagram insta"></i></a>
+                            <a href="https://www.facebook.com/dmcniser/" title="Link to DMC's Facebook (Opens in New Tab)" target="_blank"><i class="fab fa-facebook-square fb"></i></a>
+                            <a href="https://www.youtube.com/channel/UCubV372_AWYjVIDRWw3UOBA" title="Link to DMC's YouTube (Opens in New Tab)" target="_blank"><i class="fab fa-youtube yt"></i></a>
+                            <a href="https://www.instagram.com/dmcniser/" title="Link to DMC's Instagram (Opens in New Tab)" target="_blank"><i class="fab fa-instagram insta"></i></a>
                             <a href="mailto:dmc@niser.ac.in" title="DMC's Mail"><i class="far fa-envelope mail"></i></a>
-                            <a href="tel:+911234567890" title="DMC's WhatsApp"><i class="fab fa-whatsapp whatsapp"></i></a>
+                            <a href="tel:+911234567890" title="Link to DMC's WhatsApp (Opens in New Tab)"><i class="fab fa-whatsapp whatsapp"></i></a>
                         </div>
                     </div>
                     <!-- SPIC MACAY -->
-                    <!-- "HAS NO USE" NERF -->
-                    <!-- <div class="spic">
+                    <div class="spic">
                         <p>SPIC MACAY<br>NISER Chapter (?)</p>
                         <a class="spic-link" href="http://www.spicmacay.com/"><img class="spic-logo" src="images/spic.jpg" alt="SPIC MACAY"></a>
                         <p>DUMMY TEXT ABOUT SPIC MACAY</p>
-                    </div> -->
+                    </div>
 
                 </div>
             </section>

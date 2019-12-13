@@ -7,6 +7,7 @@
     /* COMMON */
     --tile-ttl-font-size: 8rem;
     --ttl-color: white;
+    --in-tile-vert-sep-col: #FFFBDD;
 
 
     /* SIDEBAR */
@@ -17,11 +18,13 @@
 
     /* LANDING */
     --main-ttl-font-size: 13rem;
+    --landing-link-font-size: 2.5rem;
     --landing-bg-col: #d4b89b;
     --blockquote-quotes-col: #96cb7f;
 
 
     /* EVENTS */
+    --events-padding: 2rem;
     --events-bg-col: #9bc0ff;
     --entry-title-font-size: 3.5rem;
     --entry-text-font-size: 2.25rem;
@@ -37,18 +40,18 @@
     /* FIC */
     --fic-bg-col: #be9bff;
     --fic-text-font-size: 2.5rem;
-    --fic-image-size: 32rem;
+    --fic-image-size: 26rem;
 
     /* MEMBERS */
     --members-bg-col: #97e0d4;
-    --width-person: 24rem;
-    --height-person: 24rem;
+    --width-person: 18rem;
+    --height-person: 18rem;
     --person-details-font-size: 4rem;
     --person-border-color: white;
 
     /* CONTACT */
     --contact-bg-col: #99dd9b;
-    --contact-ttl-font-size: 6rem;
+    --contact-ttl-font-size: 4rem;
 
 
     /* Text Shadow Colors */
@@ -99,7 +102,7 @@
 
 body
 {
-    background: black center/cover no-repeat fixed;
+    background: url('../images/backgrounds/landing-bg.jpg') center/cover no-repeat fixed;
     margin: 0;
 
     color: white; /* Default Text Colour */
@@ -126,6 +129,7 @@ body::-webkit-scrollbar {
 
 a:hover, a:link, a:active, a:any-link, a:visited
 {
+    color: white;
     text-decoration: none !important;
 }
 
@@ -135,9 +139,25 @@ ul
     list-style-type: none;
 }
 
+/* FOR .backgroundimagehack */
+.blurimage {
+    filter: blur(10px);
+}
+
+.backgroundimagehack {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black url('../images/backgrounds/landing-bg.jpg') center/cover no-repeat fixed;
+    z-index: -1;
+    transition: all 0.75s ease;
+}
+/* FOR .backgroundimagehack -- ENDS HERE */
+
 #side {
     background: transparent;
-    /* grid-area: side; */
     position: sticky;
     top: 5%;
     float: left;
@@ -235,7 +255,37 @@ footer
 /* THE TITLE */
 #landing
 {
-    background-color: var(--landing-bg-col);
+    background: transparent;
+    z-index: 2;
+    /* background: url('../images/backgrounds/landing-bg.jpg') center/cover no-repeat fixed; */
+    /* filter: blur(2px); */
+    /* backdrop-filter: blur(20px); */
+    /* background-color: var(--landing-bg-col); */
+
+}
+
+#landing #landing-links {
+    float: right;
+}
+
+#landing #landing-links li {
+    display: inline-block;
+
+    font-family: Rubik;
+    font-size: var(--landing-link-font-size);
+
+    margin: 3rem 0;
+    margin-right: 5.5rem;
+    padding: 1rem;
+}
+
+/* Initial Load Transition */
+#landing-links, #ttl, #social, blockquote {
+    transition: all 1s ease;
+}
+
+.contact-us {
+    border: 2px white solid;
 }
 
 .intro {
@@ -248,6 +298,7 @@ footer
     text-align: right;
 
     color: aliceblue;
+    z-index: 2;
 }
 
 .intro > * {
@@ -265,21 +316,10 @@ footer
     background-color: #d4b89b;
     z-index: -1;
     transition: all 1s ease;
-}
-
-.backgroundimagehack {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #d4b89b url('../images/backgrounds/webp/madam.webp') center/cover no-repeat fixed;
-    z-index: -1;
-    transition: all 1s ease;
 } */
 
 h1 {
-    margin-top: 10rem;
+    margin: 12rem auto 0 auto;
     text-align: center;
 }
 
@@ -299,12 +339,13 @@ h1 #ttl
 }
 
 blockquote {
-    margin: 4rem auto;
-    font-size: 2.5rem;
+    position: absolute;
+    bottom: 3rem;
     width: 80rem;
-    float: left;
+
     color: white;
     font-family: Gothic, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;    
 }
 /* From: https://stackoverflow.com/questions/16325687/make-big-quotes-with-blockquote */
 /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
@@ -334,9 +375,9 @@ blockquote:after
 }
 
 #landing #social {
-    display: flex;
     position: relative;
-    justify-content: center;
+    right: 36rem; /* 18.5vw on FHD 16/9*/
+    top: -12rem;
 }
 
 #landing #social li {
@@ -362,10 +403,10 @@ blockquote:after
     top: -7rem;
 }
 
-.ig {
+/* .yt {
     position: relative;
     right: -2.5rem;
-}
+} */
 
 #social a:link,
 #social a:visited,
@@ -374,7 +415,7 @@ blockquote:after
     color: white;
     opacity: 0.5;
     /* filter: blur(1px); */
-    transition: 0.4s ease;
+    transition: 0.75s ease;
 }
 
 #social a:hover,
@@ -412,6 +453,10 @@ blockquote:after
     /* overflow: auto; */
 
     /* Subject to change */
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+
     font: 2rem 'Source Serif Pro', serif;
     font-weight: 600;
     line-height: 2.5rem;
@@ -420,8 +465,13 @@ blockquote:after
 /* For all the tiles -- Individual tiles can be styled, well, individually */
 .tiles
 {
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
+
+    width: calc(100vw - var(--side-width) - var(--events-padding));
+
+    padding: 0 var(--events-padding);
+    padding-left: var(--side-width);
 
     /* margin-left: 0; */
 
@@ -449,7 +499,6 @@ blockquote:after
     font-size: var(--tile-ttl-font-size);
     text-transform: uppercase;
 
-    /* font-weight: 100; */
     padding: 12rem 0 4rem 0;
 
     line-height: 5.5rem;
@@ -461,18 +510,16 @@ blockquote:after
     background-color: var(--events-bg-col);
     overflow: hidden;
 
-    padding: 2rem;
-
-    padding-left: var(--side-width);
+    position: absolute;
 }
 
 /* The actual timeline (the vertical ruler) */
 .timeline
 {
     margin: 0 auto;
-    margin-top: 15rem;
+    margin-top: 12rem;
 
-    background: inherit;
+    /* background: inherit; */
     overflow: hidden;
 }
 
@@ -672,17 +719,19 @@ blockquote:after
     padding: 6rem auto;
     text-align: center;
 
-    border-right: white 0.2rem solid;
+    border-right: var(--in-tile-vert-sep-col) 0.2rem solid;
 }
 
 .fic-image img
 {
     margin: 0 auto;
+    margin-top: 5rem;
 
     width: var(--fic-image-size);
     height: var(--fic-image-size);
 
     border-radius: 50%;
+    border: 2px solid var(--person-border-color);
 }
 
 .fic-words
@@ -824,27 +873,29 @@ blockquote:after
     background-color: var(--contact-bg-col);
 }
 
-.connect {
-    /* display: grid;
+.contact-container {
+    display: grid;
     grid-template-areas:
-        "details spic";
+        "contact-details contact-spic";
 
-    grid-column-gap: 5rem;
-    grid-template-columns: 70% 25%; */
-
-    margin: 6rem;
-    /* height: 80%; */
+    /* grid-column-gap: 5rem; */
+    grid-template-columns: 50% 50%;
 
     color: white;
+    padding: 2rem;
 }
 
 .contact-details {
-    /* grid-area: details; */
+    grid-area: contact-details;
     text-align: center;
+
+    padding: 2rem;
+
+    border-right: var(--in-tile-vert-sep-col) 0.2rem solid;
 }
 
 #contact-logo {
-    margin: 3rem auto;
+    margin: 2rem auto;
     margin-bottom: 1.5rem;
     width: 10rem;
     border-radius: 50%;
@@ -857,32 +908,32 @@ blockquote:after
     font-family: Rubik, serif;
     font-size: var(--contact-ttl-font-size);
     font-weight: 500;
-    line-height: 6rem;
+    line-height: 4rem;
     text-shadow: 0px 0px 5px rgb(185, 139, 79);
 }
 
-#niser-logo {
+#contact-niser-logo {
     margin-bottom: 2rem;
     width: 18rem;
     border-radius: 50%;
 }
 
-.mailing-address {
+.contact-niser {
     margin: 5rem 0;
     margin-bottom: 5rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 5rem;
+    line-height: 4rem;
     text-align: center;
 }
 
-.mailing-address a {
+.contact-niser a {
     color: white;
     text-decoration: underline dotted palegoldenrod !important;
 }
 
 .follow-us {
-    font-size: 6rem;
+    font-size: 4rem;
 
     display: flex;
     flex-direction: row;
@@ -896,7 +947,7 @@ blockquote:after
 }
 
 .follow-us a i {
-    transition: 0.6s;
+    transition: all 0.4s;
 }
 
 .mail:hover {
@@ -907,12 +958,44 @@ blockquote:after
     color: var(--whatsapp-col);
 }
 
-/* CAUTION - COMMENT GRAVEYARD AHEAD */
+.spic
+{
+    padding: 2rem;
+    height: 100%;
 
-/* .cont-sep {
-    width: 96%;
-    margin: 6rem auto;
-} */
+    padding-top: 0;
+
+    color: darkkhaki;
+    font-family: cursive;
+    font-weight: 100;
+    font-size: 1.8rem;
+
+    text-align: center;
+}
+
+.spic-link
+{
+    grid-area: spic;
+    width: 10rem;
+}
+
+.spic-logo
+{
+    background: pink;
+    border: 2px inset red;
+    border-radius: 8px;
+
+    width: 10rem;
+
+    transition: all 0.5s ease; 
+}
+
+.spic-logo:hover
+{
+    transform: scale(1.1);
+}
+
+/* CAUTION - CODE GRAVEYARD AHEAD */
 
 /* .spic
 {
