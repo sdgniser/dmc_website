@@ -760,14 +760,14 @@ blockquote:after
     border-radius: 5px;
 }
 
-.group
+.members-container
 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     
-    margin: 2rem auto;
+    margin: 5rem auto;
 }
 
 .person
@@ -775,7 +775,7 @@ blockquote:after
     width: var(--width-person);
     height: var(--height-person);
 
-    margin: 5rem 4.7rem;
+    margin: 5rem 8rem; /* Original: 5rem 4.7rem */
 
     transition: 0.3s ease;
 }
