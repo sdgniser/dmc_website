@@ -126,11 +126,11 @@ gallery_image_resizer();
 // 	}
 // }
 
-$.scrollify({
-	section : ".scrollify-section",
-	scrollSpeed: 2000,
-	setHeights: false
-});
+// $.scrollify({
+// 	section : ".scrollify-section",
+// 	scrollSpeed: 2000,
+// 	setHeights: false
+// });
 
 // To disable Scrollify on Phones/Tablets
 // $(document).ready(function(){
