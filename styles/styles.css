@@ -1056,6 +1056,10 @@ blockquote:after
     .person {
         margin: 5rem 6vw;
     }
+
+    .contact-spic {
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 1300px)
@@ -1227,6 +1231,10 @@ blockquote:after
 
     .fic-image img {
         margin: 1.8rem auto;
+    }
+
+    .fic-name {
+        margin: 0;
     }
 
     .fic-words {
