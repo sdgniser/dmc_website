@@ -15,6 +15,7 @@
     --in-tile-vert-sep-col: #FFFBDD;
     /* AFFECTS: Entry-Text in Events Tile | Text in FIC Tile | Text in Contact Tile */
     --in-tile-text-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --in-tile-text-font-size: 2.25rem;
     /* MAIN TITLE/HEADER COLOR */
     --ttl-color: white;
 
@@ -25,7 +26,6 @@
     --side-width: 16rem;
     --logowidth: 8rem;
     --nav-link-icon-font-size: 4rem;
-    --navicon-hover-bg-col: darkslategray;
     
 
     /* LANDING */
@@ -52,15 +52,16 @@
 
     /* FIC */
     --fic-bg-col: #be9bff;
-    --fic-text-font-size: 2.25rem;
     --fic-image-size: 26rem;
+    --fic-name-col: #D90368;
 
     /* MEMBERS */
     --members-bg-col: #97e0d4;
-    --width-person: 18rem;
-    --height-person: 18rem;
+    --members-pic-size: 18rem;
     --person-details-font-size: 4rem;
     --person-border-color: white;
+    --person-name-font-size: 2.25rem; /* AFFECT FIC NAME TOO */
+    --person-dgn-font-size: 2rem; /* AFFECT FIC DGN TOO */
 
     /* CONTACT */
     --address-font-family: inherit;
@@ -190,6 +191,8 @@ img {
     text-align: center;
 
     z-index: 10;
+
+    transition: all 0.6s ease;
 
     /* border: 2px red solid; */ /* FOR DEBUGGING */
 }
@@ -365,7 +368,7 @@ h1 #ttl
 blockquote {
     position: absolute;
     bottom: 3rem;
-    width: 80rem;
+    /* width: 80rem; */
 
     color: white;
     font-family: Gothic, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -389,7 +392,7 @@ blockquote:before
 blockquote:after
 {
     position: relative;
-    top: 3.2rem;
+    top: 3.8rem;
     color: var(--blockquote-quotes-col);
 
     font-family: Arial, Helvetica, sans-serif;
@@ -509,6 +512,8 @@ blockquote:after
 
     line-height: 5.5rem;
     text-shadow: 0px 0px 5px rgb(185, 139, 79);
+
+    transition: all 0.6s ease;
 }
 
 .in-tile-ttl {
@@ -524,6 +529,7 @@ blockquote:after
 
 .in-tile-text {
     font-family: var(--in-tile-text-font-family);
+    font-size: var(--in-tile-text-font-size);
 }
 
 #events
@@ -608,6 +614,8 @@ blockquote:after
     font-size: var(--entry-title-font-size);
 
     cursor: pointer;
+
+    transition: all 0.6s ease;
 }
 
 .entry label:hover {
@@ -657,11 +665,15 @@ blockquote:after
     background-color: var(--gallery-bg-col);
 }
 
+.gallery-slider, .gallery-pics {
+    transition: all 0.6s ease;
+}
+
 .gallery-slider {
     display: flex;
     align-items: center;
 
-    margin: 6rem 6rem;
+    margin: 6rem;
     margin-top: 8rem;
 
     height: 60vh;
@@ -736,6 +748,10 @@ blockquote:after
     background-color: var(--fic-bg-col);
 }
 
+.fic-image img, .fic-words {
+    transition: all 0.6s ease;
+}
+
 .fic-container
 {
     display: grid;
@@ -783,7 +799,6 @@ blockquote:after
     margin-right: 6rem;
 
     color: white;
-    font-size: var(--fic-text-font-size);
     text-align: justify;
 }
 
@@ -792,13 +807,11 @@ blockquote:after
     display: grid;
     margin: 0 auto;
     
-    color: var(--sec0);
+    color: var(--fic-name-col);
 	font-family: Helvetica, sans-serif;
 	font-weight: 600;
     
-    font-size: 2.25rem;
-    
-    border-radius: 5px;
+    font-size: var(--person-name-font-size);
 }
 
 #members
@@ -822,10 +835,10 @@ blockquote:after
 
 .person
 {
-    width: var(--width-person);
-    height: var(--height-person);
+    width: var(--members-pic-size);
+    height: var(--members-pic-size);
 
-    margin: 5rem 10rem; /* Original: 5rem 4.7rem */
+    margin: 5rem 13rem; /* Original: 5rem 4.7rem */
 
     transition: 0.3s ease;
 }
@@ -833,7 +846,7 @@ blockquote:after
 .person-details
 {
     position: relative;
-    top: -11.8rem; /* PREV: 13.8rem */
+    top: -11.2rem; /* PREV: 13.8rem */
 
     opacity: 0;
     margin: 0 1.4rem; /* PREV: 1.75rem */
@@ -869,7 +882,7 @@ blockquote:after
     color: var(--sec0);
 	font-family: Helvetica, sans-serif;
 	font-weight: 600;
-    font-size: 2.25rem;
+    font-size: var(--person-name-font-size);
 
     border-radius: 5px;
 }
@@ -880,7 +893,7 @@ blockquote:after
     padding-top: 0.25rem;
 
     color: white;
-    font-size: 2rem;
+    font-size: var(--person-dgn-font-size);
     font-weight: 500;
 }
 
@@ -943,16 +956,14 @@ blockquote:after
 
 .contact-niser {
     margin: 5rem 0;
-    margin-bottom: 5rem;
-    font-size: 2.5rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 4rem;
     text-align: center;
 }
 
 .address-text {
-    font-family: var(--address-font-family);
+    font-family: var(--in-tile-text-font-family);
+    font-size: var(--in-tile-text-font-size);
     font-style: normal;
+    line-height: 3rem;
 }
 
 .contact-niser a {
@@ -1001,7 +1012,6 @@ blockquote:after
     padding: 2rem;
 
     font-size: 1.9rem;
-
     text-align: justify;
 }
 
@@ -1019,16 +1029,31 @@ blockquote:after
   
 } */
 
+@media screen and (max-width: 1500px)
+{
+    .person {
+        margin: 5rem 6vw;
+    }
+}
+
 @media screen and (max-width: 1300px)
 {
     :root {
         --main-ttl-font-size: 9rem;
         --tile-ttl-font-size: 7rem;
         --landing-link-font-size: 2.25rem;
-    }
-    #landing {
-        /* justify-content: center; */
-        /* text-align: center; */
+
+        --side-width: 12rem;
+        --nav-link-icon-font-size: 3.5rem;
+
+        --entry-title-font-size: 3rem;
+        --entry-text-font-size: 2rem;
+
+        --gallery-pic-width: 55vw;
+
+        --members-bg-col: #97e0d4;
+        --members-pic-size: 16rem;
+        --person-details-font-size: 4rem;
     }
 
     #landing #social {
@@ -1050,54 +1075,34 @@ blockquote:after
     }
 
     blockquote {
-        position: absolute;
-        bottom: 3rem;
-        width: 80rem;
-    
-        color: white;
-        font-family: Gothic, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 2.5rem;    
+        font-size: 2rem;    
     }
-    /* From: https://stackoverflow.com/questions/16325687/make-big-quotes-with-blockquote */
-    /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
     
     blockquote:before
     {
         position: relative;
         top: 1.8rem;
-        color: var(--blockquote-quotes-col);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 6rem;
-        line-height: 1;
-        
-        content: "\201C";
     }
-    
-    blockquote:after
-    {
+
+    .entry label {
+        padding: 1rem 0; 
+    }
+
+    .fic-words {
+        padding: 2rem;
+        margin: 2rem;
+        margin-right: 6rem;
+    }
+
+    .members-container {
+        margin: 6.5rem auto;
+    }
+
+    .person-details {
         position: relative;
-        top: 3.2rem;
-        color: var(--blockquote-quotes-col);
-    
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 6rem;
-        line-height: 1;
-        content: "\201D";
+        top: -10.2rem;
     }
-    /* #contact-logo {
-        margin: 0;
-        width: 8rem;
-        border-radius: 50%;
-    } */
-    /* #contact-ttl {
-        margin: 0;
-        line-height: 4rem;
-    } */
-    /* #niser-logo {
-        margin: 1rem;
-        width: 14rem;
-        border-radius: 50%;
-    } */
+
     .mailing-address {
         margin: 0;
         margin-bottom: 2rem;
@@ -1109,75 +1114,144 @@ blockquote:after
 @media screen and (max-width: 1024px)
 {
     :root {
+        --in-tile-text-font-size: 2rem;
+
         --main-ttl-font-size: 8rem;
         --tile-ttl-font-size: 6rem;
 
-        --entry-title-font-size: 3rem;
-        --entry-date-font-size: 2.6rem;
+        --landing-link-font-size: 2rem;
 
-        --contact-ttl-font-size: 5rem;
+        --gallery-pic-width: 60vw;
+
+        --fic-image-size: 22rem;
+
+        --person-name-font-size: 2rem;
+        --person-dgn-font-size: 1.8rem;
     }
-    blockquote {
-        font-size: 1.75rem;
+
+    .fic-words {
+        padding-left: 0;
+        margin: 2rem 4rem 2rem 0;
+    }
+
+    .person {
+        margin: 6rem 4vw;
     }
 }
 
 @media screen and (max-width: 840px)
 {
     :root {
-        --main-ttl-font-size: 8rem;
-        --tile-ttl-font-size: 6rem;
+        --main-ttl-font-size: 7rem;
+        --tile-ttl-font-size: 5rem;
 
-        --entry-title-font-size: 3rem;
+        --in-tile-ttl-font-size: 3.5rem;
+        --in-tile-text-font-size: 1.9rem;
 
-        --width-person: 20rem;
-        --height-person: 20rem;
+        --side-width: 10rem;
+        --logowidth: 7.5rem;
+
+        --entry-title-font-size: 2.8rem;
+        --entry-text-font-size: 1.8rem;
+
+        --gallery-pic-width: 72vw;
+
+        --fic-image-size: 20rem;
+
+        /* --person-details-font-size: 4rem; */
     }
-    body {
-        grid-template-columns: minmax(8rem, 12rem) 88%;
+
+    .in-tile-ttl {
+        margin: 0.5rem auto;
     }
-    .entry-date {
-        display: none;
-    }
-    .entry label::after {
-        position: absolute;
-        top: 33.5%;
-        right: 12%;
-    }
-    .partialViewSlider-outerwrapper {
-        padding: 18rem 0;
-    }
-    .partialViewSlider-dots {
-        position: absolute;
-        bottom: 15rem;
-    }
-    .partialViewSlider-wrapper ul > li > img{
-        height: 25vh;
-    }
-    .partialViewSlider-prev{
-        left: 5%;
-    }
-    .partialViewSlider-next{
-        right: 5%;
-    }
-    #contact-logo {
-        margin: 0;
-    }
-    #contact-ttl {
-        margin: 0;
-    }
-    #niser-logo {
-        margin: 1rem;
-    }
-    .mailing-address {
-        margin: 0;
-        margin-bottom: 2rem;
-    }
-    .follow-us {
-        font-size: 4.75rem;
-    }
+
     blockquote {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+    }
+
+    blockquote:before
+    {
+        position: relative;
+        top: 2.2rem;
+    }
+
+    .gallery-slider {    
+        margin: 3rem;
+    }
+
+    .fic-container {
+        height: 100%;
+    
+        display: grid;
+        grid-template-areas:
+            "fic-image"
+            "fic-words";
+        
+        grid-column-gap: unset;
+        grid-template-columns: unset;
+        grid-template-rows: 40% 40%;
+
+        margin-top: 0;
+    }
+
+    .fic-image {
+        grid-area: fic-image;
+        padding: 0;
+        margin: 4rem 6rem;
+
+        border-right: unset;
+        border-bottom: var(--in-tile-vert-sep-col) 0.2rem solid;
+    }
+
+    .fic-image img {
+        margin: 1.8rem auto;
+    }
+
+    .fic-words {
+        grid-area: fic-words;
+        padding: 4rem;
+        margin: 2rem;
+    }
+
+    .person {
+        margin: 5.5rem 3vw;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-areas:
+            "contact-details"
+            "contact-spic";
+    
+        grid-template-columns: unset;
+        grid-template-rows: 55% 45%;
+    
+        margin-top: 0;
+        padding: 1rem 0;
+    }
+    
+    .contact-details {
+        margin: 2rem 8rem;
+        
+        border-right: unset;
+        border-bottom: var(--in-tile-vert-sep-col) 0.2rem solid;
+    }
+    
+    .contact-niser {
+        margin: 3rem 0;
+    }
+    
+    .follow-us {
+        font-size: 3.5rem;
+    }
+    
+    .contact-spic {
+        margin: 2rem auto;
+        padding: 0;
+    }
+    
+    .contact-spic p {
+        padding: 0 10rem;
     }
 }
 
