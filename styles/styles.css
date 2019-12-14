@@ -9,12 +9,12 @@
     --tile-ttl-font-family: Gothic_Bold, sans-serif;
     --tile-ttl-font-size: 8rem;
     /* AFFECTS: In-tile Title in Contact Tile */
-    --in-tile-ttl-font-family: Rubik, serif;
+    --in-tile-ttl-font-family: Source_Bold, sans-serif;
     --in-tile-ttl-font-size: 4rem;
     /* AFFECTS: In-tile vertical separator in FIC and Contact Tiles */
     --in-tile-vert-sep-col: #FFFBDD;
     /* AFFECTS: Entry-Text in Events Tile | Text in FIC Tile | Text in Contact Tile */
-    --in-tile-text-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --in-tile-text-font-family: Gothic, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     --in-tile-text-font-size: 2.25rem;
     /* MAIN TITLE/HEADER COLOR */
     --ttl-color: white;
@@ -53,7 +53,7 @@
     /* FIC */
     --fic-bg-col: #be9bff;
     --fic-image-size: 26rem;
-    --fic-name-col: #D90368;
+    --fic-name-col: white;
 
     /* MEMBERS */
     --members-bg-col: #97e0d4;
@@ -100,8 +100,13 @@
 }
 
 @font-face {
-    font-family: Music;
-    src: url('../fonts/AlphaMusicMan.ttf');
+    font-family: Source;
+    src: url('../fonts/SourceSandPro.ttf');
+}
+
+@font-face {
+    font-family: Source_Bold;
+    src: url('../fonts/SourceSandPro-Bold.ttf');
 }
 
 @font-face {
@@ -112,6 +117,11 @@
 @font-face {
     font-family: Gothic_Bold;
     src: url('../fonts/centuryb.ttf');
+}
+
+@font-face {
+    font-family: Athelas;
+    src: url('../fonts/Athelas-Regular.ttf');
 }
 
 body
@@ -353,7 +363,7 @@ h1 {
 h1 #ttl
 {
     color: var(--ttl-color);
-    font-family: Music, serif;
+    font-family: Source, sans-serif;
     font-size: var(--main-ttl-font-size);
     font-weight: 500;
 
@@ -371,7 +381,7 @@ blockquote {
     /* width: 80rem; */
 
     color: white;
-    font-family: Gothic, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Gothic', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.5rem;    
 }
 /* From: https://stackoverflow.com/questions/16325687/make-big-quotes-with-blockquote */
@@ -382,7 +392,7 @@ blockquote:before
     position: relative;
     top: 1.8rem;
     color: var(--blockquote-quotes-col);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Athelas, sans-serif;
     font-size: 6rem;
     line-height: 1;
     
@@ -395,7 +405,7 @@ blockquote:after
     top: 3.8rem;
     color: var(--blockquote-quotes-col);
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Athelas, sans-serif;
     font-size: 6rem;
     line-height: 1;
     content: "\201D";
@@ -799,7 +809,7 @@ blockquote:after
     margin-right: 6rem;
 
     color: white;
-    text-align: justify;
+    text-align: justify; /* left -- SA */
 }
 
 .fic-name
@@ -809,7 +819,7 @@ blockquote:after
     
     color: var(--fic-name-col);
 	font-family: Helvetica, sans-serif;
-	font-weight: 600;
+	font-weight: 300;
     
     font-size: var(--person-name-font-size);
 }
@@ -879,9 +889,10 @@ blockquote:after
     margin: 1rem auto;
     margin-top: -4rem;
     
-    color: var(--sec0);
+    /*color: var(--sec0);*/
+    color: white;
 	font-family: Helvetica, sans-serif;
-	font-weight: 600;
+	font-weight: 300;
     font-size: var(--person-name-font-size);
 
     border-radius: 5px;
@@ -894,7 +905,7 @@ blockquote:after
 
     color: white;
     font-size: var(--person-dgn-font-size);
-    font-weight: 500;
+    font-weight: 800;
 }
 
 
@@ -947,7 +958,7 @@ blockquote:after
 
 .contact-details {
     grid-area: contact-details;
-    text-align: center;
+    text-align: right;
 
     padding: 2rem;
 
@@ -1001,7 +1012,7 @@ blockquote:after
     grid-area: contact-spic;
     padding: 2rem;
 
-    text-align: center;
+    text-align: left;
 }
 
 .contact-spic a {
