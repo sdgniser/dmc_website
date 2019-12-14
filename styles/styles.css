@@ -5,15 +5,26 @@
     box-sizing: border-box;
 
     /* COMMON */
+    /* AFFECTS: All Tile Titles */
+    --tile-ttl-font-family: Gothic_Bold, sans-serif;
     --tile-ttl-font-size: 8rem;
-    --ttl-color: white;
+    /* AFFECTS: In-tile Title in Contact Tile */
+    --in-tile-ttl-font-family: Rubik, serif;
+    --in-tile-ttl-font-size: 4rem;
+    /* AFFECTS: In-tile vertical separator in FIC and Contact Tiles */
     --in-tile-vert-sep-col: #FFFBDD;
+    /* AFFECTS: Entry-Text in Events Tile | Text in FIC Tile | Text in Contact Tile */
+    --in-tile-text-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* MAIN TITLE/HEADER COLOR */
+    --ttl-color: white;
+
+    --link-underline-col: palegoldenrod;
 
 
     /* SIDEBAR */
-    --side-width: 11rem;
+    --side-width: 16rem;
     --logowidth: 8rem;
-    --nav-link-icon-font-size: 3.5rem;
+    --nav-link-icon-font-size: 4rem;
     --navicon-hover-bg-col: darkslategray;
     
 
@@ -27,6 +38,7 @@
     /* EVENTS */
     --events-padding: 2rem;
     --events-bg-col: #9bc0ff;
+    --entry-title-font-family: Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --entry-title-font-size: 3.5rem;
     --entry-text-font-size: 2.25rem;
     /* --entry-date-font-size: 2.8rem; */
@@ -35,12 +47,10 @@
 
     /* GALLERY */
     --gallery-bg-col: #ff847e;
-    /* --carousel-height: 55%;
-    --carousel-width: 55%; */
 
     /* FIC */
     --fic-bg-col: #be9bff;
-    --fic-text-font-size: 2.5rem;
+    --fic-text-font-size: 2.25rem;
     --fic-image-size: 26rem;
 
     /* MEMBERS */
@@ -52,7 +62,6 @@
 
     /* CONTACT */
     --contact-bg-col: #99dd9b;
-    --contact-ttl-font-size: 4rem;
 
 
     /* Text Shadow Colors */
@@ -108,19 +117,8 @@ body
 
     color: white; /* Default Text Colour */
 
-    /* display: grid;
-    grid-template-areas:
-        "side content"
-        "side content"
-        "side content";
-
-    grid-template-columns: minmax(8rem, 18rem) 92%;
-
-    grid-row-gap: 1.5rem;
-    grid-column-gap: 0; */
-
     /* To match up the transition with div.backgroundimagehack */
-    transition: all 1s ease;
+    transition: all 0.75s ease;
 }
 
 /* Hiding the scrollbar on the page */
@@ -132,6 +130,9 @@ a:hover, a:link, a:active, a:any-link, a:visited
 {
     color: white;
     text-decoration: none !important;
+    outline: 0;
+    -moz-outline-style: none;
+    outline-style: none;
 }
 
 ul
@@ -178,7 +179,7 @@ img {
 
     z-index: 10;
 
-    /* backdrop-filter: blur(20px); */
+    /* border: 2px red solid; */ /* FOR DEBUGGING */
 }
 
 /* LOGO Image */
@@ -231,8 +232,7 @@ img {
     width: 4rem;
     height: 4rem;
 
-    background: white;
-    border-radius: 50%;
+    color: white;
     margin: 1.5rem;
     padding: 1.75rem;
 
@@ -242,40 +242,15 @@ img {
 .navicon:hover
 {
     transform: scale(1.2);
-    background: var(--navicon-hover-bg-col);
-}
-
-.fa-calendar {
-    color: var(--events-bg-col);
-}
-
-.fa-image {
-    color: var(--gallery-bg-col);
-}
-
-.fa-user-tie {
-    color: var(--fic-bg-col);
-}
-
-.fa-id-badge {
-    color: var(--members-bg-col);
-}
-
-.fa-phone-alt {
-    color: var(--contact-bg-col);
 }
 
 footer
 {
     position: sticky;
-    /* top: calc(92rem - 5rem); *** */
     top: 88vh;
     margin: 0 var(--tiles-margin);
     margin-bottom: 2rem;
     padding: 1.4rem;
-
-    /* background-color: pink; */
-    border-radius: 5px;
 
     color: white;
     font: bold 1.5rem Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -513,7 +488,7 @@ blockquote:after
 {
     text-align: center;
 
-    font-family: Gothic_Bold, sans-serif;
+    font-family: var(--tile-ttl-font-family);
     font-size: var(--tile-ttl-font-size);
     text-transform: uppercase;
 
@@ -521,6 +496,21 @@ blockquote:after
 
     line-height: 5.5rem;
     text-shadow: 0px 0px 5px rgb(185, 139, 79);
+}
+
+.in-tile-ttl {
+    margin: 2rem auto;
+
+    color: var(--ttl-color);
+    font-family: var(--in-tile-ttl-font-family);
+    font-size: var(--in-tile-ttl-font-size);
+    font-weight: 500;
+    line-height: 4rem;
+    text-shadow: 0px 0px 5px rgb(185, 139, 79);
+}
+
+.in-tile-text {
+    font-family: var(--in-tile-text-font-family);
 }
 
 #events
@@ -552,62 +542,32 @@ blockquote:after
 }
 
 /* Forcing the last element up */
-.entry:last-child
+/* .entry:last-child
 {
     margin-bottom: 20rem;
-}
-
-/* Circles on the timeline */
-/* .entry::before
-{ */
-    /* content: ''; */
-    /* In case, we decide to put counters, e.g. Year, in the circles */
-    /* text-align: center;
-    font-size: 1.5rem;
-    color: white; */
-    /* float: left;
-    width: 3rem;
-    height: 3rem;
-    margin-left: -5.17rem;
-    margin-top: 1.4rem;
-    background-color:  #d90368;
-    border: 4px solid rgb(228, 162, 162);
-    border-radius: 50%; */
-    /* counter-reset: counter(section); */
-/* } */
+} */
 
 .entry-title
 {
-    margin: 0 2rem;
+    margin: 0;
     padding: 1rem;
 
     color: white;
-    font-family: Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 200;
     font-size: var(--entry-title-font-size);
 }
 
-/* .entry-date
-{
-    float: right;
-
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: var(--entry-date-font-size);
-} */
+.entry-title i {
+    margin: 0 2rem;
+    transition: all 0.4s;
+}
 
 .entry-detail
 {
     margin: 0;
     max-height: 0;
     overflow: hidden;
-
-    /* background-color: rgba(0, 255, 200, 0.452);
-    backdrop-filter: blur(20px); */
-
-    /* border-bottom-left-radius: 1.4rem;
-    border-bottom-right-radius: 1.4rem; */
     
-    font-family: Gothic, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: var(--entry-text-font-size);
     font-weight: 200;
 
@@ -627,14 +587,10 @@ blockquote:after
     display: block;
 
     margin: 0;
-    padding: 2rem; 
-
-    /* border-radius: 1.4rem; */
-    
-    /* background-color: rgba(0, 238, 255, 0.555); */
+    padding: 1.5rem 0; 
     
     color: white;
-    font-family: Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--entry-title-font-family);
     font-weight: 200;
     font-size: var(--entry-title-font-size);
 
@@ -647,34 +603,15 @@ blockquote:after
 
 /* :checked */
 .entry input:checked ~ .entry-detail {
-    max-height: 100vh;
-}
-
-/* Icon */
-.entry label::after {
-    position: absolute;
-    left: 1.5rem;
-    /* display: block; */
-
-    text-align: center;
-     
-    -webkit-transition: all 0.35s;
-    -o-transition: all 0.35s;
-    transition: all 0.35s;
-}
-
-.entry input[type=checkbox] + label::after {
-    content: "⮚"; /* EXPERIMENTAL DOWN ARROW \02C5 */
-    position: absolute;
-    bottom: 35.5%;
-}
-
-.entry input[type=checkbox]:checked + label::after {
-    transform: rotate(450deg);
+    max-height: 50vh;
 }
 
 .entry input[type=checkbox]:checked + label {
     background: rgba(45, 196, 131, 1);
+}
+
+.entry input[type=checkbox]:checked + label h2 i {
+    transform: rotate(90deg);
 }
 
 /* Text in the entry - <p> */
@@ -776,12 +713,16 @@ blockquote:after
     
     grid-template-columns: 50% 50%;
     margin-top: 15vh;
+
+    /* padding: auto 8rem; */
 }
 
 .fic-image
 {
     grid-area: fic-image;
     padding: 6rem auto;
+    margin-left: 6rem;
+
     text-align: center;
 
     border-right: var(--in-tile-vert-sep-col) 0.2rem solid;
@@ -804,9 +745,9 @@ blockquote:after
     grid-area: fic-words;
     padding: 4rem;
     margin: 4rem;
+    margin-right: 6rem;
 
     color: white;
-    font-family: Rubik, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: var(--fic-text-font-size);
     text-align: justify;
 }
@@ -943,7 +884,7 @@ blockquote:after
 
     color: white;
 
-    margin-top: 2.5rem;
+    margin-top: 13.5rem;
     padding: 2rem 0;
 }
 
@@ -956,30 +897,6 @@ blockquote:after
     border-right: var(--in-tile-vert-sep-col) 0.2rem solid;
 }
 
-#contact-logo {
-    margin: 2rem auto;
-    margin-bottom: 1.5rem;
-    width: 10rem;
-    border-radius: 50%;
-}
-
-#contact-ttl, #contact-spic-ttl {
-    margin: 2rem auto;
-
-    color: var(--ttl-color);
-    font-family: Rubik, serif;
-    font-size: var(--contact-ttl-font-size);
-    font-weight: 500;
-    line-height: 4rem;
-    text-shadow: 0px 0px 5px rgb(185, 139, 79);
-}
-
-#contact-niser-logo {
-    margin-bottom: 2rem;
-    width: 18rem;
-    border-radius: 50%;
-}
-
 .contact-niser {
     margin: 5rem 0;
     margin-bottom: 5rem;
@@ -989,9 +906,12 @@ blockquote:after
     text-align: center;
 }
 
+.contact-niser address {
+    font-style: normal;
+}
+
 .contact-niser a {
-    color: white;
-    text-decoration: underline dotted palegoldenrod !important;
+    text-decoration: underline dotted var(--link-underline-col) !important;
 }
 
 .follow-us {
@@ -1028,24 +948,16 @@ blockquote:after
     text-align: center;
 }
 
+.contact-spic a {
+    text-decoration: underline dotted var(--link-underline-col) !important;
+}
+
 .contact-spic p {
     padding: 2rem;
 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.9rem;
 
     text-align: justify;
-}
-
-.spic-logo
-{
-    width: 20rem;
-    transition: all 0.4s ease; 
-}
-
-.spic-logo:hover
-{
-    transform: scale(1.1);
 }
 
 /* CAUTION - CODE GRAVEYARD AHEAD */

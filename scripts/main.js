@@ -58,12 +58,12 @@ cu.addEventListener('mouseover', blurBg);
 cu.addEventListener('mouseout', unblurBg);
 
 const gallery_image_resizer = function() {
-	let items = document.querySelectorAll('.gallery-pics');
-	for (let i = 0; i < items.length; i++)
+	let images = document.querySelectorAll('.gallery-pics');
+	for (let i = 0; i < images.length; i++)
 		if (i % 2) {
-			items[i].style.minHeight = '56vh';
-			items[i].style.zIndex = '2';
-			items[i].style.boxShadow = '0 9px 6px -6px black';
+			images[i].style.minHeight = '56vh';
+			images[i].style.zIndex = '2';
+			images[i].style.boxShadow = '0 9px 6px -6px black';
 		}
 }
 
