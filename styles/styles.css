@@ -815,7 +815,7 @@ blockquote:after
 .fic-name
 {
     display: grid;
-    margin: 0 auto;
+    margin: 2rem auto;
     
     color: var(--fic-name-col);
 	font-family: Helvetica, sans-serif;
@@ -1034,7 +1034,7 @@ blockquote:after
     padding-left: 0;
 
     font-size: var(--in-tile-text-font-size);
-    text-align: justify;
+    text-align: left;
 }
 
 /* CAUTION - CODE GRAVEYARD AHEAD */
