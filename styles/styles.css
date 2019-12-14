@@ -61,6 +61,7 @@
     --person-border-color: white;
 
     /* CONTACT */
+    --address-font-family: inherit;
     --contact-bg-col: #99dd9b;
 
 
@@ -202,7 +203,7 @@ img {
 
 #logo:hover
 {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 #nav
@@ -691,15 +692,6 @@ blockquote:after
     scroll-snap-align: center;
 }
 
-#members
-{
-    background-color: var(--members-bg-col);
-    /* Delete the line, below, to make scrollify work perfectly, but wreck the layout (if there are > 10 people) and vice-versa */
-    /* height: auto; */
-
-    text-align: center;
-}
-
 #fic
 {
     background-color: var(--fic-bg-col);
@@ -711,8 +703,10 @@ blockquote:after
     grid-template-areas:
         "fic-image fic-words";
     
-    grid-template-columns: 50% 50%;
-    margin-top: 15vh;
+    grid-template-columns: 42% 58%;
+
+    grid-column-gap: 4rem;
+    margin-top: 19vh;
 
     /* padding: auto 8rem; */
 }
@@ -720,6 +714,8 @@ blockquote:after
 .fic-image
 {
     grid-area: fic-image;
+    /* position: relative; */
+    /* left: -4rem; */
     padding: 6rem auto;
     margin-left: 6rem;
 
@@ -731,7 +727,7 @@ blockquote:after
 .fic-image img
 {
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 1.5rem;
 
     width: var(--fic-image-size);
     height: var(--fic-image-size);
@@ -766,6 +762,15 @@ blockquote:after
     border-radius: 5px;
 }
 
+#members
+{
+    background-color: var(--members-bg-col);
+    /* Delete the line, below, to make scrollify work perfectly, but wreck the layout (if there are > 10 people) and vice-versa */
+    /* height: auto; */
+
+    text-align: center;
+}
+
 .members-container
 {
     display: flex;
@@ -781,7 +786,7 @@ blockquote:after
     width: var(--width-person);
     height: var(--height-person);
 
-    margin: 5rem 8rem; /* Original: 5rem 4.7rem */
+    margin: 5rem 10rem; /* Original: 5rem 4.7rem */
 
     transition: 0.3s ease;
 }
@@ -906,7 +911,8 @@ blockquote:after
     text-align: center;
 }
 
-.contact-niser address {
+.address-text {
+    font-family: var(--address-font-family);
     font-style: normal;
 }
 
