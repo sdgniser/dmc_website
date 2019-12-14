@@ -655,7 +655,7 @@ blockquote:after
     height: 60vh;
     
 
-    scroll-snap-type: x proximity;
+    /* scroll-snap-type: x proximity; */
 	-webkit-overflow-scrolling: touch;
     overflow-x: scroll;
     /* overflow-y: visible; */
@@ -681,6 +681,11 @@ blockquote:after
     background: #be9bff;
 }
 
+.gallery-slider.active {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
 .gallery-pics {
     position: relative;
 
@@ -689,7 +694,7 @@ blockquote:after
 
     text-align: center;
     
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; */
 }
 
 #fic
