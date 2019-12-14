@@ -29,7 +29,7 @@
     
 
     /* LANDING */
-    --main-ttl-font-size: 13rem;
+    --main-ttl-font-size: 10.5rem;
     --landing-link-font-size: 2.5rem;
     --landing-bg-col: #d4b89b;
     --blockquote-quotes-col: #96cb7f;
@@ -960,14 +960,14 @@ blockquote:after
     grid-area: contact-details;
     text-align: right;
 
-    padding: 2rem;
+    padding: 0 2rem;
 
     border-right: var(--in-tile-vert-sep-col) 0.2rem solid;
 }
 
 .contact-niser {
     margin: 5rem 0;
-    text-align: center;
+    text-align: right;
 }
 
 .address-text {
@@ -986,11 +986,19 @@ blockquote:after
 
     display: flex;
     flex-direction: row;
+    float: right;
     flex-wrap: wrap;
-    justify-content: center;
+
+    /* margin: 0 6rem; */
+
+    /* position: relative;
+    right: -23vw; */
+    /* top: 10rem; */
 }
 
 .follow-us a {
+    display: inline-block;
+
     color: white;
     margin: 1rem 2rem;
 }
@@ -1012,6 +1020,8 @@ blockquote:after
     grid-area: contact-spic;
     padding: 2rem;
 
+    margin-right: 18vw;
+
     text-align: left;
 }
 
@@ -1021,8 +1031,9 @@ blockquote:after
 
 .contact-spic p {
     padding: 2rem;
+    padding-left: 0;
 
-    font-size: 1.9rem;
+    font-size: var(--in-tile-text-font-size);
     text-align: justify;
 }
 
