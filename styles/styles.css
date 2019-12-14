@@ -47,6 +47,8 @@
 
     /* GALLERY */
     --gallery-bg-col: #ff847e;
+    --gallery-pic-width: 40vw;
+    --gallery-pic-num: 8; /* CHANGE TO THE CURRENT NUMBER */
 
     /* FIC */
     --fic-bg-col: #be9bff;
@@ -167,6 +169,15 @@ img {
     transition: all 0.75s ease;
 }
 /* FOR .backgroundimagehack -- ENDS HERE */
+
+/* .content {
+    scroll-snap-type: y mandatory;
+}
+
+.scrollify-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+} */
 
 #side {
     background: transparent;
@@ -560,7 +571,7 @@ blockquote:after
 
 .entry-title i {
     margin: 0 2rem;
-    transition: all 0.4s;
+    transition: all 0.6s;
 }
 
 .entry-detail
@@ -572,9 +583,9 @@ blockquote:after
     font-size: var(--entry-text-font-size);
     font-weight: 200;
 
-    -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
 }
 
 .entry input {
@@ -653,14 +664,18 @@ blockquote:after
     margin-top: 8rem;
 
     height: 60vh;
-    
 
-    /* scroll-snap-type: x proximity; */
+    scroll-snap-type: x proximity;
 	-webkit-overflow-scrolling: touch;
     overflow-x: scroll;
-    /* overflow-y: visible; */
-    /* -webkit-scrollbar-track-color: red; */
 }
+
+/* .gallery-slider:hover .gallery-pics {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+} */
 
 .gallery-slider::-webkit-scrollbar {
     /* width: 0 !important; */
@@ -681,20 +696,38 @@ blockquote:after
     background: #be9bff;
 }
 
-.gallery-slider.active {
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
-}
+/* FROM HERE: https://codepen.io/lewismcarey/pen/GJZVoG */
+/* @keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+  
+    50% {
+        -webkit-transform: translate3d(calc(-1*var(--gallery-pic-width)*(var(--gallery-pic-num)-4)), 0, 0);
+        transform: translate3d(calc(-1*var(--gallery-pic-width)*6), 0, 0);
+    }
+} */
 
 .gallery-pics {
     position: relative;
 
-    width: 40vw;
+    width: var(--gallery-pic-width);
     height: 48vh;
 
     text-align: center;
     
-    /* scroll-snap-align: center; */
+    scroll-snap-align: center;
+
+    /* -webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+   -webkit-animation-name: ticker;
+           animation-name: ticker;
+    -webkit-animation-duration: 30s;
+            animation-duration: 30s; */
 }
 
 #fic
