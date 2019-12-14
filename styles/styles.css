@@ -806,7 +806,7 @@ blockquote:after
     grid-area: fic-words;
     padding: 4rem;
     margin: 4rem;
-    margin-right: 6rem;
+    margin-right: 12rem;
 
     color: white;
     text-align: justify; /* left -- SA */
