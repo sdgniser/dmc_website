@@ -315,7 +315,7 @@ footer
 
 /* Initial Load Transition */
 #landing-links, #ttl, #social, blockquote {
-    transition: all 1s ease;
+    transition: all 0.6s ease;
 }
 
 .contact-us {
@@ -410,12 +410,13 @@ blockquote:after
 
 #landing #social {
     position: relative;
-    right: 36rem; /* 18.5vw on FHD 16/9*/
+    right: 18.5vw;
     top: -12rem;
 }
 
 #landing #social li {
     display: inline-block;
+
     font-size: 8rem;
     width: 2rem;
     margin: 0 5rem;
@@ -1029,14 +1030,70 @@ blockquote:after
   
 } */
 
-@media screen and (max-width: 1230px)
+@media screen and (max-width: 1300px)
 {
     :root {
         --main-ttl-font-size: 9rem;
         --tile-ttl-font-size: 7rem;
+        --landing-link-font-size: 2.25rem;
     }
-    body {
-        grid-template-columns: minmax(8rem, 12rem) 90%;
+    #landing {
+        /* justify-content: center; */
+        /* text-align: center; */
+    }
+
+    #landing #social {
+        margin: 0 auto;
+        position: relative;
+        right: 0;
+        top: -12rem;
+    }
+    
+    #landing #social li {
+        font-size: 6rem;
+        margin: 0 4rem;
+    }
+
+    .social-icons::after {
+        width: 5px;
+        position: relative;
+        top: -6rem;
+    }
+
+    blockquote {
+        position: absolute;
+        bottom: 3rem;
+        width: 80rem;
+    
+        color: white;
+        font-family: Gothic, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2.5rem;    
+    }
+    /* From: https://stackoverflow.com/questions/16325687/make-big-quotes-with-blockquote */
+    /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+    
+    blockquote:before
+    {
+        position: relative;
+        top: 1.8rem;
+        color: var(--blockquote-quotes-col);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 6rem;
+        line-height: 1;
+        
+        content: "\201C";
+    }
+    
+    blockquote:after
+    {
+        position: relative;
+        top: 3.2rem;
+        color: var(--blockquote-quotes-col);
+    
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 6rem;
+        line-height: 1;
+        content: "\201D";
     }
     /* #contact-logo {
         margin: 0;
@@ -1057,8 +1114,7 @@ blockquote:after
         margin-bottom: 2rem;
         font-size: 2.5rem;
         line-height: 4rem;
-    }
-     
+    } 
 }
 
 @media screen and (max-width: 1024px)
