@@ -29,6 +29,7 @@
     
 
     /* LANDING */
+    --landing-blur: 10px;
     --main-ttl-font-size: 10.5rem;
     --landing-link-font-size: 2.5rem;
     --landing-bg-col: #d4b89b;
@@ -41,9 +42,6 @@
     --entry-title-font-family: Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --entry-title-font-size: 3.5rem;
     --entry-text-font-size: 2.25rem;
-    /* --entry-date-font-size: 2.8rem; */
-
-    --timeline-height: 88%;
 
     /* GALLERY */
     --gallery-bg-col: #ff847e;
@@ -140,8 +138,7 @@ body::-webkit-scrollbar {
     width: 0 !important;
 }
 
-a:hover, a:link, a:active, a:any-link, a:visited
-{
+a:hover, a:link, a:active, a:any-link, a:visited {
     color: white;
     text-decoration: none !important;
     outline: 0;
@@ -166,7 +163,7 @@ img {
 
 /* FOR .backgroundimagehack */
 .blurimage {
-    filter: blur(10px);
+    filter: blur(var(--landing-blur));
 }
 
 .backgroundimagehack {
@@ -208,8 +205,7 @@ img {
 }
 
 /* LOGO Image */
-#logo-link
-{
+#logo-link {
     display: block;
     position: sticky;
     top: 8rem;
@@ -218,20 +214,17 @@ img {
     border-radius: 50%;
 }
 
-#logo
-{
+#logo {
     max-width: var(--logowidth);
     border-radius: 50%;
     transition: 0.3s ease;
 }
 
-#logo:hover
-{
+#logo:hover {
     transform: scale(1.1);
 }
 
-#nav
-{
+#nav {
     position: sticky;
     top: 27vh; /* PREV: 32vh */
 
@@ -244,7 +237,7 @@ img {
 .nav-links
 {
     font-size: var(--nav-link-icon-font-size);
-    color: var(--fg0);
+    color: var(--nav-link-col);
 
     margin: 0;
     padding: 0;
@@ -894,8 +887,6 @@ blockquote:after
 	font-family: Helvetica, sans-serif;
 	font-weight: 300;
     font-size: var(--person-name-font-size);
-
-    border-radius: 5px;
 }
 
 #person-dgn
@@ -1065,7 +1056,7 @@ blockquote:after
 @media screen and (max-width: 1300px)
 {
     :root {
-        --main-ttl-font-size: 9rem;
+        --main-ttl-font-size: 7.75rem;
         --tile-ttl-font-size: 7rem;
         --landing-link-font-size: 2.25rem;
 
@@ -1083,10 +1074,12 @@ blockquote:after
     }
 
     #landing #social {
+        width: 100vw;
+        text-align: center;
         margin: 0 auto;
         position: relative;
-        right: 0;
-        top: -12rem;
+        right: unset;
+        left: -2rem;
     }
     
     #landing #social li {
@@ -1142,7 +1135,7 @@ blockquote:after
     :root {
         --in-tile-text-font-size: 2rem;
 
-        --main-ttl-font-size: 8rem;
+        --main-ttl-font-size: 7.25rem;
         --tile-ttl-font-size: 6rem;
 
         --landing-link-font-size: 2rem;
@@ -1165,10 +1158,10 @@ blockquote:after
     }
 }
 
-@media screen and (max-width: 840px)
+@media screen and (max-width: 850px)
 {
     :root {
-        --main-ttl-font-size: 7rem;
+        --main-ttl-font-size: 6.5rem;
         --tile-ttl-font-size: 5rem;
 
         --in-tile-ttl-font-size: 3.5rem;
@@ -1183,8 +1176,6 @@ blockquote:after
         --gallery-pic-width: 72vw;
 
         --fic-image-size: 20rem;
-
-        /* --person-details-font-size: 4rem; */
     }
 
     .in-tile-ttl {
@@ -1217,13 +1208,14 @@ blockquote:after
         grid-template-columns: unset;
         grid-template-rows: 40% 40%;
 
-        margin-top: 0;
+        margin-top: 2rem;
     }
 
     .fic-image {
         grid-area: fic-image;
         padding: 0;
-        margin: 4rem 6rem;
+        margin: 4rem 5rem;
+        margin-bottom: 2rem;
 
         border-right: unset;
         border-bottom: var(--in-tile-vert-sep-col) 0.2rem solid;
@@ -1239,7 +1231,7 @@ blockquote:after
 
     .fic-words {
         grid-area: fic-words;
-        padding: 4rem;
+        padding: 2rem 4rem;
         margin: 2rem;
     }
 
@@ -1252,9 +1244,10 @@ blockquote:after
         grid-template-areas:
             "contact-details"
             "contact-spic";
-    
+        
         grid-template-columns: unset;
         grid-template-rows: 55% 45%;
+        grid-row-gap: 3rem;
     
         margin-top: 0;
         padding: 1rem 0;
@@ -1262,90 +1255,229 @@ blockquote:after
     
     .contact-details {
         margin: 2rem 8rem;
-        
+        text-align: center;
+
         border-right: unset;
         border-bottom: var(--in-tile-vert-sep-col) 0.2rem solid;
     }
     
     .contact-niser {
         margin: 3rem 0;
+        text-align: center;
     }
     
     .follow-us {
         font-size: 3.5rem;
+        float: none;
+        justify-content: center;
     }
     
     .contact-spic {
         margin: 2rem auto;
         padding: 0;
+
+        text-align: center;
     }
     
     .contact-spic p {
-        padding: 0 10rem;
+        padding: 1rem 10rem;
+
+        text-align: justify;
     }
 }
 
-@media screen and (max-width: 690px)
+@media screen and (max-width: 740px)
 {
     :root {
-        --main-ttl-font-size: 6.5rem;
-        --tile-ttl-font-size: 5rem;
+        --main-ttl-font-size: 6rem;
+        --tile-ttl-font-size: 4.5rem;
 
-        --entry-title-font-size: 2.7rem;
+        --in-tile-ttl-font-size: 3rem;
+        --in-tile-text-font-size: 1.8rem;
 
-        --contact-ttl-font-size: 3.5rem;
+        --logowidth: 5rem;
 
-        --timeline-height: 90%;
+        --entry-title-font-size: 2.5rem;
+        --entry-text-font-size: 1.6rem;
+
+        --gallery-pic-width: 86vw;
+
+        --fic-image-size: 18rem;
+
+        /* --members-pic-size: 17rem; */
+
+        --person-name-font-size: 1.8rem; /* AFFECT FIC NAME TOO */
+        --person-dgn-font-size: 1.7rem; /* AFFECT FIC DGN TOO */
     }
-    body {
-        grid-template-columns: minmax(8rem, 18rem) 84%;
+    
+    .tiles {
+        min-height: 100vh;
+        width: 100vw;
+        padding: 0;
     }
-    /* blockquote {
-        font-size: 1.6rem;
-    } */
+
     .tile-ttl {
-        padding: 0rem;
+        padding: 6rem 0 4rem 0;
     }
-    #landing {
+
+    #landing #landing-links {
+        float: unset;
         text-align: center;
     }
+    
+    #landing #landing-links li {
+        margin: 3rem;
+    }
+    
+    #side {
+        transform: translate3d(0, 0, 0); /* To force HW Accelaration */
+        backdrop-filter: blur(var(--landing-blur));
+
+        position: fixed;
+        top: unset;
+        bottom: 0;
+
+        float: none;
+        width: 100%;
+        height: 10vh;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        text-align: center;
+    }
+
+    #logo-link {
+        position: unset;
+        margin: 0 2vw;
+    }
+
+    #logo {
+        margin: 2rem 1vw;
+    }
+
+    #nav {
+        position: unset;
+
+        margin: 0 auto;
+        /* margin-left: 2.5rem; */
+
+        line-height: 8vh;
+        text-align: center;
+    }
+
+    #nav-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #nav-list .ulist {
+        display: flex;
+
+        margin: 0 0.5vw;
+    }
+
+    .nav-links {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navicon {
+        margin: 0 2rem;
+        padding: 0;
+    }
+
+    footer
+    {
+        display: none;
+        position: unset;
+        top: 88vh;
+        margin: 0 var(--tiles-margin);
+        margin-bottom: 2rem;
+        padding: 1.4rem;
+
+        color: white;
+        font: bold 1.5rem Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        line-height: 2.2rem;
+    }
+
     #landing #social {
-        justify-content: center;
         position: relative;
         right: 0;
+        top: -8rem;
     }
+
     #landing #social li {
-        font-size: 4.5rem;
-        margin: 0 3rem;
+        font-size: 5.5rem;
+        margin: 0 4rem;
     }
+
     .social-icons::after {
-        height: 6rem;
-        width: 6px;
+        width: 4px;
         position: relative;
-        right: -2.4rem;
-        top: -5.5rem;
+        top: -5.75rem;
     }
-    .ig {
+
+    blockquote {
+        position: absolute;
+        bottom: 12rem;
+        width: 100vw;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    blockquote:before {
         position: relative;
-        right: -1.4rem;
+        top: 1.8rem;
     }
+
     .timeline {
-        margin-top: 7rem;
+        margin-top: 4rem;
     }
-    #contact-logo {
-        width: 8rem;
-        border-radius: 50%;
+
+    #gallery .tile-ttl, #fic .tile-ttl {
+        padding: 8rem 0 3rem 0;
     }
-    #contact-ttl {
-        line-height: 4rem;
+
+    .gallery-slider {    
+        margin: 3rem 2rem;
     }
-    #niser-logo {
-        width: 14rem;
-        border-radius: 50%;
+
+    .fic-container {
+        margin-top: 4.5vh;
     }
-    .mailing-address {
-        font-size: 2.5rem;
-        line-height: 4rem;
+
+    #members .tile-ttl, #contact .tile-ttl {
+        padding-bottom: 2rem;
+    }
+
+    .members-container {
+        margin: -1rem 0;
+    }
+
+    .person {
+        margin: 4.5rem 6vw;
+    }
+
+    #person-dgn {
+        padding-top: 0;
+    }
+
+    .contact-container {
+        grid-row-gap: 2rem;
+    }
+
+    .contact-spic {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    
+    .contact-spic p {
+        padding: 1rem 5rem;
     }
 }
 
