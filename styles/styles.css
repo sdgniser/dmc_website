@@ -9,14 +9,14 @@
     --tile-ttl-font-family: Gothic_Bold, sans-serif;
     --tile-ttl-font-size: 8rem;
     /* AFFECTS: In-tile Title in Contact Tile */
-    --in-tile-ttl-font-family: Source_Bold, sans-serif;
+    --in-tile-ttl-font-family: Gothic_Bold, sans-serif;
     --in-tile-ttl-font-size: 4rem;
     /* AFFECTS: In-tile vertical separator in FIC and Contact Tiles */
     --in-tile-vert-sep-col: #FFFBDD;
     /* AFFECTS: Entry-Text in Events Tile | Text in FIC Tile | Text in Contact Tile */
     --in-tile-text-font-family: Gothic, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    --in-tile-text-font-size: 2.25rem;
-    /* MAIN TITLE/HEADER COLOR */
+    --in-tile-text-font-size: 2.5rem;
+    --in-tile-text-events-font-size: 3rem;    /* MAIN TITLE/HEADER COLOR */
     --ttl-color: white;
 
     --link-underline-col: palegoldenrod;
@@ -30,7 +30,7 @@
 
     /* LANDING */
     --landing-blur: 10px;
-    --main-ttl-font-size: 10.5rem;
+    --main-ttl-font-size: 12rem;
     --landing-link-font-size: 2.5rem;
     --landing-bg-col: #d4b89b;
     --blockquote-quotes-col: #96cb7f;
@@ -41,7 +41,7 @@
     --events-bg-col: #9bc0ff;
     --entry-title-font-family: Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --entry-title-font-size: 3.5rem;
-    --entry-text-font-size: 2.25rem;
+    --entry-text-font-size: 2.5rem;
 
     /* GALLERY */
     --gallery-bg-col: #ff847e;
@@ -50,7 +50,7 @@
 
     /* FIC */
     --fic-bg-col: #be9bff;
-    --fic-image-size: 26rem;
+    --fic-image-size: 28rem;
     --fic-name-col: white;
 
     /* MEMBERS */
@@ -58,8 +58,8 @@
     --members-pic-size: 18rem;
     --person-details-font-size: 4rem;
     --person-border-color: white;
-    --person-name-font-size: 2.25rem; /* AFFECT FIC NAME TOO */
-    --person-dgn-font-size: 2rem; /* AFFECT FIC DGN TOO */
+    --person-name-font-size: 2.5rem; /* AFFECT FIC NAME TOO */
+    --person-dgn-font-size: 2.2rem; /* AFFECT FIC DGN TOO */
 
     /* CONTACT */
     --address-font-family: inherit;
@@ -388,25 +388,28 @@ blockquote {
 blockquote:before
 {
     position: relative;
-    top: 1.8rem;
+    /*top: 1.8rem;*/
+    top: 2.3rem;
     color: var(--blockquote-quotes-col);
     font-family: Athelas, sans-serif;
     font-size: 6rem;
     line-height: 1;
-    
-    content: "\201C";
+    /*content: "\201C";*/
+    content: "\2018";
 }
 
 blockquote:after
 {
     position: relative;
-    top: 3.8rem;
+    /*top: 3.8rem;*/
+    top: 3.0rem;
     color: var(--blockquote-quotes-col);
 
     font-family: Athelas, sans-serif;
     font-size: 6rem;
     line-height: 1;
-    content: "\201D";
+    /*content: "\201D";*/
+    content: "\2019";
 }
 
 #landing #social {
@@ -784,7 +787,7 @@ blockquote:after
 
     text-align: center;
 
-    border-right: var(--in-tile-vert-sep-col) 0.2rem solid;
+    border-right: var(--in-tile-vert-sep-col) 0.5rem solid;/*0.2rem initially*/
 }
 
 .fic-image img
@@ -1263,7 +1266,7 @@ blockquote:after
         text-align: center;
 
         border-right: unset;
-        border-bottom: var(--in-tile-vert-sep-col) 0.2rem solid;
+        border-bottom: var(--in-tile-vert-sep-col) 0.5rem solid;/*0.2rem initially*/
     }
     
     .contact-niser {
