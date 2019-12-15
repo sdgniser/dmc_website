@@ -124,6 +124,11 @@
     src: url('../fonts/Athelas-Regular.ttf');
 }
 
+@font-face {
+    font-family: Pecita;
+    src: url('../fonts/Pecita.otf');
+}
+
 body
 {
     background: url('../images/backgrounds/landing-bg.jpg') center/cover no-repeat fixed;
@@ -363,7 +368,7 @@ h1 {
 h1 #ttl
 {
     color: var(--ttl-color);
-    font-family: Source, sans-serif;
+    font-family: 'Pecita', sans-serif;
     font-size: var(--main-ttl-font-size);
     font-weight: 500;
 
@@ -451,7 +456,7 @@ blockquote:after
 #social a:focus
 {
     color: white;
-    opacity: 0.5;
+    opacity: 1;
     /* filter: blur(1px); */
     transition: 0.75s ease;
 }
@@ -459,7 +464,7 @@ blockquote:after
 #social a:hover,
 #social a:active,
 #social a.on {
-    opacity: 1;
+    opacity: 0.8;
     filter: unset;
 }
 
