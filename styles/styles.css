@@ -841,7 +841,7 @@ blockquote:after
     flex-wrap: wrap;
     justify-content: center;
     
-    margin: 5rem auto;
+    margin: 4rem auto;
 }
 
 .person
@@ -849,7 +849,7 @@ blockquote:after
     width: var(--members-pic-size);
     height: var(--members-pic-size);
 
-    margin: 5rem 13rem; /* Original: 5rem 4.7rem */
+    margin: 6.5rem 13rem; /* Original: 5rem 4.7rem */
 
     transition: 0.3s ease;
 }
@@ -1053,7 +1053,7 @@ blockquote:after
 @media screen and (max-width: 1700px)
 {
     .person {
-        margin: 5rem 6vw;
+        margin: 6rem 6vw;
     }
 
     .contact-spic {
@@ -1125,17 +1125,14 @@ blockquote:after
         margin: 6.5rem auto;
     }
 
+    .person {
+        margin: 7rem 6vw;
+    }
+
     .person-details {
         position: relative;
         top: -10.2rem;
     }
-
-    .mailing-address {
-        margin: 0;
-        margin-bottom: 2rem;
-        font-size: 2.5rem;
-        line-height: 4rem;
-    } 
 }
 
 @media screen and (max-width: 1024px)
@@ -1387,11 +1384,6 @@ blockquote:after
         margin: 0 0.5vw;
     }
 
-    .nav-links {
-        margin: 0;
-        padding: 0;
-    }
-
     .navicon {
         margin: 0 2rem;
         padding: 0;
@@ -1496,20 +1488,20 @@ blockquote:after
 }
 
 /* Newer iPads (Non Pro) */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 2) {
     .contact-container {
         grid-row-gap: 2rem;
     }
 }
 
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
   and (-webkit-min-device-pixel-ratio: 2) {
     :root {
         --logowidth: 7rem;
@@ -1569,10 +1561,10 @@ blockquote:after
 /* Newer iPads (Non Pro) -- ENDS HERE */
 
 /* iPads (Pro) */
-@media only screen 
-    and (min-device-width: 1024px) 
-    and (max-device-width: 1024px) 
-    and (orientation: portrait) 
+@media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
     :root {
         --gallery-pic-width: 76vw;
@@ -1599,10 +1591,10 @@ blockquote:after
     }
 }
 
-@media only screen 
-    and (min-device-width: 1366px) 
-    and (max-device-width: 1366px) 
-    and (orientation: landscape) 
+@media only screen
+    and (min-device-width: 1366px)
+    and (max-device-width: 1366px)
+    and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
     h1 {
         margin: 14vh auto 0 auto;
@@ -1639,3 +1631,215 @@ blockquote:after
     }
 }
 /* iPads (Pro) -- ENDS HERE */
+
+/* Phones - iPhone 6/7/8 Plus */
+@media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+    :root {
+        --in-tile-text-font-size: 1.6rem;
+
+        --entry-title-font-size: 2rem;
+        --entry-text-font-size: 1.6rem;
+
+        --members-pic-size: 26rem;
+        --person-name-font-size: 2rem;
+        --person-dgn-font-size: 2rem;
+        --person-details-font-size: 5rem;
+    }
+
+    .tile-ttl {
+        padding: 4rem 0 2rem 0 !important;
+    }
+
+    #landing #landing-links li {
+        margin: 2rem;
+    }
+
+    h1 {
+        margin: 2rem auto;
+    }
+
+    #landing #social li {
+        font-size: 5rem;
+        margin: 1rem 3rem;
+    }
+
+    .social-icons::after {
+        width: 4px;
+        position: relative;
+        top: -5.5rem;
+        right: -2.35rem;
+    }
+
+    blockquote {
+        position: absolute;
+        bottom: 8rem;
+    }
+
+    blockquote:before {
+        position: relative;
+        top: 2rem;
+    }
+
+    
+    blockquote:after {
+        position: relative;
+        top: 3.5rem;
+    }
+
+    #logo-link {
+        margin: 0;
+    }
+
+    #logo {
+        margin: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    #nav {
+        margin-left: 1.5rem;
+    }
+
+    #nav-list {
+        margin-left: 1rem;
+    }
+
+    #nav-list .ulist {
+        margin: 0;
+    }
+
+    .navicon {
+        margin: 0 1.4rem;
+    }
+
+    footer
+    {
+        display: none;
+        position: unset;
+        top: 88vh;
+        margin: 0 var(--tiles-margin);
+        margin-bottom: 2rem;
+        padding: 1.4rem;
+
+        color: white;
+        font: bold 1.5rem Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        line-height: 2.2rem;
+    }
+
+    .timeline {
+        margin-top: 2rem;
+        padding: 0;
+    }
+
+    .entry {
+        margin: 0.5rem 2rem;
+    }
+
+    .gallery-slider {    
+        margin: 4rem 2rem;
+    }
+
+    .fic-container {
+        margin: 0;
+    }
+
+    .fic-image {
+        margin: 0 3.5rem;
+    }
+
+    .fic-words {
+        padding: 1rem;
+        margin: 2.2rem;
+    }
+
+    .members-container {
+        display: flex;
+
+        flex-direction: row;
+
+        margin: 2rem 6rem;
+        margin-top: 0;
+
+        height: 65vh;
+
+        scroll-snap-type: y mandatory;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+    }
+
+    .members-container::-webkit-scrollbar {
+        width: 0 !important;
+    }
+    
+
+    .person {
+        position: relative;
+
+        margin: 10rem 3vw;
+
+        width: var(--members-pic-size);
+        height: var(--members-pic-size);
+
+        scroll-snap-align: center;
+    }
+
+    .person-filter {
+        width: var(--members-pic-size);
+        height: var(--members-pic-size);
+    }
+
+    .person-details {
+        position: relative;
+        top: -15.75rem;
+        margin: 0 2.2rem;
+    }
+
+    #contact .tile-ttl {
+        /* margin: 0 1rem; */
+        padding: 2rem 0 0 0 !important;
+    }
+
+    .contact-container {
+        margin: 2rem 0;
+        padding: 0;
+
+        grid-template-rows: 47% 40%;
+        grid-row-gap: 0;
+    }
+
+    .contact-details {
+        margin: 0 2rem;
+    }
+
+    .address-text {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+
+        margin: -2rem 0 -2.2rem 0;
+        padding: 0;
+    }
+
+    .contact-spic {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    
+    .contact-spic p {
+        padding: 0 1.8rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* Landscape */
+@media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+
+}
+/* Phones - iPhone 6/7/8 Plus -- ENDS HERE */
