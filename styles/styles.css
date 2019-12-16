@@ -1632,11 +1632,23 @@ blockquote:after
 }
 /* iPads (Pro) -- ENDS HERE */
 
-/* Phones - iPhone 6/7/8 Plus */
+/* Phones - iPhone 6/7/8 Plus/X - Pixel XL */
 @media only screen
     and (min-device-width: 414px)
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait),
+    /* iPhone X */
+    only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait),
+    /* Pixel XL */
+    screen
+    and (device-width: 411px)
+    and (device-height: 823px)
+    and (-webkit-device-pixel-ratio: 4) 
     and (orientation: portrait) {
     :root {
         --in-tile-text-font-size: 1.6rem;
@@ -1684,7 +1696,6 @@ blockquote:after
         top: 2rem;
     }
 
-    
     blockquote:after {
         position: relative;
         top: 3.5rem;
@@ -1839,7 +1850,87 @@ blockquote:after
     and (min-device-width: 414px)
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape),
+    /* iPhone X */
+    only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape),
+    /* Pixel XL */
+    screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 4)
     and (orientation: landscape) {
 
 }
-/* Phones - iPhone 6/7/8 Plus -- ENDS HERE */
+/* Phones - iPhone 6/7/8 Plus/X - Pixel XL -- ENDS HERE */
+
+
+
+/* Exclusive - Phones - iPhone X */
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+
+}
+
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+
+}
+/* Exclusive - Phones - iPhone X -- ENDS HERE */
+
+/* Exclusive - Phones - Pixel XL */
+@media only screen
+    and (device-width: 411px)
+    and (device-height: 823px)
+    and (-webkit-device-pixel-ratio: 3.5)
+    and (orientation: portrait) {
+    #nav {
+        margin-left: 1rem;
+    }
+
+    #logo {
+        margin: 1.2rem;
+    }
+
+    .gallery-slider {    
+        margin: 5.2rem 2rem;
+    }
+
+    .fic-container {
+        margin-top: 1rem;
+    }
+
+    .members-container {
+        margin: 4rem 5rem;
+        margin-top: 3.5rem;
+
+        height: 60vh;
+    }
+
+    #contact .tile-ttl {
+        padding: 2rem;
+        margin: 1rem
+    }
+
+    .contact-details {
+        margin: 0 2.75rem;
+    }
+}
+
+@media only screen
+    and (device-width: 411px)
+    and (device-height: 823px)
+    and (-webkit-device-pixel-ratio: 3.5)
+    and (orientation: landscape) {
+
+}
+/* Exclusive - Phones - Pixel XL -- ENDS HERE */
