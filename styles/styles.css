@@ -555,7 +555,7 @@ blockquote:after
 .timeline
 {
     margin: 0 auto;
-    margin-top: 12rem;
+    margin-top: 8rem;
 
     /* background: inherit; */
     overflow: hidden;
@@ -1050,7 +1050,7 @@ blockquote:after
   
 } */
 
-@media screen and (max-width: 1500px)
+@media screen and (max-width: 1700px)
 {
     .person {
         margin: 5rem 6vw;
@@ -1070,7 +1070,7 @@ blockquote:after
 
         --side-width: 12rem;
         --nav-link-icon-font-size: 3.5rem;
-
+        
         --entry-title-font-size: 3rem;
         --entry-text-font-size: 2rem;
 
@@ -1166,7 +1166,7 @@ blockquote:after
     }
 }
 
-@media screen and (max-width: 850px)
+@media screen and (max-width: 900px)
 {
     :root {
         --main-ttl-font-size: 6.5rem;
@@ -1489,19 +1489,153 @@ blockquote:after
     }
 }
 
-/* @media screen and (max-width: 415px)
-{
+@media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) {
+    
+}
 
-} */
+/* Newer iPads (Non Pro) */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .contact-container {
+        grid-row-gap: 2rem;
+    }
+}
 
-/* For phones (portrait) */
-/* @media screen and (max-height: 880px)
-{
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    :root {
+        --logowidth: 7rem;
+        --side-width: 10rem;
 
-} */
-/* For phones (landscape) */
-/* @media screen and (max-height: 415px)
-{
+        --nav-link-icon-font-size: 3rem;
 
-} */
+        --gallery-pic-width: 70vw;
+    }
 
+    h1 {
+        margin: 10vh auto 0 auto;
+    }
+
+    .tile-ttl {
+        padding: 5.5rem 0 2rem 0;
+    }
+
+    #nav-list  {
+        margin-top: 14vh;
+    }
+
+    .navicon {
+        margin: 1.5rem 0;
+        padding: 0;
+    }
+
+    .timeline {
+        margin-top: 3rem;
+    }
+
+    .gallery-slider {
+        margin: 5rem 3rem;
+        height: 64vh;
+    }
+
+    .gallery-pics {
+        height: 54vh;
+    }
+
+    .fic-container {
+        margin-top: 13.5rem;
+    }
+
+    .members-container {
+        margin: 2rem 0;
+    }
+
+    .person {
+        margin: 5rem 6.5vw;
+    }
+
+    .contact-container {
+        margin: 8.5rem 3rem 0 0;
+    }
+}
+/* Newer iPads (Non Pro) -- ENDS HERE */
+
+/* iPads (Pro) */
+@media only screen 
+    and (min-device-width: 1024px) 
+    and (max-device-width: 1024px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+    :root {
+        --gallery-pic-width: 76vw;
+    }
+    .gallery-slider {
+        margin: 8rem 3rem;
+        height: 64vh;
+    }
+
+    .fic-container {
+        margin-top: 32rem;
+    }
+
+    .members-container {
+        margin: 10rem 0;
+    }
+
+    .person {
+        margin: 9rem 6.5vw;
+    }
+
+    .contact-container  {
+        margin: 19rem 3rem 0 0;
+    }
+}
+
+@media only screen 
+    and (min-device-width: 1366px) 
+    and (max-device-width: 1366px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+    h1 {
+        margin: 14vh auto 0 auto;
+    }
+
+    #landing #social {
+        width: 100vw;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        right: unset;
+        left: -2rem;
+    }
+
+    #landing #social li {
+        font-size: 8rem;
+        width: 2rem;
+        margin: 0 5rem;
+        justify-content: center;
+    }
+
+    .social-icons::after {
+        position: relative;
+        right: -3rem;
+        top: -7rem;
+    }
+
+    .fic-container {
+        margin-top: 17rem;
+    }
+
+    .person {
+        margin: 6.5rem 6.5vw;
+    }
+}
+/* iPads (Pro) -- ENDS HERE */
