@@ -61,7 +61,11 @@ const gallery_image_resizer = function() {
 	let images = document.querySelectorAll('.gallery-pics');
 	for (let i = 0; i < images.length; i++)
 		if (i % 2) {
-			images[i].style.minHeight = '56vh';
+			if (screen.width == 1024 && screen.height == 768) // iPads in Landscape
+				images[i].style.minHeight = '62vh';
+			else
+				images[i].style.minHeight = '56vh';
+
 			images[i].style.zIndex = '2';
 			images[i].style.boxShadow = '0 9px 6px -6px black';
 		}
