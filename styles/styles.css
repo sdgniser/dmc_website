@@ -774,6 +774,8 @@ blockquote:after
     grid-column-gap: 4rem;
     margin-top: 19vh;
 
+    align-items: center;
+
     /* padding: auto 8rem; */
 }
 
@@ -810,6 +812,7 @@ blockquote:after
     margin-right: 12rem;
 
     color: white;
+    font-size: 3.2rem;
     text-align: justify; /* left -- SA */
 }
 
@@ -837,11 +840,23 @@ blockquote:after
 .members-container
 {
     display: flex;
+
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
+
     margin: 4rem auto;
+    margin-top: 0;
+
+    height: 72vh;
+
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+}
+
+.members-container::-webkit-scrollbar {
+    width: 0 !important;
 }
 
 .person
@@ -849,9 +864,11 @@ blockquote:after
     width: var(--members-pic-size);
     height: var(--members-pic-size);
 
-    margin: 6.5rem 13rem; /* Original: 5rem 4.7rem */
+    margin: 8rem 13rem; /* Original: 5rem 4.7rem */
 
     transition: 0.3s ease;
+
+    scroll-snap-align: center;
 }
 
 .person-details
@@ -1121,9 +1138,9 @@ blockquote:after
         margin-right: 6rem;
     }
 
-    .members-container {
+    /* .members-container {
         margin: 6.5rem auto;
-    }
+    } */
 
     .person {
         margin: 7rem 6vw;
@@ -1154,6 +1171,7 @@ blockquote:after
     }
 
     .fic-words {
+        font-size: 2.8rem;
         padding-left: 0;
         margin: 2rem 4rem 2rem 0;
     }
@@ -1234,7 +1252,12 @@ blockquote:after
         margin: 0;
     }
 
+    .fic-dgn {
+        margin-bottom: 4vh;
+    }
+
     .fic-words {
+        font-size: 2.4rem;
         grid-area: fic-words;
         padding: 2rem 4rem;
         margin: 2rem;
@@ -1457,6 +1480,7 @@ blockquote:after
 
     .members-container {
         margin: -1rem 0;
+        height: 80vh;
     }
 
     .person {
@@ -1468,7 +1492,7 @@ blockquote:after
     }
 
     .contact-container {
-        grid-row-gap: 2rem;
+        grid-row-gap: 0;
     }
 
     .contact-spic {
@@ -1477,7 +1501,7 @@ blockquote:after
     }
     
     .contact-spic p {
-        padding: 1rem 5rem;
+        padding: 0 4rem;
     }
 }
 
@@ -1487,8 +1511,12 @@ blockquote:after
   and (max-device-width: 1024px)
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 2) {
+    .members-container {
+        height: 76.5vh;
+    }
+
     .contact-container {
-        grid-row-gap: 2rem;
+        grid-row-gap: 0;
     }
 }
 
@@ -1635,15 +1663,15 @@ blockquote:after
     and (orientation: portrait),
     /* iPhone X */
     only screen
-    and (min-device-width: 375px)
-    and (max-device-width: 812px)
+    and (device-width: 375px)
+    and (device-height: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: portrait),
     /* Pixel XL */
     only screen
-    and (min-device-width: 411px)
-    and (max-device-height: 823px)
-    and (-webkit-device-pixel-ratio: 4) 
+    and (device-width: 411px)
+    and (device-height: 823px)
+    and (-webkit-device-pixel-ratio: 3.5) 
     and (orientation: portrait) {
     :root {
         --in-tile-text-font-size: 1.6rem;
@@ -1710,7 +1738,7 @@ blockquote:after
     }
 
     #nav-list {
-        margin-left: 1rem;
+        margin-left: 0.75rem;
     }
 
     #nav-list .ulist {
@@ -1750,6 +1778,9 @@ blockquote:after
     }
 
     .fic-container {
+        grid-template-rows: 40% 24%;
+        grid-row-gap: 2rem;
+
         margin: 0;
     }
 
@@ -1760,6 +1791,8 @@ blockquote:after
     .fic-words {
         padding: 1rem;
         margin: 2.2rem;
+
+        font-size: 1.6rem;
     }
 
     .members-container {
@@ -1848,14 +1881,14 @@ blockquote:after
     and (orientation: landscape),
     /* iPhone X */
     only screen
-    and (min-device-width: 375px)
-    and (max-device-width: 812px)
+    and (device-height: 375px)
+    and (device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape),
     /* Pixel 2 XL */
     only screen
-    and (min-device-width: 411px)
-    and (max-device-height: 823px)
+    and (device-height: 411px)
+    and (device-width: 823px)
     and (-webkit-device-pixel-ratio: 3.5)
     and (orientation: landscape) {
     :root {
@@ -1960,16 +1993,15 @@ blockquote:after
         border-right: var(--in-tile-vert-sep-col) 0.25rem solid;/*0.2rem initially*/
     }
 
-    .fic-image img
-    {
+    .fic-image img {
         margin: 0 auto;
     }
 
-    .fic-words
-    {
+    .fic-words {
         grid-area: fic-words;
-        padding: 0;
         padding: 1rem;
+
+        font-size: 1.8rem;
     }
 
     .fic-name {
@@ -1982,7 +2014,7 @@ blockquote:after
         flex-direction: column;
 
         margin: 0;
-        margin-top: -6vh;
+        margin-top: -5.5vh;
 
         height: 68vh;
 
@@ -2068,14 +2100,14 @@ blockquote:after
 /* Exclusive to Pixel 2XL + iPhone X */
 @media only screen
     /* iPhone X */
-    and (min-device-width: 375px)
-    and (max-device-width: 812px)
+    and (device-height: 375px)
+    and (device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape),
     /* Pixel 2 XL */
     only screen
-    and (min-device-width: 411px)
-    and (max-device-height: 823px)
+    and (device-height: 411px)
+    and (device-width: 823px)
     and (-webkit-device-pixel-ratio: 3.5)
     and (orientation: landscape) {
     :root {
@@ -2145,8 +2177,8 @@ blockquote:after
 
 /* Exclusive - Phones - iPhone X */
 @media only screen
-    and (min-device-width: 375px)
-    and (max-device-width: 812px)
+    and (device-width: 375px)
+    and (device-height: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: portrait) {
     :root {
@@ -2200,8 +2232,8 @@ blockquote:after
 }
 
 @media only screen
-    and (min-device-width: 375px)
-    and (max-device-width: 812px)
+    and (device-height: 375px)
+    and (device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape) {
     :root {
@@ -2234,7 +2266,7 @@ blockquote:after
     }
     
     .contact-container {
-        margin-right: 2rem;
+        margin: 0.5rem 2rem 0 0;
     }
 
     .contact-spic {
@@ -2245,8 +2277,8 @@ blockquote:after
 
 /* Exclusive - Phones - Pixel 2 XL */
 @media only screen
-    and (min-device-width: 411px)
-    and (max-device-height: 823px)
+    and (device-width: 411px)
+    and (device-height: 823px)
     and (-webkit-device-pixel-ratio: 3.5)
     and (orientation: portrait) {
     #nav {
@@ -2254,7 +2286,7 @@ blockquote:after
     }
 
     #logo {
-        margin: 0rem;
+        margin: 1.3rem;
     }
 
     .gallery-slider {    
@@ -2280,6 +2312,16 @@ blockquote:after
 
     .contact-details {
         margin: 0 2.75rem;
+    }
+}
+
+@media only screen
+    and (device-height: 411px)
+    and (device-width: 823px)
+    and (-webkit-device-pixel-ratio: 3.5)
+    and (orientation: landscape) {
+    .contact-container {
+        margin: 2rem 2rem 0 0;
     }
 }
 /* Exclusive - Phones - Pixel 2 XL -- ENDS HERE */
