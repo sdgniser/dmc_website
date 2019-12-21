@@ -1648,7 +1648,7 @@ blockquote:after
 }
 /* iPads (Pro) -- ENDS HERE */
 
-/* Phones - iPhone 6/7/8 Plus/X - Pixel XL */
+/* Phones - iPhone 6/7/8 Plus/X - Pixel 2/2XL */
 @media only screen
     /* iPhone 6/7/8 Plus */
     and (min-device-width: 414px)
@@ -1660,6 +1660,12 @@ blockquote:after
     and (device-width: 375px)
     and (device-height: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait),
+    /* Pixel 2 */
+    only screen
+    and (device-width: 411px)
+    and (device-height: 731px)
+    /* and (-webkit-device-pixel-ratio: 3) */
     and (orientation: portrait),
     /* Pixel XL */
     only screen
@@ -1878,6 +1884,12 @@ blockquote:after
     and (device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape),
+    /* Pixel 2 */
+    only screen
+    and (device-height: 411px)
+    and (device-width: 731px)
+    /* and (-webkit-device-pixel-ratio: 3) */
+    and (orientation: landscape),
     /* Pixel 2 XL */
     only screen
     and (device-height: 411px)
@@ -2087,7 +2099,7 @@ blockquote:after
         text-align: left;
     }
 }
-/* Phones - iPhone 6/7/8 Plus/X - Pixel 2 XL -- ENDS HERE */
+/* Phones - iPhone 6/7/8 Plus/X - Pixel 2/2XL -- ENDS HERE */
 
 
 /* Exclusive to Pixel 2XL + iPhone X */
@@ -2096,6 +2108,12 @@ blockquote:after
     and (device-height: 375px)
     and (device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape),
+    /* Pixel 2 */
+    only screen
+    and (device-height: 411px)
+    and (device-width: 731px)
+    and (-webkit-device-pixel-ratio: 3.5)
     and (orientation: landscape),
     /* Pixel 2 XL */
     only screen
@@ -2319,12 +2337,20 @@ blockquote:after
 }
 /* Exclusive - Phones - Pixel 2 XL -- ENDS HERE */
 
-/* Phones - iPhone 5/SE */
+/* Phones - iPhone 5/SE - Galaxy S5 to iPhone 6/7/8 */
 @media only screen
     /* iPhone 5/SE */
     and (device-width: 320px)
     and (device-height: 568px)
     and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait),
+    only screen
+    /* Galaxy S5 + iPhone 6/7/8 */
+    and (min-device-width: 360px)
+    and (max-device-width: 375px)
+    and (min-device-height: 640px)
+    and (max-device-height: 667px)
+    /* and (-webkit-min-device-pixel-ratio: 2) */
     and (orientation: portrait) {
     :root {
         --logowidth: 4rem;
@@ -2572,6 +2598,14 @@ blockquote:after
     and (device-height: 320px)
     and (device-width: 568px)
     and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape),
+    only screen
+    /* Galaxy S5 + iPhone 6/7/8 */
+    and (min-device-height: 360px)
+    and (max-device-height: 375px)
+    and (min-device-width: 640px)
+    and (max-device-width: 667px)
+    /* and (-webkit-min-device-pixel-ratio: 2) */
     and (orientation: landscape) {
     :root {
         --in-tile-text-font-size: 1.6rem;
@@ -2613,10 +2647,6 @@ blockquote:after
         margin: 0;
     }
 
-    #nav-list {
-        margin-left: -2rem;
-    }
-
     .navicon {
         margin: 0 2rem;
     }
@@ -2632,7 +2662,7 @@ blockquote:after
     }
 
     #landing #social {
-        margin: 5rem 0 -4rem 1rem;
+        margin: 5rem 0 -3rem 1rem;
     }
 
     #landing #social li {
@@ -2741,7 +2771,7 @@ blockquote:after
     
     .person {
         position: relative;
-        margin: 0rem 3vw;
+        margin: 0 3vw;
 
         scroll-snap-align: center;
     }
@@ -2824,4 +2854,70 @@ blockquote:after
         text-align: left;
     }
 }
-/* Phones - iPhone 5/SE -- ENDS HERE */
+/* Phones - iPhone 5/SE - Galaxy S5 to iPhone 6/7/8 -- ENDS HERE */
+
+/* Exclusive - Phones - Galaxy S5 to iPhone 6/7/8 */
+@media only screen
+    /* Galaxy S5 + iPhone 6/7/8 */
+    and (min-device-width: 360px)
+    and (max-device-width: 375px)
+    and (min-device-height: 640px)
+    and (max-device-height: 667px)
+    /* and (-webkit-min-device-pixel-ratio: 2) */
+    and (orientation: portrait) {
+    #side {
+        height: 9vh;
+    }
+
+    #nav-list {
+        margin: 0.5rem 0 0 1.5rem;
+    }
+
+    .navicon {
+        margin: 0 0.75rem;
+    }
+
+    .contact-container {
+        margin-top: 4rem;
+        grid-row-gap: 2rem;
+    }
+
+    .follow-us {
+        margin-bottom: 4rem;
+    }
+}
+
+@media only screen
+    /* Galaxy S5 + iPhone 6/7/8 */
+    and (min-device-height: 360px)
+    and (max-device-height: 375px)
+    and (min-device-width: 640px)
+    and (max-device-width: 667px)
+    /* and (-webkit-min-device-pixel-ratio: 2) */
+    and (orientation: landscape) {
+    :root {
+        --gallery-pic-width: 60vw;
+    }
+
+    #side {
+        height: 13vh;
+    }
+
+    .gallery-slider {    
+        margin: 0 10rem;
+    }
+
+    .fic-container {
+        margin: 2.5rem 2rem;
+    }
+
+    .person {
+        position: relative;
+        margin: 2rem 4vw;
+    }
+
+    .contact-container {
+        margin: 3.5rem 0;
+    }
+}
+/* Exclusive - Phones - Galaxy S5 to iPhone 6/7/8 -- ENDS HERE */
