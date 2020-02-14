@@ -130,11 +130,20 @@ gallery_image_resizer();
 // 	}
 // }
 
-// $.scrollify({
-// 	section : ".scrollify-section",
-// 	scrollSpeed: 2000,
-// 	setHeights: false
-// });
+$.scrollify({
+	section : ".scrollify-section",
+	scrollSpeed: 200,
+	setHeights: false,
+	easing: "easeOutExpo",
+    // scrollSpeed: 1100,
+    // offset : 0,
+    // scrollbars: true,
+    // standardScrollElements: "",
+    // setHeights: true,
+    overflowScroll: true,
+    // updateHash: true,
+    // touchScroll:true,
+});
 
 // To disable Scrollify on Phones/Tablets
 // $(document).ready(function(){

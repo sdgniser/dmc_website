@@ -137,6 +137,8 @@ body
 
     /* To match up the transition with div.backgroundimagehack */
     transition: all 0.75s ease;
+
+    overflow: hidden;
 }
 
 /* Hiding the scrollbar on the page */
