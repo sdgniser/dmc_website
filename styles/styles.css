@@ -16,6 +16,7 @@
     /* AFFECTS: Entry-Text in Events Tile | Text in FIC Tile | Text in Contact Tile */
     --in-tile-text-font-family: Gothic, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     --in-tile-text-font-size: 2.5rem;
+    --in-tile-text-padding: 6.75rem;
     --in-tile-text-events-font-size: 3rem;    /* MAIN TITLE/HEADER COLOR */
     --ttl-color: white;
 
@@ -365,7 +366,7 @@ h1 #ttl
     font-size: var(--main-ttl-font-size);
     font-weight: 500;
 
-    text-shadow: 0px 0px 3px indianred;
+    text-shadow: 0px 0px 8px black;
     transition: 0.3s ease;
 
     line-height: 7.5rem;
@@ -539,6 +540,7 @@ blockquote:after
 }
 
 .in-tile-text {
+    padding: 0 var(--in-tile-text-padding);
     font-family: var(--in-tile-text-font-family);
     font-size: var(--in-tile-text-font-size);
 }
@@ -689,7 +691,7 @@ blockquote:after
 
     height: 60vh;
 
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
     overflow-x: scroll;
 }
@@ -737,7 +739,7 @@ blockquote:after
 .gallery-pics {
     position: relative;
 
-    width: var(--gallery-pic-width);
+    width: auto;
     height: 48vh;
 
     text-align: center;
@@ -774,9 +776,7 @@ blockquote:after
     grid-column-gap: 4rem;
     margin-top: 19vh;
 
-    align-items: center;
-
-    /* padding: auto 8rem; */
+    /* align-items: center; */
 }
 
 .fic-image
@@ -833,30 +833,69 @@ blockquote:after
     background-color: var(--members-bg-col);
     /* Delete the line, below, to make scrollify work perfectly, but wreck the layout (if there are > 10 people) and vice-versa */
     /* height: auto; */
-
+    
     text-align: center;
 }
 
+/* .members-wrapper-wrap {
+    height: 72vh;
+    width: 100vw;
+
+    text-align: center;
+    
+    scroll-snap-align: center;
+} */
+
 .members-container
 {
+    /* display: block; */
     display: flex;
-
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-basis: 100rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
 
-    margin: 4rem auto;
+    align-items: center;
+
+    margin: 3rem auto;
     margin-top: 0;
 
-    height: 72vh;
+    height: 75vh;
 
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .members-container::-webkit-scrollbar {
     width: 0 !important;
+}
+
+/* .members-break {
+    flex-basis: 100%;
+    height: 0;
+} */
+
+.members-wrapper {
+    position: relative;
+
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    justify-content: center;
+
+    height: 72vh;
+    width: 100%;
+
+    text-align: center;
+    
+    scroll-snap-align: center;
+    overflow: hidden;
 }
 
 .person
@@ -867,8 +906,6 @@ blockquote:after
     margin: 8rem 13rem; /* Original: 5rem 4.7rem */
 
     transition: 0.3s ease;
-
-    scroll-snap-align: center;
 }
 
 .person-details
@@ -968,7 +1005,7 @@ blockquote:after
 
     color: white;
 
-    margin-top: 13.5rem;
+    margin-top: 9.5rem;
     padding: 2rem 0;
 }
 
@@ -1072,7 +1109,8 @@ blockquote:after
     }
 }
 
-@media screen and (max-width: 1300px)
+@media screen and (max-width: 1300px),
+       screen and (max-height: 768px)
 {
     :root {
         --main-ttl-font-size: 7.75rem;
@@ -1088,7 +1126,7 @@ blockquote:after
         --gallery-pic-width: 55vw;
 
         --members-bg-col: #97e0d4;
-        --members-pic-size: 16rem;
+        --members-pic-size: 14.5rem;
         --person-details-font-size: 4rem;
     }
 
@@ -1474,6 +1512,10 @@ blockquote:after
 
     .members-container {
         margin: -1rem 0;
+        height: 84vh;
+    }
+
+    .members-wrapper {
         height: 80vh;
     }
 
@@ -2921,3 +2963,101 @@ blockquote:after
     }
 }
 /* Exclusive - Phones - Pixel 2 XL -- ENDS HERE */
+
+
+
+/* Fixes for 1366x768 */
+@media screen and (max-height: 900px) {
+    :root {
+        --tile-ttl-font-size: 6rem;
+
+        --entry-title-font-size: 2.5rem;
+        --entry-text-font-size: 1.75rem;
+        --in-tile-text-font-size: 2rem;
+
+        --person-name-font-size: 2rem;
+        --person-dgn-font-size: 1.8rem;
+    }
+
+    #landing #social {
+        position: relative;
+        right: 8.5vw;
+    }
+
+    #landing #social li {
+        font-size: 6rem;
+        margin: 0 4rem;
+    }
+
+    .social-icons::after {
+        width: 5px;
+        position: relative;
+        top: -6rem;
+    }
+
+    #side {
+        position: sticky;
+        top: 0;
+    }
+
+    .ulist {
+        margin-top: -1rem;
+    }
+
+    .navicon {
+        margin: 0.75rem;
+    }
+
+    .timeline {
+        margin-top: 0rem;
+    }
+
+    .tile-ttl {
+        padding: 7rem 0 4rem 0;
+    }
+
+    .fic-container {
+        margin-top: 10rem;
+
+        align-items: center;
+    }
+
+    .fic-words {
+        font-size: 2.75rem;
+    }
+
+    .members-container {
+        margin: 2rem auto;
+        margin-top: 0;
+
+        height: 75vh;
+    }
+
+    .members-wrapper {
+        position: relative;
+
+        margin: 2rem auto;
+
+        height: 75vh;
+        width: 100%;
+    }
+
+    .person {
+        margin: 4rem 6vw;
+    }
+
+    .contact-container {
+        margin-top: 6rem;
+    }
+}
+
+/* Fixes for 1440x900 */
+@media screen and (height: 900px) {
+    .contact-container {
+        margin-top: 9rem;
+    }
+
+    .contact-spic .in-tile-text {
+        margin-right: 10rem;
+    }
+}
