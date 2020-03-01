@@ -22,13 +22,30 @@
 
         <!-- Stylesheet -->
         <link href="styles/styles.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" rel="stylesheet" type="text/css">
         <title>Home | Drama & Music Club</title>
     </head>
     <body>
+        <div id="side">
+            <!-- <nav id="nav"> -->
+                <ul id="nav-list">
+                    <li data-menuanchor="firstTile" class="ulist active"><a tabindex="0" id="logo-link" href="#firstTile" title="DMC Homepage" target="_top"><img id="logo" class="fp-tooltip" src="images/logo_smpl.png"></a></li>
+                    <li data-menuanchor="secondTile" class="ulist"><a tabindex="0" class="nav-links" href="#secondTile" title="Our Club Activities"><i class="fa fa-calendar navicon fp-tooltip"></i></li>
+                    <li data-menuanchor="thirdTile" class="ulist"><a tabindex="0" class="nav-links" href="#thirdTile" title="Image Gallery"><i class="fas fa-image navicon fp-tooltip"></i></a></li>
+                    <li data-menuanchor="fourthTile" class="ulist"><a tabindex="0" class="nav-links" href="#fourthTile" title="Faculty-in-Charge"><i class="fas fa-user-tie navicon fp-tooltip"></i></a></li>
+                    <li data-menuanchor="fifthTile" class="ulist"><a tabindex="0" class="nav-links" href="#fifthTile" title="Our Team"><i class="fas fa-id-badge navicon fp-tooltip"></i></a></li>
+                    <li data-menuanchor="lastTile" class="ulist"><a tabindex="0" class="nav-links" href="#lastTile" title="Connect with us"><i class="fas fa-phone-alt navicon fp-tooltip"></i></a></li>
+                    <li class="ulist">
+                        <footer>
+                            <i class="fas fa-bolt"></i> <a tabindex="0" id="selfref" href="https://sdgniser.github.io" title="Powered by Software Development Group, NISER" target="_blank">SDG<br>2019</a>
+                        </footer>
+                    </li>
+                </ul>
+            <!-- </nav> -->
+        </div>
         <!-- Main content -->
-        <main class="content">
-            
-            <section id="landing" class="scrollify-section" data-section-name="landing">
+        <main id="fullpage" class="content">
+            <section class="fp-section" id="landing" >
                 <div class="backgroundimagehack"></div>
                 <section class="intro">
                     <ul id="landing-links">
@@ -67,25 +84,7 @@
                 </section>
             </section>
 
-            <div id="side">
-                <a tabindex="0" id="logo-link" href="#top" title="DMC Homepage" target="_top"><img id="logo" src="images/logo_smpl.png"></a>
-                <nav id="nav">
-                    <ul id="nav-list">
-                        <li class="ulist"><a tabindex="0" class="nav-links" href="#events" title="Our Club Activities"><i class="fa fa-calendar navicon"></i></li>
-                        <li class="ulist"><a tabindex="0" class="nav-links" href="#gallery" title="Image Gallery"><i class="fas fa-image navicon"></i></a></li>
-                        <li class="ulist"><a tabindex="0" class="nav-links" href="#fic" title="Faculty-in-Charge"><i class="fas fa-user-tie navicon"></i></a></li>
-                        <li class="ulist"><a tabindex="0" class="nav-links" href="#members" title="Our Team"><i class="fas fa-id-badge navicon"></i></a></li>
-                        <li class="ulist"><a tabindex="0" class="nav-links" href="#contact" title="Connect with us"><i class="fas fa-phone-alt navicon"></i></a></li>
-                    </ul>
-                </nav>
-                <footer>
-                    <i class="fas fa-bolt"></i> <a tabindex="0" id="selfref" href="https://sdgniser.github.io" title="Powered by Software Development Group, NISER" target="_blank">SDG<br>2019</a>
-                </footer>
-            </div>
-
-            <!-- EVENTS Timeline -->
-            <!-- EACH ENTRY HAS A MAXHEIGHT SET TO 50vh IN THE STYLESHEET (styles.css) -->
-            <section class="tiles scrollify-section" id="events" data-section-name="events">
+            <section class="tiles fp-section" id="events">
                 <div class="tile-ttl">Events</div>
                 <section class="timeline">
                     <div class="entry">
@@ -124,10 +123,10 @@
             </section>
 
             <!-- DO NOT REMOVE -->
-            <section class="tiles" id="JUNK"></section> <!-- DO NOT REMOVE -->
+            <!-- <section class="tiles section" id="JUNK"></section> -->
             <!-- DO NOT REMOVE -->
 
-            <section class="tiles scrollify-section" id="gallery" data-section-name="gallery">
+            <section class="tiles fp-section" id="gallery">
                 <div class="tile-ttl">Gallery</div>
                 <div class="gallery-slider">
                    <img class="gallery-pics" src="images/gallery/00.JPG" alt="">
@@ -141,7 +140,7 @@
                 </div>
             </section>
 
-            <section class="tiles scrollify-section" id="fic" data-section-name="fic">
+            <section class="tiles fp-section" id="fic">
                 <div class="tile-ttl">FACULTY-IN-CHARGE</div>
                 <section class="fic-container">
                     <div class="fic-image">
@@ -154,7 +153,7 @@
                 </section>
             </section>
 
-            <section class="tiles scrollify-section" id="members" data-section-name="members">
+            <section class="tiles fp-section" id="members">
                 <div class="tile-ttl">Members</div>
                 <section class="members-container">
                     <!-- <div class="members-wrapper-wrap"> -->
@@ -176,11 +175,11 @@
                                 <a class="person-details insta" href="https://www.instagram.com/ananyadas_99/" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                                 <span class="person-name">ANANYA<br><span id="person-dgn">DRAMA HEAD</span></span>
                             </span>
-                            <!-- <div class="members-break"></div> -->
+                             <!-- <div class="members-break"></div> -->
                             <span class="person">
-                                <img class="person-filter" src="images/people/pulkit.JPG">
-                                <a class="person-details fb" href="https://www.facebook.com/pulkit.aujha" title="Link to Facebook Wall" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                                <a class="person-details insta" href="https://www.instagram.com/o.pulkit/" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                                 <img class="person-filter" src="images/people/pulkit.JPG">
+                                 <a class="person-details fb" href="https://www.facebook.com/pulkit.aujha" title="Link to Facebook Wall" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                 <a class="person-details insta" href="https://www.instagram.com/o.pulkit/" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                                 <span class="person-name">PULKIT<br><span id="person-dgn">SPICMACAY HEAD</span></span>
                             </span>   
                             <span class="person">
@@ -254,7 +253,7 @@
                 </section>
             </section>
 
-            <section class="tiles scrollify-section" id="contact" data-section-name="contact">
+            <section class="tiles fp-section" id="contact">
                 <div class="tile-ttl">Connect With Us</div>
 
                 <!-- Contact Details -->
@@ -296,9 +295,8 @@
         </main>
         <!-- For FontAwesome - automatic server-side updates -->
         <script src="https://kit.fontawesome.com/377d1afaa4.js" crossorigin="anonymous"></script> <!-- UPDATED ON DEC 12, 2019 -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.js"></script>
         <script type="text/javascript" src="scripts/main.js"></script>
+        <!-- fullpage: https://webdesign.tutsplus.com/articles/vertical-and-horizontal-scrolling-with-fullpagejs--cms-24215 -->
     </body>
 </html>

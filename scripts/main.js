@@ -73,83 +73,15 @@ const gallery_image_resizer = function() {
 
 gallery_image_resizer();
 
-// From here: https://codepen.io/toddwebdev/pen/yExKoj
-// const slider = document.querySelector('.gallery-slider');
-// let isDown = false;
-// let startX;
-// let scrollLeft;
-
-// slider.addEventListener('mousedown', (e) => {
-//   isDown = true;
-//   slider.classList.add('active');
-//   startX = e.pageX - slider.offsetLeft;
-//   scrollLeft = slider.scrollLeft;
-// });
-// slider.addEventListener('mouseleave', () => {
-//   isDown = false;
-//   slider.classList.remove('active');
-// });
-// slider.addEventListener('mouseup', () => {
-//   isDown = false;
-//   slider.classList.remove('active');
-// });
-// slider.addEventListener('mousemove', (e) => {
-//   if(!isDown) return;
-//   e.preventDefault();
-//   const x = e.pageX - slider.offsetLeft;
-//   const walk = (x - startX) * 3; //scroll-fast
-//   slider.scrollLeft = scrollLeft - walk;
-//   console.log(walk);
-// });
-
-// function disableScrollify(toggle){
-// 	if(toggle){
-// 		$.scrollify.destroy();
-// 	} else {
-// 		// For smooth scrolling
-// 		var cnt = 1;
-// 		$.scrollify({
-// 			section: ".tiles",
-// 			sectionName: "section-name",
-// 			
-// 			easing: "easeOutExpo",
-// 			touchScroll: true,
-// 			setHeights: false,
-// 			// standardScrollElements: '.timeline', // Un-comment this to make .timeline scrollable - breaks Scrollify's scrolling though
-// 			offset: -8,
-// 			after: function() {
-// 				var cols = ['#9bc0ff','#ff847e','#99dd9b','#f8c28d','#d4b89b'];
-// 				// var urls = ['../images/backgrounds/madam.png', '../images/backgrounds/apratim.png', '../images/backgrounds/satyam.png', '../images/backgrounds/jamal.png'];
-// 				$('#fshack').css('background-color', cols[cnt]);
-// 				// $('#fshack').css('background-image', 'url("' + urls[cnt] + '")');
-// 				// $('.backgroundimagehack').css('background-image', 'url("' + urls[cnt] + '")');
-// 				cnt++;
-// 				cnt %= cols.length;
-// 			}
-// 		});
-// 	}
-// }
-
-$.scrollify({
-	section : ".scrollify-section",
-	scrollSpeed: 200,
-	setHeights: false,
-	easing: "easeOutExpo",
-    // scrollSpeed: 1100,
-    // offset : 0,
-    // scrollbars: true,
-    // standardScrollElements: "",
-    // setHeights: true,
-    overflowScroll: true,
-    // updateHash: true,
-    // touchScroll:true,
+var myFullPage = new fullpage('#fullpage', {
+	scrollingSpeed: 800,
+	verticalCentered: false,
+	recordHistory: false,
+	sectionSelector: '.fp-section',
+	anchors: ['firstTile', 'secondTile', 'thirdTile', 'fourthTile', 'fifthTile', 'lastTile'],
+	menu: '#nav-list',
+	animateAnchor: true,
 });
 
-// To disable Scrollify on Phones/Tablets
-// $(document).ready(function(){
-// 	if($(window).width() < 1200){
-// 		disableScrollify(true);
-// 	} else {
-// 		disableScrollify(false);
-// 	}
-// });
+var activeSec = fullpage_api.getActiveSection();
+console.log(activeSec);

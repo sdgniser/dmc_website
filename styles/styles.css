@@ -138,7 +138,7 @@ body
     /* To match up the transition with div.backgroundimagehack */
     transition: all 0.75s ease;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* Hiding the scrollbar on the page */
@@ -198,16 +198,21 @@ img {
 #side {
     background: transparent;
     position: sticky;
-    top: 5%;
+    top: 0;
     float: left;
     width: var(--side-width);
     height: 100vh;
 
     text-align: center;
 
-    z-index: 10;
+    z-index: 2;
 
-    transition: all 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;  
+    align-items: center;
+
+    /* transition: all 0.6s ease; */
 
     /* border: 2px red solid; */ /* FOR DEBUGGING */
 }
@@ -215,8 +220,8 @@ img {
 /* LOGO Image */
 #logo-link {
     display: block;
-    position: sticky;
-    top: 8rem;
+    /* position: sticky; */
+    /* top: 8rem; */
     margin: 3rem auto;
     max-width: var(--logowidth);
     border-radius: 50%;
@@ -232,14 +237,26 @@ img {
     transform: scale(1.1);
 }
 
-#nav {
-    position: sticky;
-    top: 27vh; /* PREV: 32vh */
+/* #nav {
+    height: 100vh;
 
-    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;  
+    align-items: center;
+} */
 
-    line-height: 8vh;
-    text-align: center;
+#nav-list {
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;  
+    align-items: center;
+}
+
+#nav-list .ulist {
+    display: flex;
 }
 
 .nav-links
@@ -272,10 +289,10 @@ img {
 
 footer
 {
-    position: sticky;
-    top: 88vh;
+    /* position: sticky;
+    top: 0%; */
     margin: 0 var(--tiles-margin);
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     padding: 1.4rem;
 
     color: white;
@@ -294,7 +311,8 @@ footer
 #landing
 {
     background: transparent;
-    z-index: 2;
+    z-index: 10;
+    /* width: 100vw; */
     /* background: url('../images/backgrounds/landing-bg.jpg') center/cover no-repeat fixed; */
     /* filter: blur(2px); */
     /* backdrop-filter: blur(20px); */
@@ -489,29 +507,13 @@ blockquote:after
 .tiles
 {
     height: 100vh;
+    width: 100vw;
     margin: 0;
 
-    width: calc(100vw - var(--side-width) - var(--events-padding));
+    /* width: calc(100vw - var(--side-width) - var(--events-padding)); */
 
     padding: 0 var(--events-padding);
     padding-left: var(--side-width);
-
-    /* margin-left: 0; */
-
-    /* padding: 2.5rem; */
-
-    /* border-radius: 2rem; */
-
-    /* border: 3px dashed rgb(194, 173, 150); */
-
-    /* backdrop-filter: blur(15px); */
-
-    /* DUE TO THE PRELOADER, THIS MAY NOT SEEM LIKE THE APPARENT DURATION - EXP - RESP */
-    /* Causes issues with scrollify */
-    /* animation-duration: 2s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-    animation-name: fadeInUp; */
 }
 
 .tile-ttl
@@ -551,8 +553,6 @@ blockquote:after
 {
     background-color: var(--events-bg-col);
     overflow: hidden;
-
-    position: absolute;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -1392,7 +1392,6 @@ blockquote:after
     }
     
     #side {
-        transform: translate3d(0, 0, 0); /* To force HW Accelaration */
         backdrop-filter: blur(var(--landing-blur));
 
         position: fixed;
@@ -1400,45 +1399,44 @@ blockquote:after
         bottom: 0;
 
         float: none;
-        width: 100%;
+        width: 100vw;
         height: 10vh;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
 
         text-align: center;
     }
 
     #logo-link {
-        position: unset;
-        margin: 0 2vw;
+        /* position: unset; */
+        margin: 0 4vw;
     }
 
     #logo {
         margin: 2rem 1vw;
     }
 
-    #nav {
-        position: unset;
-
-        margin: 0 auto;
-        /* margin-left: 2.5rem; */
-
-        line-height: 8vh;
-        text-align: center;
-    }
-
-    #nav-list {
+    #side {
+        height: 10vh;
+        width: 100vw;
+    
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        justify-content: space-evenly;  
+        align-items: center;
     }
-
+    
+    #nav-list {
+        padding: 0;
+    
+        display: flex;
+        flex-direction: row;
+        
+        justify-content: space-evenly;  
+        align-items: center;
+    }
+    
     #nav-list .ulist {
         display: flex;
-
-        margin: 0 0.5vw;
     }
 
     .navicon {
@@ -1794,7 +1792,7 @@ blockquote:after
         margin: 0.75rem;
     }
 
-    #nav {
+    #side {
         margin-left: 1rem;
     }
 
@@ -2362,7 +2360,7 @@ blockquote:after
         margin-bottom: 2rem;
     }
 
-    #nav {
+    #side {
         margin-left: 1.5rem;
     }
 
@@ -2840,7 +2838,7 @@ blockquote:after
         margin: 0;
     }
 
-    #nav {
+    #side {
         margin: 0 -1rem;
     }
 
@@ -2921,7 +2919,7 @@ blockquote:after
     and (device-height: 823px)
     and (-webkit-device-pixel-ratio: 3.5)
     and (orientation: portrait) {
-    #nav {
+    #side {
         margin-left: 1rem;
     }
 
@@ -2997,11 +2995,6 @@ blockquote:after
         top: -6rem;
     }
 
-    #side {
-        position: sticky;
-        top: 0;
-    }
-
     .ulist {
         margin-top: -1rem;
     }
@@ -3055,11 +3048,42 @@ blockquote:after
 
 /* Fixes for 1440x900 */
 @media screen and (height: 900px) {
+    #side {
+        position: sticky;
+        top: 0;
+    }
+
     .contact-container {
         margin-top: 9rem;
     }
 
     .contact-spic .in-tile-text {
         margin-right: 10rem;
+    }
+}
+
+@media screen and (height: 768px) {
+    .gallery-slider {    
+        margin: 4rem 2rem;
+    }
+
+    .fic-container {
+        margin-top: 6rem;
+
+        align-items: center;
+    }
+
+    .fic-words {
+        font-size: 2.25rem;
+
+        margin-right: 8rem;
+    }
+
+    .contact-container {
+        margin-top: 6rem;
+    }
+
+    .contact-spic .in-tile-text {
+        margin-right: 7rem;
     }
 }
