@@ -73,15 +73,30 @@ const gallery_image_resizer = function() {
 
 gallery_image_resizer();
 
+let side = document.querySelector('#side');
+let sideWidth = side.offsetWidth;
+// alert(sideWidth)
 var myFullPage = new fullpage('#fullpage', {
 	scrollingSpeed: 800,
 	verticalCentered: false,
 	recordHistory: false,
 	sectionSelector: '.fp-section',
-	anchors: ['firstTile', 'secondTile', 'thirdTile', 'fourthTile', 'fifthTile', 'lastTile'],
+	anchors: ['landingTile', 'eventsTile', 'galleryTile', 'ficTile', 'membersTile', 'contactTile'],
 	menu: '#nav-list',
 	animateAnchor: true,
-});
 
-var activeSec = fullpage_api.getActiveSection();
-console.log(activeSec);
+	onLeave: function(origin, destination, direction) {
+		if(this.anchor == "landingTile" && direction =='down') {
+			// side.style.transform = "translateX(" + sideWidth + "px)";
+			side.style.width = "var(--side-width)";
+			side.style.visibility = "visible";
+		}
+
+		if (this.anchor == "eventsTile" && direction =='up') {
+			side.style.width = "0";
+			side.style.visibility = "hidden";
+			side.style.overflow = "hidden";
+			// side.style.transform = "translateX(0px)";
+		}
+	}
+});
