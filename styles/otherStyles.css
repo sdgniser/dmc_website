@@ -1,0 +1,1422 @@
+@media only screen
+    /* iPhone 5/SE */
+    and (device-height: 320px)
+    and (device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape),
+    only screen
+    /* Galaxy S5 + iPhone 6/7/8 */
+    and (min-device-height: 360px)
+    and (max-device-height: 480px)
+    and (min-device-width: 640px)
+    and (max-device-width: 860px)
+    /* and (-webkit-min-device-pixel-ratio: 2) */
+    and (orientation: landscape) {
+    :root {
+        --in-tile-text-font-size: 1.6rem;
+        --in-tile-ttl-font-size: 2rem;
+        --tile-ttl-font-size: 3rem;
+        
+        --logowidth: 4rem;
+        --nav-link-icon-font-size: 2.75rem;
+
+        --main-ttl-font-size: 4rem;
+        --landing-link-font-size: 1.6rem;
+
+        --entry-title-font-size: 1.7rem;
+        --entry-text-font-size: 1.5rem;
+
+        --gallery-pic-width: 54vw;
+
+        --fic-image-size: 12rem;
+
+        --members-pic-size: 12rem;
+        --person-details-font-size: 3.25rem;
+        --person-name-font-size: 1.4rem; /* AFFECT FIC NAME TOO */
+        --person-dgn-font-size: 1.4rem; /* AFFECT FIC DGN TOO */
+    }
+
+    .tile-ttl {
+        padding: 1.25rem 0 2rem 0 !important;
+    }
+    
+    #side {
+        height: 15vh;
+    }
+
+    #logo-link {
+        margin: 0.2rem 2rem;
+    }
+
+    #logo {
+        margin: 0;
+    }
+
+    .navicon {
+        margin: 0 2rem;
+    }
+
+    #landing #landing-links {
+        text-align: right;
+        margin-bottom: 0;
+    }
+
+    #landing #landing-links li {
+        display: inline-block;
+        margin: 1rem 2rem;
+    }
+
+    #landing #social {
+        margin: 5rem 0 -3rem 1rem;
+    }
+
+    #landing #social li {
+        font-size: 4rem;
+        margin: 2rem;
+    }
+
+    .social-icons::after {
+        width: 4px;
+        height: 5rem;
+        position: relative;
+        top: -4.5rem;
+        right: -1.4rem;
+    }
+
+    blockquote {
+        position: absolute;
+        bottom: 14.25vh;
+
+        font-size: 1.5rem;
+    }
+
+    .timeline {
+        margin: 0;
+    }
+
+    .entry {
+        margin: 0 1rem;
+    }
+
+    .entry label {
+        padding: 0; 
+    }
+
+    .entry-text {
+        margin: 1rem;
+
+        font-size: 1.4rem;
+    }
+
+    .gallery-slider {
+        margin: 0 12rem;
+        margin-top: -1rem;
+        padding: 0;
+    }
+
+    #fic .tile-ttl {
+        padding: 0.5rem 0 0 0 !important;
+    }
+
+    .fic-container {
+        display: grid;
+        grid-template-areas:
+            "fic-image fic-words";
+        
+        grid-template-columns: 45% 55%;
+        grid-template-rows: 58%;
+
+        grid-column-gap: unset;
+        margin: 1.5rem 2rem;
+    }
+
+    .fic-image {
+        grid-area: fic-image;
+        margin: 0;
+        padding: 2rem 0 0 0;
+
+        border-bottom: unset;
+        border-right: var(--in-tile-vert-sep-col) 0.25rem solid;/*0.2rem initially*/
+    }
+
+    .fic-image img {
+        margin: 0 auto;
+    }
+
+    .fic-words {
+        grid-area: fic-words;
+        padding: 0.5rem;
+
+        font-size: 1.5rem;
+    }
+
+    .fic-name {
+        margin: 1rem auto;
+    }
+
+    .members-container {
+        display: flex;
+
+        flex-direction: column;
+
+        margin: 0;
+        margin-top: -11.5vh;
+
+        height: 70vh;
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .members-container::-webkit-scrollbar {
+        width: 0 !important;
+    }
+    
+    .person {
+        position: relative;
+        margin: 0 3vw;
+
+        scroll-snap-align: center;
+    }
+
+    .person-details {
+        position: relative;
+        top: -8rem;
+        margin: 0 1rem;
+    }
+
+    .person-name {
+        margin-top: -3.5rem;
+    }
+
+    #contact .tile-ttl {
+        padding: 1rem 0 0 0 !important;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-areas:
+            "contact-details contact-spic";
+        
+        grid-template-columns: 50% 50%;
+        grid-template-rows: none;
+
+        margin: 0;
+        padding: 0;
+    }
+    
+    .contact-details {
+        grid-area: contact-details;
+        text-align: right;
+        
+        margin: 0;
+        padding: 0 1rem;
+        
+        border-bottom: unset;;
+        border-right: var(--in-tile-vert-sep-col) 0.2rem solid;
+    }
+
+    .contact-details .in-tile-ttl {
+        margin: 0;
+    }
+    
+    .contact-niser {
+        margin: 0;
+        text-align: right;
+    }
+
+    .address-text {
+        font-size: 1.3rem;
+        line-height: 1.75rem;
+        margin: 0;
+    }
+
+    .follow-us {
+        font-size: 2.5rem;
+
+        display: flex;
+        flex-direction: row;
+        float: right;
+        flex-wrap: wrap;
+    }
+
+    .contact-spic {
+        grid-area: contact-spic;
+
+        padding: 0 1rem;
+        margin: 0;
+
+        text-align: left;
+    }
+
+    .contact-spic p {
+        padding: 0;
+        margin: 0;
+
+        font-size: 1.15rem;
+        text-align: left;
+    }
+}
+/* Phones - iPhone 5/SE - Galaxy S5 to iPhone 6/7/8 -- ENDS HERE */
+
+/* Exclusive - Phones - Galaxy S5 to iPhone 6/7/8 */
+@media only screen
+    /* Galaxy S5 + iPhone 6/7/8 */
+    and (min-device-width: 360px)
+    and (max-device-width: 480px)
+    and (min-device-height: 640px)
+    and (max-device-height: 860px)
+    /* and (-webkit-min-device-pixel-ratio: 2) */
+    and (orientation: portrait) {
+    #side {
+        height: 9vh;
+    }
+
+    #nav-list {
+        margin: 0.5rem 0 0 1.5rem;
+    }
+
+    .navicon {
+        margin: 0 0.75rem;
+    }
+
+    .contact-container {
+        margin-top: 4rem;
+        grid-row-gap: 2rem;
+    }
+
+    .follow-us {
+        margin-bottom: 4rem;
+    }
+}
+
+@media only screen
+    /* Galaxy S5 + iPhone 6/7/8 */
+    and (min-device-height: 360px)
+    and (max-device-height: 480px)
+    and (min-device-width: 640px)
+    and (max-device-width: 860px)
+    /* and (-webkit-min-device-pixel-ratio: 2) */
+    and (orientation: landscape) {
+    :root {
+        --gallery-pic-width: 60vw;
+    }
+
+    #side {
+        height: 13vh;
+    }
+
+    .gallery-slider {    
+        margin: 0 10rem;
+    }
+
+    .fic-container {
+        margin: 2.5rem 2rem;
+    }
+
+    .person {
+        position: relative;
+        margin: 2rem 4vw;
+    }
+
+    .contact-container {
+        margin: 3.5rem 0;
+    }
+}
+/* Exclusive - Phones - Galaxy S5 to iPhone 6/7/8 - Others -- ENDS HERE */
+
+/* Phones - iPhone 6/7/8 Plus/X - Pixel 2/2XL */
+@media only screen
+    /* iPhone 6/7/8 Plus */
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait),
+    /* iPhone X */
+    only screen
+    and (device-width: 375px)
+    and (device-height: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait),
+    /* Pixel 2 */
+    only screen
+    and (device-width: 411px)
+    and (device-height: 731px)
+    /* and (-webkit-device-pixel-ratio: 3) */
+    and (orientation: portrait),
+    /* Pixel XL */
+    only screen
+    and (device-width: 411px)
+    and (device-height: 823px)
+    and (-webkit-device-pixel-ratio: 3.5) 
+    and (orientation: portrait) {
+    :root {
+        --in-tile-text-font-size: 1.6rem;
+
+        --entry-title-font-size: 2rem;
+        --entry-text-font-size: 1.6rem;
+
+        --members-pic-size: 26rem;
+        --person-name-font-size: 2rem;
+        --person-dgn-font-size: 2rem;
+        --person-details-font-size: 5rem;
+    }
+
+    .tile-ttl {
+        padding: 4rem 0 2rem 0 !important;
+    }
+
+    #landing #landing-links li {
+        margin: 2rem;
+    }
+
+    h1 {
+        margin: 2rem auto;
+    }
+
+    #landing #social li {
+        font-size: 5rem;
+        margin: 1rem 3rem;
+    }
+
+    .social-icons::after {
+        width: 4px;
+        position: relative;
+        top: -5.5rem;
+        right: -2.35rem;
+    }
+
+    blockquote {
+        position: absolute;
+        bottom: 8rem;
+    }
+
+    blockquote:before {
+        position: relative;
+        top: 2rem;
+    }
+
+    blockquote:after {
+        position: relative;
+        top: 3.5rem;
+    }
+
+    #logo-link {
+        margin: 0;
+    }
+
+    #logo {
+        margin: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    #side {
+        margin-left: 1.5rem;
+    }
+
+    #nav-list {
+        margin-left: 0.75rem;
+    }
+
+    #nav-list .ulist {
+        margin: 0;
+    }
+
+    .navicon {
+        margin: 0 1.4rem;
+    }
+
+    footer
+    {
+        display: none;
+        position: unset;
+        top: 88vh;
+        margin: 0 var(--tiles-margin);
+        margin-bottom: 2rem;
+        padding: 1.4rem;
+
+        color: white;
+        font: bold 1.5rem Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        line-height: 2.2rem;
+    }
+
+    .timeline {
+        margin-top: 2rem;
+        padding: 0;
+    }
+
+    .entry {
+        margin: 0.5rem 2rem;
+    }
+
+    .gallery-slider {    
+        margin: 4rem 2rem;
+    }
+
+    .fic-container {
+        grid-template-rows: 40% 24%;
+        grid-row-gap: 2rem;
+
+        margin: 0;
+    }
+
+    .fic-image {
+        margin: 0 3.5rem;
+    }
+
+    .fic-words {
+        padding: 1rem;
+        margin: 2.2rem;
+
+        font-size: 1.6rem;
+    }
+
+    .members-container {
+        display: flex;
+
+        flex-direction: row;
+
+        margin: 2rem 6rem;
+        margin-top: 0;
+
+        height: 65vh;
+
+        scroll-snap-type: y mandatory;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+    }
+
+    .members-container::-webkit-scrollbar {
+        width: 0 !important;
+    }
+    
+    .person {
+        position: relative;
+
+        margin: 10rem 3vw;
+
+        width: var(--members-pic-size);
+        height: var(--members-pic-size);
+
+        scroll-snap-align: center;
+    }
+
+    .person-filter {
+        width: var(--members-pic-size);
+        height: var(--members-pic-size);
+    }
+
+    .person-details {
+        position: relative;
+        top: -15.75rem;
+        margin: 0 2.2rem;
+    }
+
+    #contact .tile-ttl {
+        /* margin: 0 1rem; */
+        padding: 2rem 0 0 0 !important;
+    }
+
+    .contact-container {
+        margin: 2rem 0;
+        padding: 0;
+
+        grid-template-rows: 47% 40%;
+        grid-row-gap: 0;
+    }
+
+    .contact-details {
+        margin: 0 2rem;
+    }
+
+    .address-text {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+
+        margin: -2rem 0 -2.2rem 0;
+        padding: 0;
+    }
+
+    .contact-spic {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    
+    .contact-spic p {
+        padding: 0 1.8rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen
+    /* iPhone 6/7/8 Plus */
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape),
+    /* iPhone X */
+    only screen
+    and (device-height: 375px)
+    and (device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape),
+    /* Pixel 2 */
+    only screen
+    and (device-height: 411px)
+    and (device-width: 731px)
+    /* and (-webkit-device-pixel-ratio: 3) */
+    and (orientation: landscape),
+    /* Pixel 2 XL */
+    only screen
+    and (device-height: 411px)
+    and (device-width: 823px)
+    and (-webkit-device-pixel-ratio: 3.5)
+    and (orientation: landscape) {
+    :root {
+        --in-tile-text-font-size: 1.6rem;
+        --in-tile-ttl-font-size: 2.8rem;
+
+        --side-width: 8rem;
+
+        --logowidth: 4.5rem;
+        --nav-link-icon-font-size: 3rem;
+
+        --entry-title-font-size: 2rem;
+        --entry-text-font-size: 1.6rem;
+
+        --gallery-pic-width: 50vw;
+
+        --fic-image-size: 16rem;
+
+        --person-name-font-size: 1.6rem; /* AFFECT FIC NAME TOO */
+        --person-dgn-font-size: 1.5rem; /* AFFECT FIC DGN TOO */
+    }
+
+    .tile-ttl {
+        padding: 2.5rem 0 2rem 0 !important;
+    }
+    
+    #side {
+        height: 13vh;
+    }
+
+    #logo-link {
+        margin: 0.25rem 1rem;
+    }
+
+    #logo {
+        margin: 0;
+    }
+
+    .navicon {
+        margin: 0 3rem;
+    }
+
+    #landing #landing-links {
+        text-align: right;
+        margin-bottom: 0;
+    }
+
+    #landing #landing-links li {
+        display: inline-block;
+        margin: 2rem;
+    }
+
+    #landing #social {
+        position: relative;
+        top: -4.5rem;
+    }
+
+    blockquote {
+        position: absolute;
+        bottom: 14.25vh;
+    }
+
+    .timeline {
+        margin-top: 0;
+    }
+
+    .entry {
+        margin: 0rem 1rem;
+    }
+
+    .entry label {
+        padding: 0; 
+    }
+
+    .entry-text {
+        margin: 1rem;
+    }
+
+    .gallery-slider {
+        margin: 0 8rem;
+    }
+
+    .fic-container {
+        display: grid;
+        grid-template-areas:
+            "fic-image fic-words";
+        
+        grid-template-columns: 45% 55%;
+        grid-template-rows: 58%;
+
+        grid-column-gap: unset;
+        margin: 1.5rem 2rem;
+    }
+
+    .fic-image {
+        grid-area: fic-image;
+        margin: 0;
+        padding: 0;
+        margin-left: 0;
+
+        border-bottom: unset;
+        border-right: var(--in-tile-vert-sep-col) 0.25rem solid;/*0.2rem initially*/
+    }
+
+    .fic-image img {
+        margin: 0 auto;
+    }
+
+    .fic-words {
+        grid-area: fic-words;
+        padding: 1rem;
+
+        font-size: 1.8rem;
+    }
+
+    .fic-name {
+        margin: 1rem auto;
+    }
+
+    .members-container {
+        display: flex;
+
+        flex-direction: column;
+
+        margin: 0;
+        margin-top: -5.5vh;
+
+        height: 68vh;
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .members-container::-webkit-scrollbar {
+        width: 0 !important;
+    }
+    
+    .person {
+        position: relative;
+        margin: 0rem 3vw;
+
+        scroll-snap-align: center;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-areas:
+            "contact-details contact-spic";
+        
+        grid-template-columns: 50% 50%;
+        grid-template-rows: none;
+
+        margin: 0;
+        padding: 0;
+    }
+    
+    .contact-details {
+        grid-area: contact-details;
+        text-align: right;
+        
+        margin: 0;
+        padding: 0 2rem;
+        
+        border-bottom: unset;;
+        border-right: var(--in-tile-vert-sep-col) 0.2rem solid;
+    }
+    
+    .contact-niser {
+        margin: 0;
+        text-align: right;
+    }
+
+    .address-text {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin: 1rem 0;
+    }
+
+    .follow-us {
+        font-size: 2.75rem;
+
+        display: flex;
+        flex-direction: row;
+        float: right;
+        flex-wrap: wrap;
+    }
+
+    .contact-spic {
+        grid-area: contact-spic;
+
+        padding: 0 2rem;
+        margin: 0;
+
+        text-align: left;
+    }
+
+    .contact-spic p {
+        padding: 0;
+
+        font-size: 1.4rem;
+        text-align: left;
+    }
+}
+/* Phones - iPhone 6/7/8 Plus/X - Pixel 2/2XL -- ENDS HERE */
+
+
+/* Exclusive to Pixel 2XL + iPhone X */
+@media only screen
+    /* iPhone X */
+    and (device-height: 375px)
+    and (device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape),
+    /* Pixel 2 */
+    only screen
+    and (device-height: 411px)
+    and (device-width: 731px)
+    and (-webkit-device-pixel-ratio: 3.5)
+    and (orientation: landscape),
+    /* Pixel 2 XL */
+    only screen
+    and (device-height: 411px)
+    and (device-width: 823px)
+    and (-webkit-device-pixel-ratio: 3.5)
+    and (orientation: landscape) {
+    :root {
+        --gallery-pic-width: 48vw;
+    }
+
+    #nav-list {
+        margin-top: 3rem;
+    }
+
+    #logo-link {
+        margin: 0 auto;
+    }
+
+    .navicon {
+        margin: 1rem 0;
+    }
+
+    footer {
+        display: none;
+    }
+
+    #landing #social {
+        position: relative;
+        right: 0;
+        top: -2rem;
+    }
+
+    #landing #social li {
+        font-size: 5rem;
+        margin: 0 4rem;
+    }
+
+    .social-icons::after {
+        width: 4px;
+        position: relative;
+        top: -5.75rem;
+    }
+
+    blockquote {
+        position: absolute;
+        bottom: 2rem;
+        width: 100vw;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .gallery-slider {
+        margin: 0 10rem;
+        height: 70vh;
+    }
+
+    .fic-container {
+        margin: 2.5rem 2rem;
+    }
+
+    .fic-image {
+        margin-top: 2rem;
+    }
+
+    .contact-container {
+        margin-right: 2rem;
+    }
+}
+/* Exclusive to Pixel 2XL + iPhone X -- ENDS HERE */
+
+/* Exclusive - Phones - iPhone X */
+@media only screen
+    and (device-width: 375px)
+    and (device-height: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+    :root {
+        --landing-link-font-size: 1.75rem;
+
+        --logowidth: 4.5rem;
+        --nav-link-icon-font-size: 3rem;
+    }
+
+    #side {
+        height: 10vh;
+    }
+
+    #logo-link {
+        margin: 1.5rem;
+    }
+
+    #logo {
+        margin: 0;
+    }
+
+    #side {
+        margin: 0 -1rem;
+    }
+
+    .navicon {
+        margin: 0 1rem;
+    }
+
+    blockquote {
+        position: absolute;
+        bottom: 10rem;
+    }
+
+    .members-container {
+        margin: 0;
+    }
+
+    .person {
+        margin: 12rem 0;
+    }
+
+    #contact .tile-ttl {
+        padding: 0.75rem 0 0 0 !important;
+    }
+
+    .follow-us a {
+        color: white;
+        margin: 1rem 1.5rem;
+    }
+}
+
+@media only screen
+    and (device-height: 375px)
+    and (device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+    :root {
+        --gallery-pic-width: 42vw;
+    }
+
+    #nav-list {
+        margin-top: 2.75rem;
+    }
+
+    .navicon {
+        margin: 0.75rem 0;
+    }
+    
+    .gallery-slider {
+        height: 66vh;
+    }
+    
+    .fic-container {
+        margin: 1.75rem;
+    }
+    
+    .fic-image {
+        margin-top: 0;
+    }
+
+    .members-container {
+        margin-top: -6rem;
+        height: 88vh;
+    }
+    
+    .contact-container {
+        margin: 0.5rem 2rem 0 0;
+    }
+
+    .contact-spic {
+        padding: 0 0 0 2rem;
+    }
+}
+/* Exclusive - Phones - iPhone X -- ENDS HERE */
+
+/* Newer iPads (Non Pro) */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .members-container {
+        height: 76.5vh;
+    }
+
+    .contact-container {
+        grid-row-gap: 0;
+    }
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    :root {
+        --logowidth: 7rem;
+        --side-width: 10rem;
+
+        --nav-link-icon-font-size: 3rem;
+
+        --gallery-pic-width: 70vw;
+    }
+
+    h1 {
+        margin: 10vh auto 0 auto;
+    }
+
+    .tile-ttl {
+        padding: 5.5rem 0 2rem 0;
+    }
+
+    #nav-list  {
+        margin-top: 14vh;
+    }
+
+    .navicon {
+        margin: 1.5rem 0;
+        padding: 0;
+    }
+
+    .timeline {
+        margin-top: 3rem;
+    }
+
+    .gallery-slider {
+        margin: 5rem 3rem;
+        height: 64vh;
+    }
+
+    .gallery-pics {
+        height: 54vh;
+    }
+
+    .fic-container {
+        margin-top: 13.5rem;
+    }
+
+    .members-container {
+        margin: 2rem 0;
+    }
+
+    .person {
+        margin: 5rem 6.5vw;
+    }
+
+    .contact-container {
+        margin: 8.5rem 3rem 0 0;
+    }
+}
+/* Newer iPads (Non Pro) -- ENDS HERE */
+
+/* iPads (Pro) */
+@media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    :root {
+        --gallery-pic-width: 76vw;
+    }
+    .gallery-slider {
+        margin: 8rem 3rem;
+        height: 64vh;
+    }
+
+    .fic-container {
+        margin-top: 32rem;
+    }
+
+    .members-container {
+        margin: 10rem 0;
+    }
+
+    .person {
+        margin: 9rem 6.5vw;
+    }
+
+    .contact-container  {
+        margin: 19rem 3rem 0 0;
+    }
+}
+
+@media only screen
+    and (min-device-width: 1366px)
+    and (max-device-width: 1366px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    h1 {
+        margin: 14vh auto 0 auto;
+    }
+
+    #landing #social {
+        width: 100vw;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        right: unset;
+        left: -2rem;
+    }
+
+    #landing #social li {
+        font-size: 8rem;
+        width: 2rem;
+        margin: 0 5rem;
+        justify-content: center;
+    }
+
+    .social-icons::after {
+        position: relative;
+        right: -3rem;
+        top: -7rem;
+    }
+
+    .fic-container {
+        margin-top: 17rem;
+    }
+
+    .person {
+        margin: 6.5rem 6.5vw;
+    }
+}
+/* iPads (Pro) -- ENDS HERE */
+
+/* Phones - iPhone 5/SE - Galaxy S5 to iPhone 6/7/8 - Others */
+@media only screen
+    /* iPhone 5/SE */
+    and (device-width: 320px)
+    and (device-height: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait),
+    only screen
+    /* Galaxy S5 + iPhone 6/7/8 */
+    and (min-device-width: 360px)
+    and (max-device-width: 480px) /* 375px */
+    and (min-device-height: 640px)
+    and (max-device-height: 860px) /* 667px */
+    /* and (-webkit-min-device-pixel-ratio: 2) */
+    and (orientation: portrait) {
+    :root {
+        --logowidth: 4rem;
+        --nav-link-icon-font-size: 3rem;
+
+        --in-tile-ttl-font-size: 2.25rem;
+        --in-tile-text-font-size: 1.5rem;
+        --tile-ttl-font-size: 3.5rem;
+
+        --main-ttl-font-size: 5rem;
+        --landing-link-font-size: 1.6rem;
+
+        --entry-title-font-size: 1.7rem;
+        --entry-text-font-size: 1.5rem;
+
+        --gallery-pic-width: 88vw;
+
+        --fic-image-size: 14rem;
+
+        --members-pic-size: 22rem;
+        --person-name-font-size: 1.6rem; /* AFFECT FIC NAME TOO */
+        --person-dgn-font-size: 1.6rem; /* AFFECT FIC DGN TOO */
+        --person-details-font-size: 5rem;
+    }
+
+    .tile-ttl {
+        padding: 2rem !important;
+    }
+
+    .in-tile-ttl {
+        margin: 0 auto;
+    }
+
+    #landing #landing-links li {
+        margin: 1rem;
+    }
+
+    h1 {
+        margin: 0 auto;
+        margin-top: -4rem;
+    }
+
+    #landing #social {
+        margin: 4rem 0 0 1rem;
+    }
+
+    #landing #social li {
+        font-size: 4rem;
+        margin: 2rem;
+    }
+
+    .social-icons::after {
+        width: 4px;
+        height: 5rem;
+        position: relative;
+        top: -4.5rem;
+        right: -1.4rem;
+    }
+
+    blockquote {
+        position: absolute;
+        bottom: 7rem;
+
+        font-size: 1.5rem;
+    }
+
+    blockquote:before, blockquote:after {
+        font-size: 5rem;
+    }
+
+    blockquote:before {
+        position: relative;
+        top: 1.5rem;
+    }
+
+    blockquote:after {
+        position: relative;
+        top: 3rem;
+    }
+
+    #logo-link {
+        margin: 0;
+    }
+
+    #logo {
+        margin: 0.75rem;
+    }
+
+    #side {
+        margin-left: 1rem;
+    }
+
+    #nav-list {
+        margin-left: 1rem;
+    }
+
+    #nav-list .ulist {
+        margin: 0;
+    }
+
+    .navicon {
+        margin: 0 0.5rem;
+    }
+
+    footer
+    {
+        display: none;
+        position: unset;
+        top: 88vh;
+        margin: 0 var(--tiles-margin);
+        margin-bottom: 2rem;
+        padding: 1.4rem;
+
+        color: white;
+        font: bold 1.5rem Gothic_Bold, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        line-height: 2.2rem;
+    }
+
+    .timeline {
+        margin: 0;
+    }
+
+    .entry {
+        margin: 0.5rem 1rem;
+    }
+
+    .entry label {
+        padding: 0.5rem;
+    }
+
+    .entry-title {
+        padding: 0.5rem;
+    }
+
+    .gallery-slider {    
+        margin: 2.5rem 1rem;
+    }
+
+    .fic-container {
+        grid-template-rows: 35% 30%;
+        grid-row-gap: 1rem;
+
+        margin: 0;
+    }
+
+    .fic-image {
+        margin: 0 3.5rem;
+    }
+
+    .fic-words {
+        padding: 1rem;
+        margin: 2.2rem;
+
+        font-size: 1.4rem;
+    }
+
+    .members-container {
+        display: flex;
+
+        flex-direction: row;
+
+        margin: 2rem 4rem;
+        margin-top: -0.5rem;
+
+        height: 65vh;
+
+        scroll-snap-type: y mandatory;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+    }
+
+    .members-container::-webkit-scrollbar {
+        width: 0 !important;
+    }
+    
+    .person {
+        position: relative;
+
+        margin: 10rem 3vw;
+
+        width: var(--members-pic-size);
+        height: var(--members-pic-size);
+
+        scroll-snap-align: center;
+    }
+
+    .person-filter {
+        width: var(--members-pic-size);
+        height: var(--members-pic-size);
+    }
+
+    .person-details {
+        position: relative;
+        top: -13.75rem;
+        margin: 0 1.75rem;
+    }
+
+    #contact .tile-ttl {
+        padding: 1rem 0 0 0 !important;
+    }
+
+    .contact-container {
+        margin: 0;
+        padding: 0;
+
+        grid-template-rows: 49% 30%;
+        grid-row-gap: 0;
+    }
+
+    .contact-details {
+        margin: 0 1.5rem;
+    }
+
+    .address-text {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+
+        margin: -2rem 0 -2.2rem 0;
+        padding: 0;
+    }
+
+    .follow-us {
+        font-size: 2.5rem;
+    }
+
+    .follow-us a {
+        margin: 0.5rem 1.5rem;
+    }
+
+    .contact-spic {
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    
+    .contact-spic p {
+        margin: 0;
+        padding: 0 1rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* Exclusive - Phones - Pixel 2 XL */
+@media only screen
+    and (device-width: 411px)
+    and (device-height: 823px)
+    and (-webkit-device-pixel-ratio: 3.5)
+    and (orientation: portrait) {
+    #side {
+        margin-left: 1rem;
+    }
+
+    #logo {
+        margin: 1.3rem;
+    }
+
+    .gallery-slider {    
+        margin: 5.2rem 2rem;
+    }
+
+    .fic-container {
+        margin-top: 1rem;
+    }
+
+    .members-container {
+        margin: 4rem 5rem;
+        margin-top: 3.5rem;
+
+        height: 60vh;
+    }
+
+    #contact .tile-ttl {
+        padding: 2rem;
+        margin: 1rem;
+        margin-top: 0;
+    }
+
+    .contact-details {
+        margin: 0 2.75rem;
+    }
+}
+
+@media only screen
+    and (device-height: 411px)
+    and (device-width: 823px)
+    and (-webkit-device-pixel-ratio: 3.5)
+    and (orientation: landscape) {
+    .contact-container {
+        margin: 2rem 2rem 0 0;
+    }
+}
+/* Exclusive - Phones - Pixel 2 XL -- ENDS HERE */

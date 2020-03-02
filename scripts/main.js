@@ -75,7 +75,6 @@ gallery_image_resizer();
 
 let side = document.querySelector('#side');
 let sideWidth = side.offsetWidth;
-// alert(sideWidth)
 var myFullPage = new fullpage('#fullpage', {
 	scrollingSpeed: 800,
 	verticalCentered: false,
@@ -86,17 +85,23 @@ var myFullPage = new fullpage('#fullpage', {
 	animateAnchor: true,
 
 	onLeave: function(origin, destination, direction) {
-		if(this.anchor == "landingTile" && direction =='down') {
-			// side.style.transform = "translateX(" + sideWidth + "px)";
-			side.style.width = "var(--side-width)";
-			side.style.visibility = "visible";
-		}
+		if (window.innerWidth >= 740) {
+			if(this.anchor == "landingTile" && direction =='down') {
+				// side.style.transform = "translateX(" + sideWidth + "px)";
+				side.style.width = "var(--side-width)";
+				side.style.visibility = "visible";
+			}
 
-		if (this.anchor == "eventsTile" && direction =='up') {
-			side.style.width = "0";
-			side.style.visibility = "hidden";
-			side.style.overflow = "hidden";
-			// side.style.transform = "translateX(0px)";
+			if (this.anchor == "eventsTile" && direction =='up') {
+				side.style.width = "0";
+				side.style.visibility = "hidden";
+				side.style.overflow = "hidden";
+				// side.style.transform = "translateX(0px)";
+			}
+		} else {
+			side.style.transition = "unset";
+			side.style.visibility = "visible";
+			side.style.width = "var(--side-width)";
 		}
 	}
 });
